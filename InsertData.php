@@ -10,13 +10,13 @@
   {
     echo "<script type='text/javascript'>
     alert('$msg');
-    location='index.html';
+    Room='index.html';
     </script>";
   }
 try  
         { 
-         $StudentIDErr = $FirstNameErr = $SurnameErr = $LocationErr = $UserTypeErr = "";
-         $StudentID = $FirstName = $Surname = $Location = $UserType = "";
+         $StudentIDErr = $SocietyErr = $BookingForErr = $RoomErr = $UserTypeErr = $BookingTillErr = "";
+         $StudentID = $Society = $BookingFor = $Room = $UserType = $Activity = $BookingTill = "";
 
          $dbhost = "localhost";
          $dbuser = "appengine";
@@ -34,32 +34,43 @@ try
                   $StudentIDErr = "Only Numbers allowed in StudentID"; 
                 }
               }
-              if (empty($_POST["FirstName"])) {
-                $FirstNameErr = "Firstname is required";
+              if (empty($_POST["Society"])) {
+                $SocietyErr = "Society is required";
               } else {
-                $FirstName = test_input($_POST["FirstName"]);
+                $Society = test_input($_POST["Society"]);
                 // check if name only contains letters and whitespace
-                if (!preg_match("/^[a-zA-Z ]{2,20}$/",$FirstName)) {
-                  $FirstNameErr = "Only letters and white space allowed in First Name"; 
+                if (!preg_match("/^[a-zA-Z ]{2,20}$/",$Society)) {
+                  $SocietyErr = "Only letters and white space allowed in First Name"; 
                 }
               }
-                
-              if (empty($_POST["Surname"])) {
-                $SurnameErr = "Surname is required";
+              if (empty($_POST["BookingFor"])) {
+                $BookingForErr = "Booking Start is required";
               } else {
-                $Surname = test_input($_POST["Surname"]);
+                $BookingFor = test_input($_POST["BookingFor"]);
+                $BookingFor = date('Y-m-d H:i:s', $BookingFor);
+              }
+              if (empty($_POST["BookingTill"])) {
+                $BookingTillErr = "Booking Start is required";
+              } else {
+                $BookingTill = test_input($_POST["BookingTill"]);
+                $BookingTill = date('Y-m-d H:i:s', $BookingTill);
+              }
+              if (empty($_POST["Room"])) {
+                $RoomErr = "Room is required";
+              } else {
+                $Room = test_input($_POST["Room"]);
                 // check if name only contains letters and whitespace
-                if (!preg_match("/^[a-zA-Z ]{2,20}$/",$Surname)) {
-                  $SurnameErr = "Only letters and white space allowed in Surname"; 
+                if (!preg_match("/^[a-zA-Z ]{2,40}$/",$Room)) {
+                  $RoomErr = "Only letters and white space allowed in Room"; 
                 }
               }
-              if (empty($_POST["Location"])) {
-                $LocationErr = "Location is required";
+              if (empty($_POST["Activity"])) {
+                $ActivityErr = "Activity is required";
               } else {
-                $Location = test_input($_POST["Location"]);
+                $Activity = test_input($_POST["Activity"]);
                 // check if name only contains letters and whitespace
-                if (!preg_match("/^[a-zA-Z ]{2,40}$/",$Location)) {
-                  $LocationErr = "Only letters and white space allowed in Location"; 
+                if (!preg_match("/^[a-zA-Z ]{2,40}$/",$Activity)) {
+                  $ActivityErr = "Only letters and white space allowed in Room"; 
                 }
               }
               if (empty($_POST["UserType"])) {
@@ -70,14 +81,14 @@ try
                   $UserTypeErr = "Only letters and white space allowed in UserType"; 
                  }
               }
-              $sql = "INSERT INTO ACW (StudentID,FirstName,Surname,Location,UserType) VALUES ('$StudentID','$FirstName','$Surname','$Location','$UserType')";
+              $sql = "INSERT INTO rooms (entryID, ts, StudentID, Society, Room, booking_for, booking_end, Activity) VALUES (NULL, CURRENT_TIMESTAMP, '$StudentID', '$Society', '$Room', '$BookingFor', '$BookingTill', '$Activity')";
                if (mysqli_query($conn, $sql)) 
               {
                 alert("Submitted"); 
               }
               else
               {
-                $message="$StudentIDErr $FirstNameErr $SurnameErr $LocationErr $UserTypeErr";
+                $message="$StudentIDErr $SocietyErr $BookingForErr $RoomErr $UserTypeErr";
                 alert($message);
                 
               }

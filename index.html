@@ -16,10 +16,12 @@
     <div class="form">
       <form action= "InsertData.php" method="post" name="InsertData" class="login-form";>
         <input type="Number" min="0" max="999999999" placeholder="Student ID" name="StudentID" required/>
-        <input type="text" placeholder="First Name" name="FirstName" maxlength="20" required/>
-        <input type="text" placeholder="Surname"  name="Surname" maxlength="20" required/>
-        <input list="Location" input type="text" name="Location"maxlength="40" placeholder="Location" required>
-        <datalist id="Location">
+        <input type="text" placeholder="Society" name="Society" maxlength="20" required/>
+        <input type="datetime-local" name="BookingFor" placeholder="Booking start" required>
+        <input type="datetime-local" name="BookingTill" placeholder="Booking end" required>
+        <input type="text" placeholder="Activity" name="Activity" maxlength="20" required/>
+        <input list="Room" input type="text" name="Room"maxlength="40" placeholder="Room" required>
+        <datalist id="Room">
           <option value="Brynmor Jones Library">
           <option value="Canham Turner">
           <option value="Fenner">
