@@ -78,7 +78,7 @@ try
               else
               {
                 $message="$StudentIDErr $FirstNameErr $SurnameErr $LocationErr $UserTypeErr";
-                alert("message");
+                alert($message);
                 
               }
               mysqli_close($conn);
