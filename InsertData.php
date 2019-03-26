@@ -18,9 +18,13 @@ try
          $StudentIDErr = $FirstNameErr = $SurnameErr = $LocationErr = $UserTypeErr = "";
          $StudentID = $FirstName = $Surname = $Location = $UserType = "";
 
-          $serverName = "sql.rde.hull.ac.uk";  
-            $connectionOptions = array("Database"=>"rde_554538");
-            $conn = sqlsrv_connect($serverName, $connectionOptions);
+         $dbhost = "localhost";
+         $dbuser = "appengine";
+         $dbpass = "Test";
+         $db = "Bookings";
+         $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
+         
+         
             if (empty($_POST["StudentID"])) {
                 $StudentIDErr = "StudentID is required";
               } else {
@@ -66,39 +70,18 @@ try
                   $UserTypeErr = "Only letters and white space allowed in UserType"; 
                  }
               }
-              if(($StudentIDErr =="") && ($FirstNameErr =="") && ($SurnameErr =="") && ($LocationErr =="") && ($UserTypeErr == ""))
+              $sql = "INSERT INTO ACW (StudentID,FirstName,Surname,Location,UserType) VALUES ('$StudentID','$FirstName','$Surname','$Location','$UserType')";
+               if (mysqli_query($conn, $sql)) 
               {
-                $check="SELECT StudentID FROM ACW WHERE StudentID ='$StudentID'";
-                $check = sqlsrv_query($conn, $check);     
-                $check= sqlsrv_fetch_array($check);
-                if (empty($check['StudentID'])) {
-           $insert = "INSERT INTO ACW (Timestamp,StudentID,FirstName,Surname,Location,UserType) VALUES (SYSDATETIME(),?,?,?,?,?)";
-           $params = array($StudentID,$FirstName,$Surname,$Location,$UserType);
-           $sql = sqlsrv_query($conn, $insert, $params);
-           alert("Submitted"); 
-                }
-                else
-                {
-                  $message="$StudentID Already Exists, please use Edit Data";
-                  alert($message); 
-                }
+                alert("Submitted"); 
               }
               else
               {
                 $message="$StudentIDErr $FirstNameErr $SurnameErr $LocationErr $UserTypeErr";
-                alert($message); 
-
-               sqlsrv_close($conn);
+                alert("message");
+                
               }
-
-            if (!$sql) {
-                if (($errors = sqlsrv_errors()) != null) {
-                    foreach ($errors as $error) {
-                        echo $error['message'];
-                    }
-                }
-            }
-            sqlsrv_close($conn);
+              mysqli_close($conn);
         }  
         catch(Exception $e)
         {  
