@@ -14,10 +14,7 @@
         <p>With Hull University</p>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="AddLocation.html">Edit Location</a></li>
-            <li><a href="EditData.html">Edit Data</a></li>
             <li><a class="active" href="Fetch.php">Fetch</a></li>
-            <li><a href="Last24hrs.php">Last 24hrs</a></li>
             <li><a href="Search.html">Search</a></li>
           </ul>
 
@@ -82,8 +79,8 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
                 echo "<td>" . $row['UserType'] . "</td>";
                 echo "</tr>" ;
             }
-            mysqli_close($conn);
         }  
+        mysqli_close($conn);
         mysqli_free_result($result);
 
 ?>
