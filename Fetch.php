@@ -26,12 +26,13 @@
 
 </html>
 <?php
-try  
-        {  $serverName = "sql.rde.hull.ac.uk";  
-            $connectionOptions = array("Database"=>"rde_554538");
-            $conn = sqlsrv_connect($serverName, $connectionOptions);
-            $Fetch="SELECT * FROM ACW";
-            $result= sqlsrv_query($conn, $Fetch);
+$dbhost = "localhost";
+$dbuser = "appengine";
+$dbpass = "Test";
+$db = "Bookings";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
+            $Fetch="SELECT * FROM rooms";
+            $result = mysqli_query($conn, $Fetch);
             echo "
             <style>
             
@@ -60,35 +61,29 @@ try
         <th>ID</th>
         <th>TimeStamp</th>
         <th>StudentID</th>
-        <th>First Name</th>
-        <th>Surname</th>
-        <th>Location</th>
+        <th>Society</th>
+        <th>Room</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Activity</th>
         <th>User Type</th>
         </tr>";
-           while($row = sqlsrv_fetch_array($result)) 
+        while ($row = mysqli_fetch_array($result)) {
             {
                 echo "<tr>";
-                echo "<td>" . $row['ID'] . "</td>";
-                echo "<td>" . $row['Timestamp']->format('d-m-y H:i:s') . "</td>";
+                echo "<td>" . $row['entryID'] . "</td>";
+                echo "<td>" . $row['ts']. "</td>";
                 echo "<td>" . $row['StudentID'] . "</td>";
-                echo "<td>" . $row['FirstName'] . "</td>";
-                echo "<td>" . $row['Surname'] . "</td>";
-                echo "<td>" . $row['Location'] . "</td>";
+                echo "<td>" . $row['Society'] . "</td>";
+                echo "<td>" . $row['Room'] . "</td>";
+                echo "<td>" . $row['booking_for'] . "</td>";
+                echo "<td>" . $row['booking_end'] . "</td>";
+                echo "<td>" . $row['Activity'] . "</td>";
                 echo "<td>" . $row['UserType'] . "</td>";
                 echo "</tr>" ;
             }
-            
-            if (!$sql) {
-                if (($errors = sqlsrv_errors()) != null) {
-                    foreach ($errors as $error) {
-                        echo $error['message'];
-                    }
-                }
-            } 
-            sqlsrv_close($conn);
+            mysqli_close($conn);
         }  
-        catch(Exception $e)
-        {  
-            echo("Error!");
-        }  
+        mysqli_free_result($result);
+
 ?>
