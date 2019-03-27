@@ -15,31 +15,8 @@
 <div class="login-page">
     <div class="form">
       <form action= "Search.php" method="GET" name="Search" class="login-form">
-        <input type="Number" min="0" max="9999999999" placeholder="Student ID" name="StudentID" />
-        <input type="text" placeholder="First Name" name="FirstName"maxlength="20" />
-        <input type="text" placeholder="Surname"  name="Surname" maxlength="20" />
-        <input list="Location" input type="text" name="Location" placeholder="Location" maxlength="40" >
-        <datalist id="Location">
-          <option value="Brynmor Jones Library">
-          <option value="Canham Turner">
-          <option value="Fenner">
-          <option value="Robert Blackburn">
-          <option value="Ferens">
-          <option value="Hardy">
-          <option value="Derwent">
-          <option value="Student Central">
-          <option value="Wilberforce">
-        </datalist>
-        <div class="switch-field">
-                <input type="radio" id="switch_3_left" name="UserType" value="Student" />
-                <label for="switch_3_left">Student</label>
-                <input type="radio" id="switch_3_center" name="UserType" value="" checked/>
-                <label for="switch_3_center">Either</label>
-                   <input type="radio" id="switch_3_right" name="UserType" value="Staff" />
-                <label for="switch_3_right">Staff</label>
-              </div>
-              <input type="checkbox" id="Last 24hr" name="checkbox" value="true">
-              <label for="Last 24hr">Last 24hrs</label>
+        <input type="Number" min="0" max="999999999" placeholder="Student ID" name="StudentID"/>
+        <input type="text" placeholder="Society" name="Society" maxlength="20"/>
         <button input type="submit" value="Submit">Search</button>
       </form>
     </div>
@@ -51,10 +28,10 @@
         <p>With Hull University</p>
         <ul>
             <li><a  href="index.html">Home</a></li>
-            <li><a href="AddLocation.html">Edit Location</a></li>
+           <!-- <li><a href="AddLocation.html">Edit Location</a></li>
             <li><a href="CurrentLocation.html">Current Location</a></li>
             <li><a href="EditData.html">Edit Data</a></li>
-            <!-- <li><a href="Fetch.php">Fetch</a></li>
+             <li><a href="Fetch.php">Fetch</a></li>
             <li><a href="Last24hrs.php">Last 24hrs</a></li> -->
             <li><a class="active" href="Search.html">Search</a></li>
           </ul>

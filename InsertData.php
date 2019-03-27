@@ -10,7 +10,7 @@
   {
     echo "<script type='text/javascript'>
     alert('$msg');
-    Room='index.html';
+    location='index.html';
     </script>";
   }
 try  
@@ -46,14 +46,12 @@ try
               if (empty($_POST["BookingFor"])) {
                 $BookingForErr = "Booking Start is required";
               } else {
-                $BookingFor = test_input($_POST["BookingFor"]);
-                $BookingFor = date('Y-m-d H:i:s', $BookingFor);
+                $BookingFor = $_POST["BookingFor"];
               }
               if (empty($_POST["BookingTill"])) {
                 $BookingTillErr = "Booking Start is required";
               } else {
-                $BookingTill = test_input($_POST["BookingTill"]);
-                $BookingTill = date('Y-m-d H:i:s', $BookingTill);
+                $BookingTill = $_POST["BookingTill"];
               }
               if (empty($_POST["Room"])) {
                 $RoomErr = "Room is required";
@@ -81,10 +79,11 @@ try
                   $UserTypeErr = "Only letters and white space allowed in UserType"; 
                  }
               }
-              $sql = "INSERT INTO rooms (entryID, ts, StudentID, Society, Room, booking_for, booking_end, Activity) VALUES (NULL, CURRENT_TIMESTAMP, '$StudentID', '$Society', '$Room', '$BookingFor', '$BookingTill', '$Activity')";
+              $sql = "INSERT INTO rooms (entryID, ts, StudentID, Society, Room, booking_for, booking_end, Activity, UserType) VALUES (NULL, CURRENT_TIMESTAMP, '$StudentID', '$Society', '$Room', '$BookingFor', '$BookingTill', '$Activity','$UserType')";
                if (mysqli_query($conn, $sql)) 
               {
-                alert("Submitted"); 
+                alert("Submitted");
+
               }
               else
               {

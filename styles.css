@@ -8,7 +8,7 @@
 .form {
   position: relative;
   z-index: 1;
-  background-image: url(BackgroundBlur.jpg);
+  background-image: url();
   background-position: center center;
 	background-repeat:  no-repeat;
 	background-attachment: fixed;
@@ -18,7 +18,7 @@
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+ 
 }
 .form input {
   font-family: "Roboto", sans-serif;
@@ -58,7 +58,7 @@ html, body{
   height: 100%;
 }
 body { 
-	background-image: url(Background.jpg) ;
+	background-image: url() ;
 	background-position: center center;
 	background-repeat:  no-repeat;
 	background-attachment: fixed;
@@ -75,33 +75,6 @@ div, body{
   
 }
 
-.message {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%; 
-  height:16.5%;
-  bottom: 0; 
-  display: block;
-  position: sticky;
-  background-color: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 0;
-  padding-top: 0.1px;
-}
-.mainmessage {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%; 
-  height:16.5%;
-  bottom: 0; 
-  display: block;
-  position: fixed;
-  background-color: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 0;
-}
 /* Button*/
 button:hover{
   background:rgba(255, 255, 255, 0);
@@ -308,7 +281,7 @@ button:after{
 
 li {
     float: left;
-    width:20%;
+    width:50%;
 }
 
 li a {
