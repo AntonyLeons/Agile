@@ -1,5 +1,5 @@
 # Agile
-agile projrct
+agile project
 Install wamp for php
 create a virtualhost pointing to agile github folder
 fetch latest copy
