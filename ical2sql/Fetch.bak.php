@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="message">
-        <h1>Location Reporting</h1>
+        <h1>Location Reporting</h1>    
         <p>With Hull University</p>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -32,8 +32,8 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
             $result = mysqli_query($conn, $Fetch);
             echo "
             <style>
-
-            table, th, td
+            
+            table, th, td 
             {
             border: 4px solid black;
             border-collapse: collapse;
@@ -68,7 +68,7 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
         while ($row = mysqli_fetch_array($result)) {
             {
                 echo "<tr>";
-                echo "<td>".$row['entryID']."</td>";
+                echo "<td>" . $row['entryID'] . "</td>";
                 echo "<td>" . $row['ts']. "</td>";
                 echo "<td>" . $row['StudentID'] . "</td>";
                 echo "<td>" . $row['Society'] . "</td>";
@@ -79,7 +79,7 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
                 echo "<td>" . $row['UserType'] . "</td>";
                 echo "</tr>" ;
             }
-        }
+        }  
         mysqli_close($conn);
         mysqli_free_result($result);
 

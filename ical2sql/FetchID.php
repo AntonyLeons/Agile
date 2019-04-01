@@ -71,14 +71,14 @@ function test_input($data)
   <table>
 <tr>
 <th>ID</th>
-       <th>TimeStamp</th>
-       <th>StudentID</th>
-       <th>Society</th>
-       <th>Room</th>
-       <th>Start</th>
-       <th>End</th>
-       <th>Activity</th>
-       <th>User Type</th>
+<th>TimeStamp</th>
+<th>StudentID</th>
+<th>Society</th>
+<th>Start</th>
+<th>End</th>
+<th>Activity</th>
+<th>Room</th>
+<th>User Type</th>
 </tr>";
 if (empty($_GET["StudentID"])) {
 							 $StudentIDErr = "StudentID is required";
@@ -94,22 +94,6 @@ require_once("zapcallib.php");
 
 //$icalfile = count($argv) > 1 ? $argv[1] : "abrahamlincoln.ics";
 $icalfeed = file_get_contents("import.ics");
-$sql="DROP TABLE IF EXISTS `TEMP`;";
-$result = mysqli_query($conn, $sql);
-$sql="CREATE TABLE IF NOT EXISTS `TEMP` (
-  `entryID` varchar(20),
-  `ts` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `StudentID` varchar(20) DEFAULT NULL,
-  `Society` varchar(20) DEFAULT NULL,
-  `booking_for` timestamp NULL DEFAULT NULL,
-  `booking_end` timestamp NULL DEFAULT NULL,
-  `Activity` varchar(100) DEFAULT NULL,
-  `Room` varchar(255) DEFAULT NULL,
-  `UserType` varchar(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
-$result = mysqli_query($conn, $sql);
-$sql="INSERT TEMP SELECT * FROM rooms;";
-$result = mysqli_query($conn, $sql);
 
 // create the ical object
 $icalobj = new ZCiCal($icalfeed);
@@ -131,56 +115,43 @@ if(isset($icalobj->tree->child))
         echo "<tr>";
 			foreach($node->data as $key => $value)
 			{
+        if($k=="0")
+        {
+          echo "<td>". "</td>";
+          echo "<td>". date("d-m-Y h:i"). "</td>";
+          echo "<td>".$StudentID. "</td>";
+          echo "<td>"."null". "</td>";
+        }
           $k++;
         if($k=="1")
         {
           $k1=($value->getValues());
           $k1= ZDateHelper::fromiCaltoUnixDateTime($k1);
           $k1= ZDateHelper::toSqlDateTime($k1);
+          echo "<td>" . $k1 . "</td>";
         }
         if($k=="2")
         {
           $k2=($value->getValues());
           $k2= ZDateHelper::fromiCaltoUnixDateTime($k2);
           $k2= ZDateHelper::toSqlDateTime($k2);
+          echo "<td>" . $k2 . "</td>";
         }
         if($k=="9")
         {
           $k9=($value->getValues());
+          echo "<td>" . $k9 . "</td>";
         }
         if($k=="11")
         {
             $k11=($value->getValues());
             $k11=rtrim($k11,"*");
+            echo "<td>" . $k11 . "</td>";
+            echo "<td>" . "Timetabling" . "</td>";
         }
 			}
               echo "</tr>" ;
-              $sql = "INSERT INTO TEMP (entryID, ts, StudentID, Society, Room, booking_for, booking_end, Activity, UserType) VALUES ('', CURRENT_TIMESTAMP, '$StudentID', '', '$k11', '$k1', '$k2', '$k9','Timetabling')";
-          if  (mysqli_query($conn, $sql)){
-            }
-            else {
-            echo  mysqli_error($conn);
-            }
 		}
 	}
 }
-$Fetch="SELECT * FROM TEMP";
-$result = mysqli_query($conn, $Fetch);
-while ($row = mysqli_fetch_array($result)) {
-    {
-        echo "<tr>";
-        echo "<td>" . $row['entryID'] . "</td>";
-        echo "<td>" . $row['ts']. "</td>";
-        echo "<td>" . $row['StudentID'] . "</td>";
-        echo "<td>" . $row['Society'] . "</td>";
-        echo "<td>" . $row['Room'] . "</td>";
-        echo "<td>" . $row['booking_for'] . "</td>";
-        echo "<td>" . $row['booking_end'] . "</td>";
-        echo "<td>" . $row['Activity'] . "</td>";
-        echo "<td>" . $row['UserType'] . "</td>";
-        echo "</tr>" ;
-    }
-}
-mysqli_close($conn);
-mysqli_free_result($result);
 ?>
