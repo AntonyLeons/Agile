@@ -24,7 +24,7 @@
         <!-- <li><a href="AddLocation.html">Edit Location</a></li>
         <li><a href="CurrentLocation.html">Current Location</a></li>
         <li><a href="EditData.html">Edit Data</a></li>
-         
+
             <li><a href="Last24hrs.php">Last 24hrs</a></li> -->
         <li><a class="active" href="Search.html">Search</a></li>
     </ul>
@@ -69,13 +69,13 @@ if (($StudentIDErr == "") && $SocietyErr == "") {
   } else {
     $Fetch = "SELECT * FROM rooms WHERE ('$StudentID'='' OR StudentID = '$StudentID') AND ('$Society'='' OR Society = '$Society')  AND ts >= DATEADD(day,-1,GETDATE())";
   }
- 
+
   $result = mysqli_query($conn, $Fetch);
 
   echo "
             <style>
-            
-            table, th, td 
+
+            table, th, td
             {
             border: 4px solid black;
             border-collapse: collapse;
@@ -97,7 +97,6 @@ if (($StudentIDErr == "") && $SocietyErr == "") {
             </style>
             <table>
         <tr>
-        <th>ID</th>
         <th>TimeStamp</th>
         <th>StudentID</th>
         <th>Society</th>
@@ -109,7 +108,6 @@ if (($StudentIDErr == "") && $SocietyErr == "") {
         </tr>";
   while ($row = mysqli_fetch_array($result)) {
     echo "<tr>";
-    echo "<td>" . $row['entryID'] . "</td>";
     echo "<td>" . $row['ts'] . "</td>";
     echo "<td>" . $row['StudentID'] . "</td>";
     echo "<td>" . $row['Society'] . "</td>";
@@ -126,4 +124,4 @@ if (($StudentIDErr == "") && $SocietyErr == "") {
 }
 mysqli_close($conn);
 
-?> 
+?>
