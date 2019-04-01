@@ -71,16 +71,16 @@ function test_input($data)
 <th>Room</th>
 <th>User Type</th>
 </tr>";
-if (empty($_POST["StudentID"])) {
+if (empty($_GET["StudentID"])) {
 							 $StudentIDErr = "StudentID is required";
 						 } else {
-							 $StudentID = test_input($_POST["StudentID"]);
+							 $StudentID = test_input($_GET["StudentID"]);
 							 // check if name only contains letters and whitespace
 							 if (!preg_match("/^[0-9][0-9]{2,10}$/",$StudentID)) {
 								 $StudentIDErr = "Only Numbers allowed in StudentID";
 							 }
 						 }
-	file_put_contents("import.ics", fopen("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}", 'r'));
+file_put_contents("import.ics", fopen("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}", 'r'));
 
 require_once("zapcallib.php");
 
