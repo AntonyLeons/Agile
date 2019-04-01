@@ -70,6 +70,7 @@ function test_input($data)
   </style>
   <table>
 <tr>
+<th>ID</th>
 <th>TimeStamp</th>
 <th>StudentID</th>
 <th>Society</th>
@@ -100,6 +101,7 @@ $icalobj = new ZCiCal($icalfeed);
 //echo "Number of events found: " . $icalobj->countEvents() . "<br />";
 
 $ecount = 0;
+
 // read back icalendar data that was just parsed
 if(isset($icalobj->tree->child))
 {
@@ -115,6 +117,7 @@ if(isset($icalobj->tree->child))
 			{
         if($k=="0")
         {
+          echo "<td>". "</td>";
           echo "<td>". date("d-m-Y h:i"). "</td>";
           echo "<td>".$StudentID. "</td>";
           echo "<td>"."null". "</td>";
