@@ -71,14 +71,14 @@ function test_input($data)
   <table>
 <tr>
 <th>ID</th>
-<th>TimeStamp</th>
-<th>StudentID</th>
-<th>Society</th>
-<th>Start</th>
-<th>End</th>
-<th>Activity</th>
-<th>Room</th>
-<th>User Type</th>
+       <th>TimeStamp</th>
+       <th>StudentID</th>
+       <th>Society</th>
+       <th>Room</th>
+       <th>Start</th>
+       <th>End</th>
+       <th>Activity</th>
+       <th>User Type</th>
 </tr>";
 if (empty($_GET["StudentID"])) {
 							 $StudentIDErr = "StudentID is required";
@@ -131,39 +131,27 @@ if(isset($icalobj->tree->child))
         echo "<tr>";
 			foreach($node->data as $key => $value)
 			{
-        if($k=="0")
-        {
-          echo "<td>". "</td>";
-          echo "<td>". date("d-m-Y h:i"). "</td>";
-          echo "<td>".$StudentID. "</td>";
-          echo "<td>"."null". "</td>";
-        }
           $k++;
         if($k=="1")
         {
           $k1=($value->getValues());
           $k1= ZDateHelper::fromiCaltoUnixDateTime($k1);
           $k1= ZDateHelper::toSqlDateTime($k1);
-          echo "<td>" . $k1 . "</td>";
         }
         if($k=="2")
         {
           $k2=($value->getValues());
           $k2= ZDateHelper::fromiCaltoUnixDateTime($k2);
           $k2= ZDateHelper::toSqlDateTime($k2);
-          echo "<td>" . $k2 . "</td>";
         }
         if($k=="9")
         {
           $k9=($value->getValues());
-          echo "<td>" . $k9 . "</td>";
         }
         if($k=="11")
         {
             $k11=($value->getValues());
             $k11=rtrim($k11,"*");
-            echo "<td>" . $k11 . "</td>";
-            echo "<td>" . "Timetabling" . "</td>";
         }
 			}
               echo "</tr>" ;
@@ -176,4 +164,23 @@ if(isset($icalobj->tree->child))
 		}
 	}
 }
+$Fetch="SELECT * FROM TEMP";
+$result = mysqli_query($conn, $Fetch);
+while ($row = mysqli_fetch_array($result)) {
+    {
+        echo "<tr>";
+        echo "<td>" . $row['entryID'] . "</td>";
+        echo "<td>" . $row['ts']. "</td>";
+        echo "<td>" . $row['StudentID'] . "</td>";
+        echo "<td>" . $row['Society'] . "</td>";
+        echo "<td>" . $row['Room'] . "</td>";
+        echo "<td>" . $row['booking_for'] . "</td>";
+        echo "<td>" . $row['booking_end'] . "</td>";
+        echo "<td>" . $row['Activity'] . "</td>";
+        echo "<td>" . $row['UserType'] . "</td>";
+        echo "</tr>" ;
+    }
+}
+mysqli_close($conn);
+mysqli_free_result($result);
 ?>
