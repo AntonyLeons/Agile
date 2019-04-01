@@ -175,8 +175,8 @@ class ZDateHelper {
 	{
 		date_default_timezone_set('GMT');
 		if($t == 0)
-			return gmdate('Y-m-d H:i',self::now());
-		return gmdate('d-m-Y H:i', $t);
+			return gmdate('Y-m-d H:i:s',self::now());
+		return gmdate('Y-m-d H:i:s', $t);
 	}
 
 	/**
