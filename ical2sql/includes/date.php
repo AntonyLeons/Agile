@@ -26,7 +26,7 @@ class ZDateHelper {
 	 *
 	 * @param int $year is between 1 and 32767 inclusive
 	 *
-	 * @return int 
+	 * @return int
 	 */
 	static function DayInMonth($month, $year) {
 	   $daysInMonth = array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
@@ -175,8 +175,8 @@ class ZDateHelper {
 	{
 		date_default_timezone_set('GMT');
 		if($t == 0)
-			return gmdate('Y-m-d H:i:s',self::now());
-		return gmdate('Y-m-d H:i:s', $t);
+			return gmdate('Y-m-d H:i',self::now());
+		return gmdate('d-m-Y H:i', $t);
 	}
 
 	/**
@@ -198,7 +198,7 @@ class ZDateHelper {
 	 * Format iCal date-time string to Unix timestamp
 	 *
 	 * @param string $datetime in iCal time format ( YYYYMMDD or YYYYMMDDTHHMMSS or YYYYMMDDTHHMMSSZ )
-	 * 
+	 *
 	 * @return int Unix timestamp
 	 */
 	static function fromiCaltoUnixDateTime($datetime) {
@@ -244,10 +244,10 @@ class ZDateHelper {
 
 	/**
 	 * Convert iCal duration string to # of seconds
-	 * 
+	 *
 	 * @param string $duration iCal duration string
 	 *
-	 * return int 
+	 * return int
 	 */
 	static function iCalDurationtoSeconds($duration) {
 		$secs = 0;
@@ -300,7 +300,7 @@ class ZDateHelper {
 		$dayend = self::addDate($daystart, 0,0,0,0,1,0);
 
 		$end = max($begin, $end); // $end can't be less than $begin
-		$inday = 
+		$inday =
 			($daystart <= $begin && $begin < $dayend)
 			||($daystart < $end && $end < $dayend)
 			||($begin <= $daystart && $end > $dayend)
@@ -357,13 +357,13 @@ class ZDateHelper {
 	 * @param int $hour add or subtract hours from date
 	 *
 	 * @param int $min add or subtract minutes from date
-	 * 
+	 *
 	 * @param int $sec add or subtract seconds from date
-	 * 
+	 *
 	 * @param int $month add or subtract months from date
-	 * 
+	 *
 	 * @param int $day add or subtract days from date
-	 * 
+	 *
 	 * @param int $year add or subtract years from date
 	 *
 	 * @param string $tzid PHP recognized timezone (default is UTC)
@@ -427,7 +427,7 @@ class ZDateHelper {
 
 	/**
 	 * Convert UTC date-time to local date-time
-	 * 
+	 *
 	 * @param string $sqldate SQL date-time string
 	 *
 	 * @param string $tzid PHP recognized timezone (default is "UTC")
@@ -452,7 +452,7 @@ class ZDateHelper {
 
 	/**
 	 * Convert local date-time to UTC date-time
-	 * 
+	 *
 	 * @param string $sqldate SQL date-time string
 	 *
 	 * @param string $tzid PHP recognized timezone (default is "UTC")
@@ -484,7 +484,7 @@ class ZDateHelper {
 	 *
 	 * Examples of relative dates are "-2y" for 2 years ago, "18m"
 	 * for 18 months after today. Relative date uses "y", "m" and "d" for
-	 * year, month and day. Relative date can be combined into comma 
+	 * year, month and day. Relative date can be combined into comma
 	 * separated list, i.e., "-1y,-1d" for 1 year and 1 day ago.
 	 *
 	 * @param string $date relative date string (i.e. "1y" for 1 year from today)

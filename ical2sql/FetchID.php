@@ -37,6 +37,14 @@ function test_input($data)
     location='index.html';
     </script>";
   }
+
+  $dbhost = "localhost";
+  $dbuser = "appengine";
+  $dbpass = "Test";
+  $db = "bookings";
+  $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
+
+
   echo "
   <style>
 
@@ -81,7 +89,6 @@ if (empty($_GET["StudentID"])) {
 							 }
 						 }
 file_put_contents("import.ics", fopen("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}", 'r'));
-
 require_once("zapcallib.php");
 
 //$icalfile = count($argv) > 1 ? $argv[1] : "abrahamlincoln.ics";
@@ -108,17 +115,36 @@ if(isset($icalobj->tree->child))
 			{
         if($k=="0")
         {
-          echo "<td>". date("d-m-Y h:i A"). "</td>";
+          echo "<td>". date("d-m-Y h:i"). "</td>";
           echo "<td>".$StudentID. "</td>";
           echo "<td>"."null". "</td>";
         }
           $k++;
-        if ($k=="1"||$k=="2"||$k=="9"||$k=="11"){
-					echo "<td>" . $value->getValues() . "</td>";
+        if($k=="1")
+        {
+          $k1=($value->getValues());
+          $k1= ZDateHelper::fromiCaltoUnixDateTime($k1);
+          $k1= ZDateHelper::toSqlDateTime($k1);
+          echo "<td>" . $k1 . "</td>";
+        }
+        if($k=="2")
+        {
+          $k2=($value->getValues());
+          $k2= ZDateHelper::fromiCaltoUnixDateTime($k2);
+          $k2= ZDateHelper::toSqlDateTime($k2);
+          echo "<td>" . $k2 . "</td>";
+        }
+        if($k=="9")
+        {
+          $k9=($value->getValues());
+          echo "<td>" . $k9 . "</td>";
         }
         if($k=="11")
         {
-          echo "<td>" . "Timetabling" . "</td>";
+            $k11=($value->getValues());
+            $k11=rtrim($k11,"*");
+            echo "<td>" . $k11 . "</td>";
+            echo "<td>" . "Timetabling" . "</td>";
         }
 			}
               echo "</tr>" ;
