@@ -41,7 +41,7 @@ $InputtedRoomErr ="";
 
 
 
-$sql = "UPDATE `roomcontent` SET `IsBooked` = '1', `LatestBooking` = '$InputtedTime', `BookedDuration` = '$InputtedDuration'  WHERE `roomcontent`.`Room` LIKE '$InputtedRoom'";
+$sql = "UPDATE `roomcontent` SET `IsBooked` = 'Yes', `LatestBooking` = '$InputtedTime', `BookedDuration` = '$InputtedDuration'  WHERE `roomcontent`.`Room` LIKE '$InputtedRoom'";
 
 
 
