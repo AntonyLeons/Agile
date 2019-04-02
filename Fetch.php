@@ -84,7 +84,8 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
                 echo "</tr>" ;
             }
         }
-        mysqli_close($conn);
         mysqli_free_result($result);
+        mysqli_close($conn);
+
 
 ?>

@@ -89,6 +89,12 @@ if (empty($_GET["StudentID"])) {
 								 $StudentIDErr = "Only Numbers allowed in StudentID";
 							 }
 						 }
+             if ($_GET["Selection"])  {
+              $Selection = test_input($_GET["Selection"]);
+               if (!preg_match("/^[a-zA-Z ]{0,7}$/",$Selection)) {
+                $SelectionErr = "Invalid Selection";
+               }
+             }
 file_put_contents("import.ics", fopen("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}", 'r'));
 require_once("zapcallib.php");
 
@@ -164,8 +170,21 @@ if(isset($icalobj->tree->child))
 		}
 	}
 }
+if($Selection=='Now')
+{
 $Fetch="SELECT * FROM TEMP WHERE StudentID LIKE '$StudentID' AND booking_for > CURRENT_TIMESTAMP  ORDER BY `temp`.`booking_for` ASC";
 $result = mysqli_query($conn, $Fetch);
+}
+else if($Selection=='All')
+{
+  $Fetch="SELECT * FROM TEMP WHERE StudentID LIKE '$StudentID' ORDER BY `temp`.`booking_for` ASC";
+  $result = mysqli_query($conn, $Fetch);
+}
+else if($Selection=='Week')
+{
+$Fetch="SELECT * FROM TEMP WHERE StudentID LIKE '$StudentID' AND booking_for > (SELECT DATE_ADD(CURDATE(), INTERVAL - WEEKDAY(CURDATE()) DAY))  ORDER BY `temp`.`booking_for` ASC";
+$result = mysqli_query($conn, $Fetch);
+}
 while ($row = mysqli_fetch_array($result)) {
     {
         echo "<tr>";
@@ -181,6 +200,7 @@ while ($row = mysqli_fetch_array($result)) {
         echo "</tr>" ;
     }
 }
-mysqli_close($conn);
 mysqli_free_result($result);
+mysqli_close($conn);
+
 ?>
