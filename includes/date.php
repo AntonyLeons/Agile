@@ -131,7 +131,7 @@ class ZDateHelper {
 	 *
 	 * @return bool
 	 */
-	static function isPast($date, $tzid = "UTC") {
+	static function isPast($date, $tzid = "BST") {
 		$dtz = new DateTimeZone($tzid);
 		$dt = new DateTime("now", $dtz);
 		$now = time() + $dtz->getOffset($dt);
