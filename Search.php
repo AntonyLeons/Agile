@@ -14,8 +14,8 @@
         <p>With Hull University</p>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="Fetch.php">Fetch</a></li>
-            <li><a href="Search.html">Search</a></li>
+            <li><a href="Fetch.php">Fetch</a></li>
+            <li><a class="active" href="Search.html">Search</a></li>
           </ul>
 
 </div>
@@ -164,7 +164,7 @@ if(isset($icalobj->tree->child))
 		}
 	}
 }
-$Fetch="SELECT * FROM TEMP";
+$Fetch="SELECT * FROM TEMP WHERE StudentID LIKE '$StudentID'";
 $result = mysqli_query($conn, $Fetch);
 while ($row = mysqli_fetch_array($result)) {
     {
