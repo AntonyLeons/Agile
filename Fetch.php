@@ -55,6 +55,7 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
             </style>
             <table>
         <tr>
+        <th>ID</th>
         <th>TimeStamp</th>
         <th>StudentID</th>
         <th>Society</th>
@@ -67,6 +68,7 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
         while ($row = mysqli_fetch_array($result)) {
             {
                 echo "<tr>";
+                echo "<td>".$row['entryID']."</td>";
                 echo "<td>" . $row['ts']. "</td>";
                 echo "<td>" . $row['StudentID'] . "</td>";
                 echo "<td>" . $row['Society'] . "</td>";

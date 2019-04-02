@@ -1,0 +1,6 @@
+{
+"require": {
+        "liliumdev/icalendar": "0.1.0"
+
+    }
+}
