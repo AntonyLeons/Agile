@@ -18,7 +18,7 @@
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
-
+ 
 }
 .form input {
   font-family: "Roboto", sans-serif;
@@ -52,12 +52,12 @@
 body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;      
 }
 html, body{
   height: 100%;
 }
-body {
+body { 
 	background-image: url() ;
 	background-position: center center;
 	background-repeat:  no-repeat;
@@ -65,14 +65,14 @@ body {
 	background-size:  cover;
   background-color: #999;
   text-align:center;
-
+  
 }
 
 div, body{
   margin: 0;
   padding: 0;
   font-family: exo, sans-serif;
-
+  
 }
 
 /* Button*/
@@ -241,11 +241,11 @@ button:after{
     padding: 0.1em;
     color:white;
   }
-
+  
   input[type=checkbox] {
     display: none;
   }
-
+  
   input[type=checkbox] + label:before {
     content: "\2714";
     border: 0.1em solid rgb(255, 255, 255);
@@ -260,17 +260,17 @@ button:after{
     color: transparent;
     transition: .2s;
   }
-
+  
   input[type=checkbox] + label:active:before {
     transform: scale(0);
   }
-
+  
   input[type=checkbox]:checked + label:before {
     background-color: #1AAB8A;
     border-color: #1AAB8A;
     color: #fff;
   }
-
+  
    /* navbar*/
    ul {
     list-style-type: none;
