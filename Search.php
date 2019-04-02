@@ -164,7 +164,7 @@ if(isset($icalobj->tree->child))
 		}
 	}
 }
-$Fetch="SELECT * FROM TEMP WHERE StudentID LIKE '$StudentID' ORDER BY `temp`.`booking_for` ASC";
+$Fetch="SELECT * FROM TEMP WHERE StudentID LIKE '$StudentID' AND booking_for > CURRENT_TIMESTAMP  ORDER BY `temp`.`booking_for` ASC";
 $result = mysqli_query($conn, $Fetch);
 while ($row = mysqli_fetch_array($result)) {
     {
