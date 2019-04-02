@@ -34,6 +34,8 @@ $db = "Bookings";
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
             $Fetch="SELECT * FROM roomcontent";
             $result = mysqli_query($conn, $Fetch);
+
+
             echo "
             <style>
 
