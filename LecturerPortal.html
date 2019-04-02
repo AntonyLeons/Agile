@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Room Booking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+<link rel="shortcut icon" type="image/png" href="https://www.hull.ac.uk/site-elements/img/favicon/favicon-57.png"/>
+  <script src="main.js"></script>
+</head>
+<body>
+
+<div class="login-page">
+    <div class="form">
+      <form action= "Book.php" method="post" name="Book" class="login-form";>
+        <input type="Number" min="0" max="999999999" placeholder="Staff ID" name="StudentID" required/>
+        <input type="datetime-local" name="BookingFor" placeholder="Booking start" required/>
+        <input type="Number" min="0" max="999999999" placeholder="Duration" name="FormDuration" required/>
+        <input list="Room" input type="text" name="Room"maxlength="40" placeholder="Room" required>
+        <button input type="submit" value="submit"> Book Room</button>
+      </form>
+    </div>
+  </div>
+  </body>
+      <div class="mainmessage">
+        <h1>Room Booking</h1>
+        <p>With Hull University</p>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="LecturerRoomFetch.php">Find Avalible Rooms</a></li>
+            <li><a href="Search.html">My Timetable</a></li>
+          </ul>
+
+</div>
+</html>

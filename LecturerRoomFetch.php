@@ -32,8 +32,10 @@ $dbuser = "appengine";
 $dbpass = "Test";
 $db = "Bookings";
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
-            $Fetch="SELECT * FROM rooms";
+            $Fetch="SELECT * FROM roomcontent";
             $result = mysqli_query($conn, $Fetch);
+
+
             echo "
             <style>
 
@@ -59,32 +61,36 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
             </style>
             <table>
         <tr>
-        <th>ID</th>
-        <th>TimeStamp</th>
-        <th>StudentID</th>
-        <th>Society</th>
         <th>Room</th>
-        <th>Start</th>
-        <th>End</th>
-        <th>Activity</th>
-        <th>User Type</th>
+        <th>IsBooked</th>
+        <th>Disabled Access?</th>
+
+        <th>Projector? </th>
+        <th>Latest Booking</th>
+        <th>Duration Of Booking</th>
+        <th>Capacity</th>
+        <th>Building</th>
+        <th>Computer Lab?</th>
+        <th>Chemical Lab?</th>
         </tr>";
+
         while ($row = mysqli_fetch_array($result)) {
             {
                 echo "<tr>";
-                echo "<td>".$row['entryID']."</td>";
-                echo "<td>" . $row['ts']. "</td>";
-                echo "<td>" . $row['StudentID'] . "</td>";
-                echo "<td>" . $row['Society'] . "</td>";
-                echo "<td>" . $row['Room'] . "</td>";
-                echo "<td>" . $row['booking_for'] . "</td>";
-                echo "<td>" . $row['booking_end'] . "</td>";
-                echo "<td>" . $row['Activity'] . "</td>";
-                echo "<td>" . $row['UserType'] . "</td>";
+                echo "<td>".$row['Room']."</td>";
+                echo "<td>" . $row['IsBooked']. "</td>";
+                echo "<td>" . $row['IsDisabledAccess'] . "</td>";
+
+                echo "<td>" . $row['IsProjector'] . "</td>";
+                echo "<td>" . $row['LatestBooking'] . "</td>";
+                echo "<td>" . $row['BookedDuration'] . "</td>";
+                echo "<td>" . $row['RoomCapacity'] . "</td>";
+                echo "<td>" . $row['RoomBuilding'] . "</td>";
+                echo "<td>" . $row['IsComputerLab'] . "</td>";
+                echo "<td>" . $row['IsChemicalLab'] . "</td>";
                 echo "</tr>" ;
             }
         }
         mysqli_close($conn);
         mysqli_free_result($result);
-
 ?>
