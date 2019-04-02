@@ -1,4 +1,4 @@
-# Agile
+# Agile [![Build Status](https://travis-ci.com/Openanttony/Agile.svg?token=iEHPmhnrfp4VatGpB9LT&branch=master)](https://travis-ci.com/Openanttony/Agile)
 * agile project
 * Install WAMP for PHP
 * create a virtualhost pointing to agile Github folder
@@ -13,3 +13,4 @@
 * IF a branch is merged get update from master before opening a pull request
 * ATOM is the recommended editor
 * Open issues if you spot an issue with the code
+* Travis is Continuous Integration which checks PHP for syntax errors
