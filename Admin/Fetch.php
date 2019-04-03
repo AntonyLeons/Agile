@@ -16,8 +16,8 @@
         <h2>With Hull University</h2>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="Fetch.php">Find Avalible Rooms</a></li>
-            <li><a href="Search.html">My Timetable</a></li>
+            <li><a class="active" href="Fetch.php">Fetch</a></li>
+            <li><a href="Search.html">Search</a></li>
           </ul>
 
 </div>
@@ -34,10 +34,8 @@ $dbuser = "appengine";
 $dbpass = "Test";
 $db = "Bookings";
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
-            $Fetch="SELECT * FROM roomcontent";
+            $Fetch="SELECT * FROM rooms";
             $result = mysqli_query($conn, $Fetch);
-
-
             echo "
             <style>
 
@@ -52,11 +50,9 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
             }
             table tr:nth-child(even) {
                 background-color: rgba(187, 187, 187, 0.9);
-                color: black;
             }
             table tr:nth-child(odd) {
                background-color: rgba(255, 255, 255, 0.9);
-               color: black;
             }
             table th {
                 background-color: black;
@@ -65,36 +61,33 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
             </style>
             <table>
         <tr>
+        <th>ID</th>
+        <th>TimeStamp</th>
+        <th>StudentID</th>
+        <th>Society</th>
         <th>Room</th>
-        <th>IsBooked</th>
-        <th>Disabled Access?</th>
-
-        <th>Projector? </th>
-        <th>Latest Booking</th>
-        <th>Duration Of Booking</th>
-        <th>Capacity</th>
-        <th>Building</th>
-        <th>Computer Lab?</th>
-        <th>Chemical Lab?</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Activity</th>
+        <th>User Type</th>
         </tr>";
-
         while ($row = mysqli_fetch_array($result)) {
             {
                 echo "<tr>";
-                echo "<td>".$row['Room']."</td>";
-                echo "<td>" . $row['IsBooked']. "</td>";
-                echo "<td>" . $row['IsDisabledAccess'] . "</td>";
-
-                echo "<td>" . $row['IsProjector'] . "</td>";
-                echo "<td>" . $row['LatestBooking'] . "</td>";
-                echo "<td>" . $row['BookedDuration'] . "</td>";
-                echo "<td>" . $row['RoomCapacity'] . "</td>";
-                echo "<td>" . $row['RoomBuilding'] . "</td>";
-                echo "<td>" . $row['IsComputerLab'] . "</td>";
-                echo "<td>" . $row['IsChemicalLab'] . "</td>";
+                echo "<td>".$row['entryID']."</td>";
+                echo "<td>" . $row['ts']. "</td>";
+                echo "<td>" . $row['StudentID'] . "</td>";
+                echo "<td>" . $row['Society'] . "</td>";
+                echo "<td>" . $row['Room'] . "</td>";
+                echo "<td>" . $row['booking_for'] . "</td>";
+                echo "<td>" . $row['booking_end'] . "</td>";
+                echo "<td>" . $row['Activity'] . "</td>";
+                echo "<td>" . $row['UserType'] . "</td>";
                 echo "</tr>" ;
             }
         }
-        mysqli_close($conn);
         mysqli_free_result($result);
+        mysqli_close($conn);
+
+
 ?>

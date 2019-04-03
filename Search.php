@@ -61,9 +61,11 @@ function test_input($data)
   }
   table tr:nth-child(even) {
       background-color: rgba(187, 187, 187, 0.9);
+      color: black;
   }
   table tr:nth-child(odd) {
      background-color: rgba(255, 255, 255, 0.9);
+     color: black;
   }
   table th {
       background-color: black;

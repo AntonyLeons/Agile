@@ -13,11 +13,11 @@
 <body>
 <div class="message">
         <h1>Location Reporting</h1>
-        <p>With Hull University</p>
+        <h2>With Hull University</h2>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="Fetch.php">Fetch</a></li>
-            <li><a href="Search.html">Search</a></li>
+            <li><a class="active" href="Fetch.php">Find Avalible Rooms</a></li>
+            <li><a href="Search.html">My Timetable</a></li>
           </ul>
 
 </div>
@@ -52,9 +52,11 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
             }
             table tr:nth-child(even) {
                 background-color: rgba(187, 187, 187, 0.9);
+                color: black;
             }
             table tr:nth-child(odd) {
                background-color: rgba(255, 255, 255, 0.9);
+               color: black;
             }
             table th {
                 background-color: black;
