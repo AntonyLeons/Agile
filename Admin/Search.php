@@ -16,7 +16,7 @@
         <h2>With Hull University</h2>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="Fetch.php">Fetch</a></li>
+            <li><a href="Fetch.php">Find Avalible Rooms</a></li>
             <li><a class="active" href="Search.html">Search</a></li>
           </ul>
 
