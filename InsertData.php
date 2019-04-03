@@ -16,8 +16,8 @@ require_once("zapcallib.php");
   }
 try
         {
-         $StudentIDErr = $SocietyErr = $BookingForErr = $RoomErr = $UserTypeErr = $BookingTillErr = "";
-         $StudentID = $Society = $BookingFor = $Room = $UserType = $Activity = $BookingTill = "";
+         $StudentIDErr = $SocietyErr = $BookingForErr = $RoomErr = $UserTypeErr = $BookingTillErr = $PastErr = $Past2Err = "";
+         $StudentID = $Society = $BookingFor = $Room = $UserType = $Activity = $BookingTill = $Past = $Past2 = "";
 
          $dbhost = "localhost";
          $dbuser = "appengine";
@@ -50,7 +50,7 @@ try
                 $BookingFor = $_POST["BookingFor"];
               }
               if (empty($_POST["BookingTill"])) {
-                $BookingTillErr = "Booking Start is required";
+                $BookingTillErr = "Booking End is required";
               } else {
                 $BookingTill = $_POST["BookingTill"];
               }
@@ -80,15 +80,20 @@ try
                   $UserTypeErr = "Only letters and white space allowed in UserType";
                  }
               }
-              $BookingForp=ZDateHelper::tounixdate($BookingFor);
-              $Past=ZDateHelper::isPast($BookingForp);
-              $BookingTillp=ZDateHelper::tounixdate($BookingTill);
-              $Past2=ZDateHelper::isPast($BookingTillp);
-              if($Past==1 ||$Past2==1)
+              // $BookingTillp=ZDateHelper::tounixdate($BookingTill);
+              // $Past2=ZDateHelper::isPast($BookingTillp);
+              // $BookingForp=ZDateHelper::tounixdate($BookingFor);
+              // $Past=ZDateHelper::isPast($BookingForp);
+
+              if($Past==1)
               {
-                $Past="DATE OR TIME IS IN THE PAST";
+                $PastErr="BOOKING START DATE OR TIME IS IN THE PAST";
               }
-              if(($StudentIDErr =="") && ($SocietyErr =="") && ($BookingForErr =="") && ($BookingTillErr =="") && ($Past == "") && ($Past2 == "") && ($UserTypeErr == ""))
+              if($Past2==1)
+              {
+                $Past2Err="BOOKING END DATE OR TIME IS IN THE PAST";
+              }
+              if(($StudentIDErr =="") && ($SocietyErr =="") && ($BookingForErr =="") && ($BookingTillErr =="") && ($PastErr == "") && ($Past2Err == "") && ($UserTypeErr == ""))
               {
               $sql = "INSERT INTO rooms (entryID, ts, StudentID, Society, Room, booking_for, booking_end, Activity, UserType) VALUES (NULL, CURRENT_TIMESTAMP, '$StudentID', '$Society', '$Room', '$BookingFor', '$BookingTill', '$Activity','$UserType')";
                if (mysqli_query($conn, $sql))
@@ -99,7 +104,7 @@ try
             }
               else
               {
-                $message="$StudentIDErr $SocietyErr $BookingForErr $RoomErr $UserTypeErr $Past";
+                $message="$StudentIDErr $SocietyErr $BookingForErr $RoomErr $UserTypeErr $Past1Err $Past2Err";
                 alert($message);
 
               }
