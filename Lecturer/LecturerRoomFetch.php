@@ -13,7 +13,7 @@
 <body>
 <div class="message">
         <h1>Location Reporting</h1>
-        <p>With Hull University</p>
+        <h2>With Hull University</h2>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a class="active" href="Fetch.php">Fetch</a></li>
