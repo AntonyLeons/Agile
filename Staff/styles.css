@@ -1,101 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
-.login-page {
-  width: 360px;
-  padding: 8% 0 0;
-  margin: auto;
-}
-.form {
-  position: relative;
-  z-index: 1;
-  background-image: url();
-  background-position: center center;
-	background-repeat:  no-repeat;
-	background-attachment: fixed;
-	background-size:  cover;
-	background-color: #999;
-  max-width: 360px;
-  margin: 0 auto 100px;
-  padding: 45px;
-  text-align: center;
- 
-}
-.form input {
-  font-family: "Roboto", sans-serif;
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-.form button{
-  background:#1AAB8A;
-  color:#fff;
-  border:none;
-  position:relative;
-  height:60px;
-  font-size:1.6em;
-  padding:0 2em;
-  cursor:pointer;
-  transition:800ms ease all;
-  outline:none;
-  width:100%;
-}
-.form button:hover,.form button:active,.form button:focus,.button:hover:before,button:hover:after {
-    width:100%;
-    transition:800ms ease all;
-}
 
-body {
-  font-family: "Roboto", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;      
-}
-html, body{
-  height: 100%;
-}
-body { 
-	background-image: url() ;
-	background-position: center center;
-	background-repeat:  no-repeat;
-	background-attachment: fixed;
-	background-size:  cover;
-  background-color: #999;
-  text-align:center;
-  
-}
-
-div, body{
-  margin: 0;
-  padding: 0;
-  font-family: exo, sans-serif;
-  
-}
-
-/* Button*/
-button:hover{
-  background:rgba(255, 255, 255, 0);
-  color:#1AAB8A;
-}
-button:before,button:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:4px;
-  width:0;
-  background: #1AAB8A;
-  transition:400ms ease all;
-}
-button:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
 /* Second radio button*/
 .switch-field {
   font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
@@ -233,44 +138,8 @@ button:after{
   -o-transition: left 0.15s ease-out;
   transition: left 0.15s ease-out;
 }
-  /* checkbox */
-  input[type=checkbox] + label {
-    display: block;
-    margin-bottom: 0.6em;
-    cursor: pointer;
-    padding: 0.1em;
-    color:white;
-  }
-  
-  input[type=checkbox] {
-    display: none;
-  }
-  
-  input[type=checkbox] + label:before {
-    content: "\2714";
-    border: 0.1em solid rgb(255, 255, 255);
-    border-radius: 0.2em;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    padding-left: 0.2em;
-    padding-bottom: 0.3em;
-    margin-right: 0.2em;
-    vertical-align: bottom;
-    color: transparent;
-    transition: .2s;
-  }
-  
-  input[type=checkbox] + label:active:before {
-    transform: scale(0);
-  }
-  
-  input[type=checkbox]:checked + label:before {
-    background-color: #1AAB8A;
-    border-color: #1AAB8A;
-    color: #fff;
-  }
-  
+
+
    /* navbar*/
    ul {
     list-style-type: none;
@@ -298,4 +167,255 @@ li a:hover:not(.active) {
 
 .active {
     background-color: #1AAB8A;
+}
+
+$bezier: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$time: 300ms;
+
+$base-font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@mixin animated(
+  $time: 300ms,
+  $fillmode: both,
+  $count: 1) {
+  animation-duration: $time;
+  animation-fill-mode: $fillmode;
+  animation-iteration-count: $count;
+}
+
+body {
+  background-color: #363E4A;
+  font-family: $base-font-family;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: "Texta", $base-font-family;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 24px;
+  color: rgba(255, 255, 255, .4);
+}
+
+.container {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 20px 16px 40px 16px;
+  transform: translateZ(0);
+  text-align: center;
+}
+
+.form-footer {
+  margin-top: 2em;
+}
+
+.ui-input {
+  position: relative;
+  padding: 0;
+  border: 0;
+}
+
+.ui-input input {
+  font-family: $base-font-family;
+  border: 0;
+  background: none;
+  padding: 16px 0 16px 0;
+  font-size: 24px;
+  outline: 0;
+  width: 100%;
+  tap-highlight-color: rgba(0,0,0,0);
+  touch-callout: none;
+}
+
+.ui-input input + label {
+  position: relative;
+  display: block;
+  padding: 8px 0 8px 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: .0875em;
+  font-weight: 500;
+  text-align: left;
+
+  &::before, &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+  }
+
+  &::before {
+    background-color: rgba(255, 255, 255, .2);
+  }
+
+  &::after {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform $time $bezier;
+    background-color: #6EB1FF;
+    height: 2px;
+  }
+
+  span {
+    position: relative;
+    color: rgba(255, 255, 255, .2);
+    transition: color $time $bezier;
+
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      overflow: hidden;
+      left: 0;
+      transform: scaleX(1);
+      white-space: nowrap;
+      color: #fff;
+
+      background-image: linear-gradient(to right,
+          #4A90E2 50%,
+          rgba(255,255,255,0) 0%);
+      background-position: 100% 50%;
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      backface-visibility: hidden;
+      perspective: 1000;
+      transform: translateZ(0);
+
+      transition: background-position $time $bezier;
+    }
+  }
+}
+
+.ui-input input:focus,
+.ui-input input.error,
+.ui-input input:invalid,
+.ui-input input.filled {
+
+  & + label {
+
+    &::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    span::after {
+      //color: #4A90E2;
+      background-image: linear-gradient(to right,
+      rgba(255,255,255,1) 50%,
+      rgba(255,255,255,0) 0%);
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.ui-input input.filled {
+  color: #ffffff;
+
+  & + label {
+
+    &::after {
+      background-color: #ffffff;
+    }
+
+    span::after {
+      background-image: linear-gradient(to right,
+        #ffffff 50%,
+        rgba(255,255,255,0) 0%);
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.ui-input input:focus {
+  color: #6EB1FF;
+
+  & + label {
+
+    &::after {
+      background-color: #6EB1FF;
+    }
+
+    span::after {
+      background-image: linear-gradient(to right,
+        #6EB1FF 50%,
+        rgba(255,255,255,0) 0%);
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.ui-input input.error,
+.ui-input input:invalid {
+  color: #E66161;
+
+  & + label {
+
+    &::after {
+      background-color: #E66161;
+    }
+
+    span::after {
+      background-image: linear-gradient(to right,
+        #E66161 50%,
+        rgba(255,255,255,0) 0%);
+      background-position: 0% 50%;
+    }
+  }
+}
+
+.btn {
+  border: 0;
+  background-color: #50617A;
+  padding: 18px 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: .0875em;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: $base-font-family;
+  border-radius: 100px;
+  outline: 0;
+  transition: background-color $time $bezier,
+              color $time $bezier;
+}
+
+.btn:focus,.btn:active,
+.btn:hover {
+  background-color: #6EB1FF;
+  color: white;
+}
+
+.__first, .__second, .__third, .__fourth, .__fith,.__sixth, .__seventh {
+  animation-name: fadeIn;
+  animation-duration: 180ms;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+}
+
+.__first { animation-delay: 0; }
+.__second { animation-delay: 80ms; }
+.__third { animation-delay: 180ms; }
+.__fourth { animation-delay: 360ms; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -25%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
