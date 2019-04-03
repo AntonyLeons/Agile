@@ -12,52 +12,70 @@
 </head>
 <body>
 
-<div class="login-page">
-    <div class="form">
-      <form action= "InsertData.php" method="post" name="InsertData" class="login-form";>
-        <input type="Number" min="0" max="999999999" placeholder="Student ID" name="StudentID" required/>
-        <input type="text" placeholder="Society" name="Society" maxlength="20" required/>
-        <input type="datetime-local" name="BookingFor" placeholder="Booking start" required>
-        <input type="datetime-local" name="BookingTill" placeholder="Booking end" required>
-        <input type="text" placeholder="Activity" name="Activity" maxlength="20" required/>
-        <input list="Room" input type="text" name="Room"maxlength="40" placeholder="Room" required>
-        <datalist id="Room">
-          <option value="Brynmor Jones Library">
-          <option value="Canham Turner">
-          <option value="Fenner">
-          <option value="Robert Blackburn">
-          <option value="Ferens">
-          <option value="Hardy">
-          <option value="Derwent">
-          <option value="Student Central">
-          <option value="Wilberforce">
-        </datalist>
-        <div class="switch">
-        <input type="radio" class="switch-input" name="UserType" value="Student" id="Student"checked >
-        <label for="Student" class="switch-label switch-label-off">Student</label>
-        <input type="radio" class="switch-input" name="UserType" value="Staff" id="Staff">
-        <label for="Staff" class="switch-label switch-label-on">Staff</label>
-        <span class="switch-selection"></span>
-      </div>
-        <button input type="submit" value="Submit"> Submit</button>
-      </form>
-    </div>
-  </div>
-  </body>
+  <div class="container" >
+    <h1>Room Booking</h1>
+    <h2>With Hull University</h2>
+    <form class="form" action= "InsertData.php" method="post" name="InsertData">
 
+      <fieldset class="form-fieldset ui-input __first">
+        <input type="Number" min="0" max="999999999" placeholder="Student ID" name="StudentID" id =  "username" required/>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Student ID</span>
+        </label>
+      </fieldset>
+      <fieldset class="form-fieldset ui-input __second">
+        <input type="text" placeholder="Society" name="Society" maxlength="20"  id =  "username" required/>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Society</span>
+        </label>
+      </fieldset>
+      <fieldset class="form-fieldset ui-input __third">
+      <input type="datetime-local" name="BookingFor" placeholder="Booking start" id =  "username" required>
+      <label for="repeat-new-password">
+        <span data-text="Repeat New Password">Booking Start</span>
+      </label>
+      </fieldset>
+      <fieldset class="form-fieldset ui-input __fourth">
+          <input type="datetime-local" name="BookingTill" placeholder="Booking end" id ="username" required>
+          <label for="repeat-new-password">
+            <span data-text="Repeat New Password">Booking End</span>
+          </label>
+      </fieldset>
+      <fieldset class="form-fieldset ui-input __fourth">
+        <input type="text" placeholder="Activity" name="Activity" maxlength="20" id ="username" required/>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Activity</span>
+        </label>
+      </fieldset>
+      <fieldset class="form-fieldset ui-input __fourth">
+        <input list="Room" input type="text" name="Room"maxlength="40" placeholder="Room" id = "username" required>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Room</span>
+          <datalist id="Room">
+            <option value="Brynmor Jones Library">
+            <option value="Canham Turner">
+            <option value="Fenner">
+            <option value="Robert Blackburn">
+            <option value="Ferens">
+            <option value="Hardy">
+            <option value="Derwent">
+            <option value="Student Central">
+            <option value="Wilberforce">
+          </datalist>
+        </label>
+      </fieldset>
+      <div class="form-footer">
+        <button class="btn">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  </body>
       <div class="mainmessage">
-        <h1>Room Booking</h1>
-        <p>With Hull University</p>
         <ul>
             <li><a class="active" href="index.html">Home</a></li>
             <li><a href="Fetch.php">Fetch</a></li>
-          <!--   <li><a href="AddLocation.html">Edit Location</a></li>
-            <li><a href="CurrentLocation.html">Current Location</a></li>
-            <li><a href="EditData.html">Edit Data</a></li>
-
-            <li><a href="Last24hrs.php">Last 24hrs</a></li> -->
             <li><a href="Search.html">Search</a></li>
           </ul>
-
 </div>
 </html>
