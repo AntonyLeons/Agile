@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Room Booking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+<link rel="shortcut icon" type="image/png" href="https://www.hull.ac.uk/site-elements/img/favicon/favicon-57.png"/>
+  <script src="main.js"></script>
+</head>
+<body>
+
+<div class="login-page">
+    <div class="form">
+      <form action= "Search.php" method="GET" name="Search" class="login-form";>
+        <input type="Number" min="0" max="999999999" placeholder="Student ID" name="StudentID" required/>
+        <div class="switch-field">
+                        <input type="radio" id="switch_3_left" name="Selection" value="Week" checked/>
+                        <label for="switch_3_left">Week</label>
+                        <input type="radio" id="switch_3_center" name="Selection" value="Now" />
+                        <label for="switch_3_center">Now</label>
+                           <input type="radio" id="switch_3_right" name="Selection" value="All" />
+                        <label for="switch_3_right">All</label>
+                      </div>
+        <button input type="submit" value="Submit"> Submit</button>
+      </form>
+    </div>
+  </div>
+  </body>
+
+      <div class="mainmessage">
+        <h1>Room Booking</h1>
+        <p>With Hull University</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Fetch.php">Fetch</a></li>
+          <!--   <li><a href="AddLocation.html">Edit Location</a></li>
+            <li><a href="CurrentLocation.html">Current Location</a></li>
+            <li><a href="EditData.html">Edit Data</a></li>
+
+            <li><a href="Last24hrs.php">Last 24hrs</a></li> -->
+            <li><a class="active" href="Search.html">Search</a></li>
+          </ul>
+
+</div>
+</html>
