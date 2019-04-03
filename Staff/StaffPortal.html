@@ -12,21 +12,46 @@
 </head>
 <body>
 
-<div class="login-page">
-    <div class="form">
-      <form action= "Book.php" method="post" name="Book" class="login-form";>
-        <input type="Number" min="0" max="999999999" placeholder="Staff ID" name="StaffID" required/>
-        <input type="datetime-local" name="BookingFor" placeholder="Booking start" required/>
-        <input type="Number" min="0" max="999999999" placeholder="Duration" name="FormDuration" required/>
-        <input list="Room" input type="text" name="Room"maxlength="40" placeholder="Room" required>
-        <button input type="submit" value="submit"> Book Room</button>
-      </form>
-    </div>
+  <div class="container" >
+    <h1>Room Booking</h1>
+    <h2>With Hull University</h2>
+    <form class="form" action= "InsertData.php" method="post" name="InsertData">
+
+      <fieldset class="form-fieldset ui-input __first">
+        <input type="Number" min="0" max="999999999" placeholder="Staff ID" name="StaffID" id =  "username" required/>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Staff ID</span>
+        </label>
+      </fieldset>
+
+      <fieldset class="form-fieldset ui-input __third">
+      <input type="datetime-local" name="BookingFor" placeholder="Booking start" id =  "username" required>
+      <label for="repeat-new-password">
+        <span data-text="Repeat New Password">Booking Start</span>
+      </label>
+      </fieldset>
+      <fieldset class="form-fieldset ui-input __first">
+        <input type="Number" min="0" max="999999999" placeholder="Duration" name="FormDuration" id =  "username" required/>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Duration</span>
+        </label>
+      </fieldset>
+
+      <fieldset class="form-fieldset ui-input __fourth">
+        <input list="Room" input type="text" name="Room"maxlength="40" placeholder="Room" id = "username" required>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Room</span>
+
+        </label>
+      </fieldset>
+      <div class="form-footer">
+        <button class="btn">Book Room</button>
+      </div>
+    </form>
   </div>
   </body>
       <div class="mainmessage">
-        <h1>Room Booking</h1>
-        <p>With Hull University</p>
+
         <ul>
             <li><a class="active" href="index.html">Home</a></li>
             <li><a href="StaffRoomFetch.php">Find Avalible Rooms</a></li>

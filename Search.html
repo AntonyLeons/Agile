@@ -12,10 +12,24 @@
 </head>
 <body>
 
-<div class="login-page">
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <h1>Room Booking</h1>
+  <h2>With Hull University</h2>
     <div class="form">
-      <form action= "Search.php" method="GET" name="Search" class="login-form";>
-        <input type="Number" min="0" max="999999999" placeholder="Student ID" name="StudentID" required/>
+      <form action= "Search.php" method="GET" name="Search";>
+        <fieldset class="form-fieldset ui-input __first">
+          <input type="Number" min="0" max="999999999" placeholder="Student ID" name="StudentID" id =  "username" required/>
+        </fieldset>
         <div class="switch-field">
                         <input type="radio" id="switch_3_left" name="Selection" value="Week" checked/>
                         <label for="switch_3_left">Week</label>
@@ -24,15 +38,16 @@
                            <input type="radio" id="switch_3_right" name="Selection" value="All" />
                         <label for="switch_3_right">All</label>
                       </div>
-        <button input type="submit" value="Submit"> Submit</button>
+                      <div class="form-footer">
+                        <button class="btn">Submit</button>
+                      </div>
       </form>
     </div>
   </div>
   </body>
 
       <div class="mainmessage">
-        <h1>Room Booking</h1>
-        <p>With Hull University</p>
+
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="Fetch.php">Fetch</a></li>
