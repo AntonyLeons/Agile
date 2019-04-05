@@ -93,17 +93,25 @@ if (empty($_GET["StudentID"])) {
 								 $StudentIDErr = "Only Numbers allowed in StudentID";
 							 }
 						 }
+             $Society = test_input($_POST["Society"]);
+             // check if name only contains letters and whitespace
+             if (!preg_match("/^[a-zA-Z ]{2,20}$/",$Society)) {
+               $SocietyErr = "Only letters and white space allowed in First Name";
+             }
              if ($_GET["Selection"])  {
               $Selection = test_input($_GET["Selection"]);
                if (!preg_match("/^[a-zA-Z ]{0,7}$/",$Selection)) {
                 $SelectionErr = "Invalid Selection";
                }
              }
+             if($StudentID!='')
+             {
 file_put_contents("import.ics", fopen("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}", 'r'));
 require_once("zapcallib.php");
 
 //$icalfile = count($argv) > 1 ? $argv[1] : "abrahamlincoln.ics";
 $icalfeed = file_get_contents("import.ics");
+}
 $sql="DROP TABLE IF EXISTS `TEMP`;";
 $result = mysqli_query($conn, $sql);
 $sql="CREATE TABLE IF NOT EXISTS `TEMP` (
@@ -118,7 +126,7 @@ $sql="CREATE TABLE IF NOT EXISTS `TEMP` (
   `UserType` varchar(11) NOT NULL
 ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
 $result = mysqli_query($conn, $sql);
-$sql="INSERT TEMP SELECT * FROM rooms;";
+$sql="INSERT TEMP SELECT * FROM rooms WHERE (StudentID='$StudentID' OR StudentID='') AND (Society=''$Society' OR Society='');";
 $result = mysqli_query($conn, $sql);
 
 // create the ical object
@@ -176,17 +184,17 @@ if(isset($icalobj->tree->child))
 }
 if($Selection=='Now')
 {
-$Fetch="SELECT * FROM TEMP WHERE StudentID LIKE '$StudentID' AND booking_for > CURRENT_TIMESTAMP  ORDER BY `temp`.`booking_for` ASC";
+$Fetch="SELECT * FROM TEMP WHERE booking_for > CURRENT_TIMESTAMP  ORDER BY `temp`.`booking_for` ASC";
 $result = mysqli_query($conn, $Fetch);
 }
 else if($Selection=='All')
 {
-  $Fetch="SELECT * FROM TEMP WHERE StudentID LIKE '$StudentID' ORDER BY `temp`.`booking_for` ASC";
+  $Fetch="SELECT * FROM TEMP ORDER BY `temp`.`booking_for` ASC";
   $result = mysqli_query($conn, $Fetch);
 }
 else if($Selection=='Week')
 {
-$Fetch="SELECT * FROM TEMP WHERE StudentID LIKE '$StudentID' AND booking_for > (SELECT DATE_ADD(CURDATE(), INTERVAL - WEEKDAY(CURDATE()) DAY))  ORDER BY `temp`.`booking_for` ASC";
+$Fetch="SELECT * FROM TEMP WHERE booking_for > (SELECT DATE_ADD(CURDATE(), INTERVAL - WEEKDAY(CURDATE()) DAY))  ORDER BY `temp`.`booking_for` ASC";
 $result = mysqli_query($conn, $Fetch);
 }
 while ($row = mysqli_fetch_array($result)) {
