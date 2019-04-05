@@ -101,6 +101,20 @@ function test_input($data)
                 $SelectionErr = "Invalid Selection";
                }
              }
+             $sql="DROP TABLE IF EXISTS `TEMP`;";
+             $result = mysqli_query($conn, $sql);
+             $sql="CREATE TABLE IF NOT EXISTS `TEMP` (
+               `entryID` varchar(20),
+               `ts` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+               `StudentID` varchar(20) DEFAULT NULL,
+               `Society` varchar(20) DEFAULT NULL,
+               `booking_for` timestamp NULL DEFAULT NULL,
+               `booking_end` timestamp NULL DEFAULT NULL,
+               `Activity` varchar(100) DEFAULT NULL,
+               `Room` varchar(255) DEFAULT NULL,
+               `UserType` varchar(11) NOT NULL
+             ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
+             $result = mysqli_query($conn, $sql);
              if($StudentID != '')
              {
 file_put_contents("import.ics", fopen("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}", 'r'));
@@ -163,20 +177,6 @@ if(isset($icalobj->tree->child))
 }
 }
 
-$sql="DROP TABLE IF EXISTS `TEMP`;";
-$result = mysqli_query($conn, $sql);
-$sql="CREATE TABLE IF NOT EXISTS `TEMP` (
-  `entryID` varchar(20),
-  `ts` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `StudentID` varchar(20) DEFAULT NULL,
-  `Society` varchar(20) DEFAULT NULL,
-  `booking_for` timestamp NULL DEFAULT NULL,
-  `booking_end` timestamp NULL DEFAULT NULL,
-  `Activity` varchar(100) DEFAULT NULL,
-  `Room` varchar(255) DEFAULT NULL,
-  `UserType` varchar(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
-$result = mysqli_query($conn, $sql);
 $sql="INSERT TEMP SELECT * FROM rooms WHERE (StudentID='$StudentID' OR '$StudentID'='') AND (Society='$Society' OR '$Society'='');";
 $result = mysqli_query($conn, $sql);
 
