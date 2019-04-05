@@ -84,44 +84,32 @@ function test_input($data)
        <th>Activity</th>
        <th>User Type</th>
 </tr>";
-if (empty($_GET["StudentID"])) {
-							 $StudentIDErr = "StudentID is required";
-						 } else {
 							 $StudentID = test_input($_GET["StudentID"]);
 							 // check if name only contains letters and whitespace
 							 if (!preg_match("/^[0-9][0-9]{2,10}$/",$StudentID)) {
 								 $StudentIDErr = "Only Numbers allowed in StudentID";
 							 }
-						 }
+
+             $Society = test_input($_GET["Society"]);
+             // check if name only contains letters and whitespace
+             if (!preg_match("/^[a-zA-Z ]{2,20}$/",$Society)) {
+               $SocietyErr = "Only letters and white space allowed in First Name";
+             }
              if ($_GET["Selection"])  {
               $Selection = test_input($_GET["Selection"]);
                if (!preg_match("/^[a-zA-Z ]{0,7}$/",$Selection)) {
                 $SelectionErr = "Invalid Selection";
                }
              }
+             if($StudentID != '')
+             {
 file_put_contents("import.ics", fopen("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}", 'r'));
+// create the ical object
 require_once("zapcallib.php");
 
 //$icalfile = count($argv) > 1 ? $argv[1] : "abrahamlincoln.ics";
 $icalfeed = file_get_contents("import.ics");
-$sql="DROP TABLE IF EXISTS `TEMP`;";
-$result = mysqli_query($conn, $sql);
-$sql="CREATE TABLE IF NOT EXISTS `TEMP` (
-  `entryID` varchar(20),
-  `ts` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `StudentID` varchar(20) DEFAULT NULL,
-  `Society` varchar(20) DEFAULT NULL,
-  `booking_for` timestamp NULL DEFAULT NULL,
-  `booking_end` timestamp NULL DEFAULT NULL,
-  `Activity` varchar(100) DEFAULT NULL,
-  `Room` varchar(255) DEFAULT NULL,
-  `UserType` varchar(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
-$result = mysqli_query($conn, $sql);
-$sql="INSERT TEMP SELECT * FROM rooms;";
-$result = mysqli_query($conn, $sql);
 
-// create the ical object
 $icalobj = new ZCiCal($icalfeed);
 
 //echo "Number of events found: " . $icalobj->countEvents() . "<br />";
@@ -164,7 +152,6 @@ if(isset($icalobj->tree->child))
             $k11=rtrim($k11,"*");
         }
 			}
-              echo "</tr>" ;
               $sql = "INSERT INTO TEMP (entryID, ts, StudentID, Society, Room, booking_for, booking_end, Activity, UserType) VALUES ('', CURRENT_TIMESTAMP, '$StudentID', '', '$k11', '$k1', '$k2', '$k9','Timetabling')";
           if  (mysqli_query($conn, $sql)){
             }
@@ -174,19 +161,39 @@ if(isset($icalobj->tree->child))
 		}
 	}
 }
+}
+
+$sql="DROP TABLE IF EXISTS `TEMP`;";
+$result = mysqli_query($conn, $sql);
+$sql="CREATE TABLE IF NOT EXISTS `TEMP` (
+  `entryID` varchar(20),
+  `ts` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `StudentID` varchar(20) DEFAULT NULL,
+  `Society` varchar(20) DEFAULT NULL,
+  `booking_for` timestamp NULL DEFAULT NULL,
+  `booking_end` timestamp NULL DEFAULT NULL,
+  `Activity` varchar(100) DEFAULT NULL,
+  `Room` varchar(255) DEFAULT NULL,
+  `UserType` varchar(11) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
+$result = mysqli_query($conn, $sql);
+$sql="INSERT TEMP SELECT * FROM rooms WHERE (StudentID='$StudentID' OR '$StudentID'='') AND (Society='$Society' OR '$Society'='');";
+$result = mysqli_query($conn, $sql);
+
+
 if($Selection=='Now')
 {
-$Fetch="SELECT * FROM TEMP WHERE StudentID LIKE '$StudentID' AND booking_for > CURRENT_TIMESTAMP  ORDER BY `temp`.`booking_for` ASC";
+$Fetch="SELECT * FROM TEMP WHERE booking_for > CURRENT_TIMESTAMP  ORDER BY `temp`.`booking_for` ASC";
 $result = mysqli_query($conn, $Fetch);
 }
 else if($Selection=='All')
 {
-  $Fetch="SELECT * FROM TEMP WHERE StudentID LIKE '$StudentID' ORDER BY `temp`.`booking_for` ASC";
+  $Fetch="SELECT * FROM TEMP ORDER BY `temp`.`booking_for` ASC";
   $result = mysqli_query($conn, $Fetch);
 }
 else if($Selection=='Week')
 {
-$Fetch="SELECT * FROM TEMP WHERE StudentID LIKE '$StudentID' AND booking_for > (SELECT DATE_ADD(CURDATE(), INTERVAL - WEEKDAY(CURDATE()) DAY))  ORDER BY `temp`.`booking_for` ASC";
+$Fetch="SELECT * FROM TEMP WHERE booking_for > (SELECT DATE_ADD(CURDATE(), INTERVAL - WEEKDAY(CURDATE()) DAY))  ORDER BY `temp`.`booking_for` ASC";
 $result = mysqli_query($conn, $Fetch);
 }
 while ($row = mysqli_fetch_array($result)) {
