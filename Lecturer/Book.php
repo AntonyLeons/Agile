@@ -55,6 +55,16 @@ else
  alert("Error");
 
 }
+
+try {
+  $msg = "Dear Student\n Your Timetable has changed as there has been a booking\n Please rate the room \n https://forms.gle/vAbdPkoWbCtpPFah9";
+  $msg = wordwrap($msg,70);
+  $email = "Jamesjduncan99@gmail.com";
+  mail($email,"Timetabling",$msg);
+}
+catch (\Exception $e) {
+
+}
 mysqli_close($conn);
 
 
