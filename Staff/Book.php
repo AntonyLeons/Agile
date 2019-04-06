@@ -19,7 +19,7 @@ function test_input($data)
  {
    echo "<script type='text/javascript'>
    alert('$msg');
-   location='index.html';
+   location='StaffPortal.html';
    </script>";
  }
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Data</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles.css" />
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
   <link rel="shortcut icon" type="image/png" href="https://www.hull.ac.uk/site-elements/img/favicon/favicon-57.png"/>
     <script src="main.js"></script>
@@ -15,9 +15,10 @@
         <h1>Location Reporting</h1>
         <h2>With Hull University</h2>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="Fetch.php">Find Avalible Rooms</a></li>
+            <li><a href="LecturerPortal.html">Home</a></li>
+            <li><a class="active" href="LecturerRoomFetch.php">Find Avalible Rooms</a></li>
             <li><a href="Search.html">My Timetable</a></li>
+            <li><a href="../index.html">Logout</a></li>
           </ul>
 
 </div>
