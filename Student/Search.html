@@ -12,36 +12,39 @@
 </head>
 <body>
 
-  <div class="container">
-    <h1>Room Booking</h1>
-    <h2>With Hull University</h2>
-      <div class="form">
-        <form action= "Search.php" method="GET" name="Search";>
-          <fieldset class="form-fieldset ui-input __first">
-            <input type="Number" min="0" max="999999999" placeholder="Student ID" name="StudentID" id =  "username" required/>
-          </fieldset>
-          <div class="switch-field">
-                          <input type="radio" id="switch_3_left" name="Selection" value="Week" checked/>
-                          <label for="switch_3_left">Week</label>
-                          <input type="radio" id="switch_3_center" name="Selection" value="Now" />
-                          <label for="switch_3_center">Now</label>
-                             <input type="radio" id="switch_3_right" name="Selection" value="All" />
-                          <label for="switch_3_right">All</label>
-                        </div>
-                        <div class="form-footer">
-                          <button class="btn">Submit</button>
-                        </div>
-        </form>
-      </div>
+<div class="container">
+  <h1>Room Booking</h1>
+  <h2>With Hull University</h2>
+    <div class="form">
+      <form action= "Search.php" method="GET" name="Search";>
+        <fieldset class="form-fieldset ui-input __first">
+          <input type="Number" min="0" max="999999999" placeholder="Student ID" name="StudentID" id =  "StudentID"/>
+        </fieldset>
+        <fieldset class="form-fieldset ui-input __second">
+          <input type="text" placeholder="Society" name="Society" maxlength="20"  id =  "Society" />
+        </fieldset>
+        <div class="switch-field">
+                        <input type="radio" id="switch_3_left" name="Selection" value="Week" checked/>
+                        <label for="switch_3_left">Week</label>
+                        <input type="radio" id="switch_3_center" name="Selection" value="Now" />
+                        <label for="switch_3_center">Now</label>
+                           <input type="radio" id="switch_3_right" name="Selection" value="All" />
+                        <label for="switch_3_right">All</label>
+                      </div>
+                      <div class="form-footer">
+                        <button class="btn">Submit</button>
+                      </div>
+      </form>
     </div>
+  </div>
   </body>
 
       <div class="mainmessage">
 
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="Fetch.php">Find Avalible Rooms</a></li>
-            <li><a class="active" href="Search.html">My Timetable</a></li>
+            <li><a href="Fetch.php">Fetch</a></li>
+            <li><a class="active" href="Search.html">Search</a></li>
           </ul>
 
 </div>

@@ -15,8 +15,8 @@
         <h1>Location Reporting</h1>
         <h2>With Hull University</h2>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a class="active" href="Fetch.php">Find Avalible Rooms</a></li>
+            <li><a href="LecturerPortal.html">Home</a></li>
+            <li><a class="active" href="LecturerRoomFetch.php">Find Avalible Rooms</a></li>
             <li><a href="Search.html">My Timetable</a></li>
           </ul>
 
