@@ -16,6 +16,7 @@
             <li><a href="StaffPortal.html">Home</a></li>
             <li><a class="active" href="StaffRoomFetch.php">Find Avalible Rooms</a></li>
             <li><a href="Search.html">My Timetable</a></li>
+            <li><a href="../index.html">Logout</a></li>
           </ul>
 
 </div>

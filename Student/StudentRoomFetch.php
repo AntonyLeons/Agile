@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Data</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles.css" />
     <script src="main.js"></script>
 </head>
 <body>
@@ -16,6 +16,7 @@
             <li><a href="StaffPortal.html">Home</a></li>
             <li><a class="active" href="StudentRoomFetch.php">Find Avalible Rooms</a></li>
             <li><a href="Search.html">My Timetable</a></li>
+            <li><a href="../index.html">Logout</a></li>
           </ul>
 
 </div>
