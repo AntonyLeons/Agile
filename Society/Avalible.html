@@ -15,37 +15,18 @@
   <div class="container" >
     <h1>Room Booking</h1>
     <h2>With Hull University</h2>
-    <form class="form" action= "Book.php" method="post" name="InsertData">
+    <form class="form" action= "StudentRoomFetch.php" method="get" >
 
-      <fieldset class="form-fieldset ui-input __first">
-        <input type="Number" min="0" max="999999999" placeholder="Student ID" name="StudentID" id =  "username" required/>
-        <label for="repeat-new-password">
-          <span data-text="Repeat New Password">Student ID</span>
-        </label>
-      </fieldset>
 
       <fieldset class="form-fieldset ui-input __third">
-      <input type="datetime-local" name="BookingFor" placeholder="Booking start" id =  "username" required>
+      <input type="time" name="Timesearch" placeholder="Booking start" id =  "username" required>
       <label for="repeat-new-password">
         <span data-text="Repeat New Password">Booking Start</span>
       </label>
       </fieldset>
-      <fieldset class="form-fieldset ui-input __first">
-        <input type="Number" min="0" max="999999999" placeholder="Duration" name="FormDuration" id =  "username" required/>
-        <label for="repeat-new-password">
-          <span data-text="Repeat New Password">Duration</span>
-        </label>
-      </fieldset>
 
-      <fieldset class="form-fieldset ui-input __fourth">
-        <input list="Room" input type="text" name="Room"maxlength="40" placeholder="Room" id = "username" required>
-        <label for="repeat-new-password">
-          <span data-text="Repeat New Password">Room</span>
-
-        </label>
-      </fieldset>
       <div class="form-footer">
-        <button class="btn">Book Room</button>
+        <button class="btn">Find Avalible Rooms</button>
       </div>
     </form>
   </div>
