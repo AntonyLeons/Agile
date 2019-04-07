@@ -1,5 +1,6 @@
 
 <?php
+require_once("../zapcallib.php");
 $dbhost = "localhost";
 $dbuser = "appengine";
 $dbpass = "Test";
@@ -28,24 +29,21 @@ $InputtedRoomErr ="";
 
 
 
-  // if (empty($_POST["Room"]))
-  //  {
-    //   $InputtedRoomErr = "Room is required";
-  //   } else
-    // {
+       $StudentID = test_input($_POST["StaffID"]);
        $InputtedRoom = test_input($_POST["Room"]);
        $InputtedTime = test_input($_POST["BookingFor"]);
        $InputtedDuration = test_input($_POST["FormDuration"]);
-       //// check if name only contains letters and whitespace
-    // }
 
 
 
 $sql = "UPDATE `roomcontent` SET `IsBooked` = 'Yes', `LatestBooking` = '$InputtedTime', `BookedDuration` = '$InputtedDuration'  WHERE `roomcontent`.`Room` LIKE '$InputtedRoom'";
+$inputtedminutes=$InputtedDuration % 60;
+(int)$Inputtedhours=$InputtedDuration/60;
+$InputtedTime= ZDateHelper::fromiCaltoUnixDateTime($InputtedTime);
+$InputtedTime= ZDateHelper::toSqlDateTime($InputtedTime);
+$roomssql="INSERT INTO rooms (entryID, ts, StudentID, Room, booking_for, booking_end, UserType) VALUES (NULL, CURRENT_TIMESTAMP, '$StudentID', '$InputtedRoom', '$InputtedTime', (SELECT ADDTIME('$InputtedTime', '$Inputtedhours:$inputtedminutes')),'Admin')";
 
-
-
-if (mysqli_query($conn, $sql))
+if (mysqli_query($conn, $sql) && mysqli_query($conn, $roomssql))
 {
  alert("Booked");
 }
