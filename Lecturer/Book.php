@@ -26,19 +26,10 @@ function test_input($data)
 
 $InputtedRoom ="";
 $InputtedRoomErr ="";
-
-
-
-  // if (empty($_POST["Room"]))
-  //  {
-    //   $InputtedRoomErr = "Room is required";
-  //   } else
-    // {
+       $StudentID = test_input($_POST["LecturerID"]);
        $InputtedRoom = test_input($_POST["Room"]);
        $InputtedTime = test_input($_POST["BookingFor"]);
        $InputtedDuration = test_input($_POST["FormDuration"]);
-       //// check if name only contains letters and whitespace
-    // }
 
 
 
