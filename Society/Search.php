@@ -120,7 +120,7 @@ function test_input($data)
              {
 file_put_contents("import.ics", fopen("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}", 'r'));
 // create the ical object
-require_once("zapcallib.php");
+require_once("../zapcallib.php");
 
 //$icalfile = count($argv) > 1 ? $argv[1] : "abrahamlincoln.ics";
 $icalfeed = file_get_contents("import.ics");
