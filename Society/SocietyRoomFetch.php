@@ -15,7 +15,7 @@
         <h1>Location Reporting</h1>
         <h2>With Hull University</h2>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="SocietyPortal.html">Home</a></li>
             <li><a class="active" href="Avalible.html">Find Avalible Rooms</a></li>
             <li><a href="Search.html">My Timetable</a></li>
             <li><a href="../index.html">Logout</a></li>
