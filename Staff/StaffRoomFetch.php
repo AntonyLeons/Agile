@@ -71,6 +71,7 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
         <th>Projector? </th>
         <th>Latest Booking</th>
         <th>Duration Of Booking</th>
+        <th>Time</th>
         <th>Capacity</th>
         <th>Building</th>
         <th>Computer Lab?</th>
@@ -87,6 +88,7 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
                 echo "<td>" . $row['IsProjector'] . "</td>";
                 echo "<td>" . $row['LatestBooking'] . "</td>";
                 echo "<td>" . $row['BookedDuration'] . "</td>";
+                  echo "<td>" . $row['Time'] . "</td>";
                 echo "<td>" . $row['RoomCapacity'] . "</td>";
                 echo "<td>" . $row['RoomBuilding'] . "</td>";
                 echo "<td>" . $row['IsComputerLab'] . "</td>";
