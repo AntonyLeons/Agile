@@ -379,7 +379,7 @@ class ZDateHelper {
 		$tdate["minutes"] = substr($sqldate,14,2);
 		$tdate["seconds"] = substr($sqldate,17,2);
 		$newdate=mktime($tdate["hours"] + $hour, $tdate["minutes"] + $min, $tdate["seconds"] + $sec, $tdate["mon"] + $month, $tdate["mday"] + $day, $tdate["year"] + $year);
-		date_default_timezone_set("UTC");
+		date_default_timezone_set("BST");
 		//echo self::toSQLDateTime($date) . " => " . self::toSQLDateTime($newdate) . " ($hour:$min:$sec $month/$day/$year)<br/>\n";
 		return $newdate;
 	}
