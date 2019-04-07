@@ -32,8 +32,8 @@ $InputtedRoomErr ="";
        $InputtedDate = test_input($_POST["BookingFor"]);
        $InputtedDuration = test_input($_POST["FormDuration"]);
        $InputtedRoom = test_input($_POST["Room"]);
-
        $InputtedTime = test_input($_POST["Timebook"]);
+       $Activity= test_input($_POST["Activity"]);
 
        $Stamp = $InputtedDate  . ' ' . $InputtedTime .":00";
        $Time1 = $InputtedTime .":00";
@@ -45,9 +45,7 @@ $sql = "UPDATE `roomcontent` SET `IsBooked` = 'Yes', `LatestBooking` = '$Stamp',
 $InputtedTime=$Stamp;
 $inputtedminutes=$InputtedDuration % 60;
 $Inputtedhours=(int)($InputtedDuration/60);
-$durationarray=explode('T', $InputtedTime);
-$InputtedTimeclean= $durationarray[0] . ' ' . $durationarray[1];
-$roomssql="INSERT INTO rooms (entryID, ts, StudentID, Room, booking_for, booking_end, UserType) VALUES (NULL, CURRENT_TIMESTAMP, '$StudentID', '$InputtedRoom', '$InputtedTime', (SELECT ADDTIME('$InputtedTimeclean', '$Inputtedhours:$inputtedminutes')),'Admin')";
+$roomssql="INSERT INTO rooms (entryID, ts, StudentID, Room, booking_for, booking_end, Activity, UserType) VALUES (NULL, CURRENT_TIMESTAMP, '$StudentID', '$InputtedRoom', '$InputtedTime', (SELECT ADDTIME('$InputtedTime', '$Inputtedhours:$inputtedminutes')), '$Activity' ,'Admin')";
 
 if (mysqli_query($conn, $sql) && mysqli_query($conn, $roomssql))
 {
