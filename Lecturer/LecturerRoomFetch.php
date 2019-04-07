@@ -16,7 +16,7 @@
         <h2>With Hull University</h2>
         <ul>
             <li><a href="LecturerPortal.html">Home</a></li>
-            <li><a class="active" href="LecturerRoomFetch.php">Find Avalible Rooms</a></li>
+            <li><a class="active" href="Avalible.html">Find Avalible Rooms</a></li>
             <li><a href="Search.html">My Timetable</a></li>
             <li><a href="../index.html">Logout</a></li>
           </ul>
@@ -30,12 +30,20 @@
 
 
 <?php
+function test_input($data)
+ {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+  }
 $dbhost = "localhost";
 $dbuser = "appengine";
 $dbpass = "Test";
 $db = "Bookings";
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
-            $Fetch="SELECT * FROM roomcontent";
+$TimeSearch = $_GET["Timesearch"];
+            $Fetch="SELECT * FROM roomcontent WHERE `Time` LIKE '%$TimeSearch%'";
             $result = mysqli_query($conn, $Fetch);
 
 
