@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS `logintable` (
   `Password` text,
   `UserType` text,
   `PrimKey` int(11) NOT NULL,
+  `SocietyName` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`PrimKey`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
@@ -41,12 +42,13 @@ CREATE TABLE IF NOT EXISTS `logintable` (
 -- Dumping data for table `logintable`
 --
 
-INSERT INTO `logintable` (`ID`, `Password`, `UserType`, `PrimKey`) VALUES
-(201709001, 'James', 'Student', 1),
-(111111111, 'Staff', 'Staff', 2),
-(222222222, 'Admin', 'Admin', 3),
-(333333333, 'Society', 'Society', 4),
-(555555555, 'Lecturer', 'Lecturer', 5);
+INSERT INTO `logintable` (`ID`, `Password`, `UserType`, `PrimKey`, `SocietyName`) VALUES
+(201709001, 'James', 'Student', 1, NULL),
+(111111111, 'Staff', 'Staff', 2, NULL),
+(222222222, 'Admin', 'Admin', 3, NULL),
+(333333333, 'Society', 'Society', 4, 'Airsoft'),
+(555555555, 'Lecturer', 'Lecturer', 5, NULL);
+COMMIT;
 
 -- --------------------------------------------------------
 
