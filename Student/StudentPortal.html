@@ -25,11 +25,22 @@
       </fieldset>
 
       <fieldset class="form-fieldset ui-input __third">
-      <input type="datetime-local" name="BookingFor" placeholder="Booking start" id =  "username" required>
+      <input type="date" name="BookingFor" placeholder="Booking start" id =  "username" required>
       <label for="repeat-new-password">
-        <span data-text="Repeat New Password">Booking Start</span>
+        <span data-text="Repeat New Password">Booking Date</span>
       </label>
       </fieldset>
+
+      <fieldset class="form-fieldset ui-input __third">
+      <input type="time" name="Timebook" placeholder="Booking start" id =  "username" required>
+      <label for="repeat-new-password">
+        <span data-text="Repeat New Password">Booking Time</span>
+      </label>
+      </fieldset>
+
+
+
+
       <fieldset class="form-fieldset ui-input __first">
         <input type="Number" min="0" max="999999999" placeholder="Duration(mins)" name="FormDuration" id =  "username" required/>
         <label for="repeat-new-password">
@@ -44,6 +55,15 @@
 
         </label>
       </fieldset>
+      <fieldset class="form-fieldset ui-input __fourth">
+        <input list="Room" input type="text" name="Activity"maxlength="40" placeholder="Activity" id = "username" required>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Activity</span>
+
+        </label>
+      </fieldset>
+
+
       <div class="form-footer">
         <button class="btn">Book Room</button>
       </div>
@@ -53,7 +73,7 @@
       <div class="mainmessage">
 
         <ul>
-            <li><a class="active" href="StaffPortal.html">Home</a></li>
+            <li><a class="active" href="StudentPortal.html">Home</a></li>
             <li><a href="Avalible.html">Find Avalible Rooms</a></li>
             <li><a href="Search.html">My Timetable</a></li>
             <li><a href="../index.html">Logout</a></li>

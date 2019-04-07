@@ -31,13 +31,20 @@ $InputtedRoomErr ="";
 
         $StudentID = test_input($_POST["SocietyID"]);
        $InputtedRoom = test_input($_POST["Room"]);
-       $InputtedTime = test_input($_POST["BookingFor"]);
+       $InputtedDate = test_input($_POST["BookingFor"]);
        $InputtedDuration = test_input($_POST["FormDuration"]);
 
+       $InputtedTime = test_input($_POST["Timebook"]);
+
+       $Stamp = $InputtedDate  . ' ' . $InputtedTime .":00";
+       $Time1 = $InputtedTime .":00";
 
 
 
-$sql = "UPDATE `roomcontent` SET `IsBooked` = 'Yes', `LatestBooking` = '$InputtedTime', `BookedDuration` = '$InputtedDuration'  WHERE `roomcontent`.`Room` LIKE '$InputtedRoom'";
+
+$sql = "UPDATE `roomcontent` SET `IsBooked` = 'Yes', `LatestBooking` = '$Stamp', `BookedDuration` = '$InputtedDuration'  WHERE `roomcontent`.`Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
+
+
 $inputtedminutes=$InputtedDuration % 60;
 (int)$Inputtedhours=$InputtedDuration/60;
 $InputtedTime= ZDateHelper::fromiCaltoUnixDateTime($InputtedTime);
