@@ -43,6 +43,7 @@ $InputtedRoomErr ="";
 
 
 $sql = "UPDATE `roomcontent` SET `IsBooked` = 'Yes', `LatestBooking` = '$Stamp', `BookedDuration` = '$InputtedDuration'  WHERE `roomcontent`.`Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
+$InputtedTime=$Stamp;
 $inputtedminutes=$InputtedDuration % 60;
 $Inputtedhours=(int)($InputtedDuration/60);
 $durationarray=explode('T', $InputtedTime);
