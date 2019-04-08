@@ -1,5 +1,6 @@
 <?php
 require_once("../zapcallib.php");
+date_default_timezone_set('Europe/London');
 $dbhost = "localhost";
 $dbuser = "appengine";
 $dbpass = "Test";
@@ -37,10 +38,11 @@ $InputtedRoomErr ="";
        $Stamp = $InputtedDate  . ' ' . $InputtedTime .":00";
        $Time1 = $InputtedTime .":00";
 
-       $Stamp1=$Stamp;
-       $BookingForp=ZDateHelper::toUnixDateTime($Stamp1);
-       $Past=ZDateHelper::isPast($BookingForp);
-
+       $Past='';
+       if($Stamp < date("Y-m-d H:i:s"))
+       {
+         $Past="1";
+       }
 if($Past =='')
 {
 $sql = "UPDATE `roomcontent` SET `IsBooked` = 'Yes', `LatestBooking` = '$Stamp', `BookedDuration` = '$InputtedDuration' WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";

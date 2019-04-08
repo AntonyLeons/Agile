@@ -1,6 +1,7 @@
 
 <?php
 require_once("../zapcallib.php");
+date_default_timezone_set('Europe/London');
 $dbhost = "localhost";
 $dbuser = "appengine";
 $dbpass = "Test";
@@ -35,12 +36,12 @@ function test_input($data)
 
        $Stamp = $InputtedDate  . ' ' . $InputtedTime .":00";
        $Time1 = $InputtedTime .":00";
-       $Stamp1=$Stamp;
-       $timezone='BST';
-       $Stamp1=ZDateHelper::toUTCDateTime($Stamp1 , $timezone);
-       $BookingForp=ZDateHelper::toUnixDateTime($Stamp1);
-       $Past=ZDateHelper::isPast($BookingForp);
 
+       $Past='';
+       if($Stamp < date("Y-m-d H:i:s"))
+       {
+         $Past="1";
+       }
 
 
 if($Past =='')
@@ -53,11 +54,12 @@ $roomssql="INSERT INTO rooms (entryID, ts, StudentID, Room, booking_for, booking
 
 if (mysqli_query($conn, $sql) && mysqli_query($conn, $roomssql))
 {
-  alert("Booked");
+  //alert("Booked");
+  echo "$Stamp";
 }
 else
 {
-  alert("Error");
+//  alert("Error");
 }
 
 try {

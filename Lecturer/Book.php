@@ -1,6 +1,7 @@
 
 <?php
 require_once("../zapcallib.php");
+date_default_timezone_set('Europe/London');
 $dbhost = "localhost";
 $dbuser = "appengine";
 $dbpass = "Test";
@@ -30,17 +31,19 @@ $InputtedRoomErr ="";
        $InputtedRoom = test_input($_POST["Room"]);
        $InputtedDate = test_input($_POST["BookingFor"]);
        $InputtedDuration = test_input($_POST["FormDuration"]);
-
+       $Activity= test_input($_POST["Activity"]);
 
 
        $InputtedTime = test_input($_POST["Timebook"]);
 
        $Stamp = $InputtedDate  . ' ' . $InputtedTime .":00";
        $Time1 = $InputtedTime .":00";
+       $Past='';
+       if($Stamp < date("Y-m-d H:i:s"))
+       {
+         $Past="1";
+       }
 
-       $Stamp1=$Stamp;
-       $BookingForp=ZDateHelper::toUnixDateTime($Stamp1);
-       $Past=ZDateHelper::isPast($BookingForp);
 
 
 
@@ -77,6 +80,7 @@ else {
   if($Past==1)
   {
     alert("Time has passed");
+
   }
 }
 mysqli_close($conn);
