@@ -122,12 +122,11 @@ function test_input($data)
              $result = mysqli_query($conn, $sql);
              if($StudentID != '')
              {
-file_put_contents("import.ics", fopen("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}", 'r'));
 // create the ical object
 require_once("zapcallib.php");
 
 //$icalfile = count($argv) > 1 ? $argv[1] : "abrahamlincoln.ics";
-$icalfeed = file_get_contents("import.ics");
+$icalfeed = file_get_contents("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}");
 
 $icalobj = new ZCiCal($icalfeed);
 
