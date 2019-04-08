@@ -22,9 +22,9 @@
     <br>
     <br>
     <br>
-    <form class="form" action= "Login.php" method="post" name="Login">
+    <form class="form" action= "Login.php" id ="Login" method="post" name="Login">
       <fieldset class="form-fieldset ui-input __first">
-        <input type="Number" min="0"  placeholder="ID" name="IDform" id =  "username" required/>
+        <input type="Number" min="0"  placeholder="ID" name="IDform" id =  "formID2" required/>
         <label for="repeat-new-password">
           <span data-text="Repeat New Password">ID</span>
         </label>
@@ -36,19 +36,27 @@
         </label>
       </fieldset>
       <div class="form-footer">
-        <button class="btn">Submit</button>
+        <button  class="btn" onclick= "fetch()">Submit</button>
       </div>
     </form>
   </div>
 
+<script>
+
+var fetch = function(){
+var x = document.getElementById("Login").elements.namedItem("IDform").value;
+   localStorage.setItem("LoginID",x);
+ }
+
+
+</script>
+
+
+<
+
+
   <div class="mainmessage">
-
-
-
         <a href="FetchPass.php">Usernames and Passwords (For Testing)</a>
-
-
-
 </div>
   </body>
 </html>
