@@ -18,9 +18,16 @@
             <li><a href="StaffPortal.html">Home</a></li>
             <li><a href="Avalible.html">Find Avalible Rooms</a></li>
             <li><a class="active" href="Search.html">My Timetable</a></li>
-            <li><a href="../index.html">Logout</a></li>
+            <li><a href="../index.html" onclick="logoutclear()">Logout</a></li>
           </ul>
 
+
+          <script>
+          var logoutclear = function()
+          {
+            localStorage.clear();
+          }
+          </script>
 </div>
 </body>
 
