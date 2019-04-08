@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 07, 2019 at 12:51 PM
+-- Generation Time: Apr 08, 2019 at 08:03 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -31,12 +31,12 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `logintable`;
 CREATE TABLE IF NOT EXISTS `logintable` (
   `ID` int(11) DEFAULT NULL,
-  `Password` text,
-  `UserType` text,
-  `PrimKey` int(11) NOT NULL,
+  `Password` varchar(50) DEFAULT NULL,
+  `UserType` varchar(50) DEFAULT NULL,
+  `PrimKey` int(11) NOT NULL AUTO_INCREMENT,
   `SocietyName` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`PrimKey`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `logintable`
@@ -47,8 +47,8 @@ INSERT INTO `logintable` (`ID`, `Password`, `UserType`, `PrimKey`, `SocietyName`
 (111111111, 'Staff', 'Staff', 2, NULL),
 (222222222, 'Admin', 'Admin', 3, NULL),
 (333333333, 'Society', 'Society', 4, 'Airsoft'),
-(555555555, 'Lecturer', 'Lecturer', 5, NULL);
-COMMIT;
+(555555555, 'Lecturer', 'Lecturer', 5, NULL),
+(201707408, 'Antony', 'Admin', 6, NULL);
 
 -- --------------------------------------------------------
 
@@ -58,21 +58,21 @@ COMMIT;
 
 DROP TABLE IF EXISTS `roomcontent`;
 CREATE TABLE IF NOT EXISTS `roomcontent` (
-  `Room` text,
-  `IsBooked` varchar(255) NOT NULL DEFAULT 'No',
-  `IsDisabledAccess` varchar(255) DEFAULT NULL,
-  `RoomID` int(11) NOT NULL,
-  `IsProjector` varchar(255) DEFAULT NULL,
+  `Room` text CHARACTER SET utf8mb4,
+  `IsBooked` varchar(5) CHARACTER SET utf8mb4 NOT NULL DEFAULT 'No',
+  `IsDisabledAccess` varchar(5) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `RoomID` int(11) NOT NULL AUTO_INCREMENT,
+  `IsProjector` varchar(5) CHARACTER SET utf8mb4 DEFAULT NULL,
   `LatestBooking` datetime DEFAULT NULL,
   `BookedDuration` int(11) DEFAULT NULL,
   `Time` time DEFAULT NULL,
   `RoomCapacity` int(11) DEFAULT NULL,
-  `RoomBuilding` text,
-  `IsComputerLab` varchar(255) DEFAULT NULL,
-  `IsChemicalLab` varchar(255) DEFAULT NULL,
+  `RoomBuilding` text CHARACTER SET utf8mb4,
+  `IsComputerLab` varchar(5) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `IsChemicalLab` varchar(5) CHARACTER SET utf8mb4 DEFAULT NULL,
   PRIMARY KEY (`RoomID`),
   KEY `RoomID` (`RoomID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `roomcontent`
