@@ -459,7 +459,7 @@ class ZDateHelper {
 	 *
 	 * @return string SQL date-time string
 	 */
-	static function toUTCDateTime($sqldate, $tzid = "UTC" ){
+	static function toUTCDateTime($sqldate, $tzid = "UTC"){
 
 		date_default_timezone_set("UTC");
 		try
