@@ -19,7 +19,7 @@ try
          $StudentIDErr = $SocietyErr = $BookingForErr = $RoomErr = $UserTypeErr = $BookingTillErr = $PastErr = $Past2Err = "";
          $StudentID = $Society = $BookingFor = $Room = $UserType = $Activity = $BookingTill = $Past = $Past2 = "";
 
-         $dbhost = "localhost";
+         $dbhost = "35.246.48.149";
          $dbuser = "appengine";
          $dbpass = "Test";
          $db = "Bookings";

@@ -41,7 +41,7 @@ function test_input($data)
     </script>";
   }
 
-  $dbhost = "localhost";
+  $dbhost = "35.246.48.149";
   $dbuser = "appengine";
   $dbpass = "Test";
   $db = "bookings";
