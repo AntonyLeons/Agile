@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 08, 2019 at 08:27 PM
+-- Generation Time: Apr 08, 2019 at 10:06 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `rooms` (
   `booking_end` timestamp NULL DEFAULT NULL,
   `Activity` varchar(100) DEFAULT NULL,
   `Room` varchar(50) DEFAULT NULL,
-  `UserType` varchar(7) NOT NULL,
+  `UserType` varchar(50) NOT NULL,
   PRIMARY KEY (`entryID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 
