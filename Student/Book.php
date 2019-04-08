@@ -34,7 +34,7 @@ $InputtedRoomErr ="";
        $InputtedDate = test_input($_POST["BookingFor"]);
        $InputtedDuration = test_input($_POST["FormDuration"]);
        $InputtedTime = test_input($_POST["Timebook"]);
-
+       $Activity= test_input($_POST["Activity"]);
        $Stamp = $InputtedDate  . ' ' . $InputtedTime .":00";
        $Time1 = $InputtedTime .":00";
 
