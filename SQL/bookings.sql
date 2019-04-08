@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 08, 2019 at 08:03 PM
+-- Generation Time: Apr 08, 2019 at 08:27 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -30,25 +30,24 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `logintable`;
 CREATE TABLE IF NOT EXISTS `logintable` (
-  `ID` int(11) DEFAULT NULL,
+  `ID` int(11) NOT NULL,
   `Password` varchar(50) DEFAULT NULL,
   `UserType` varchar(50) DEFAULT NULL,
-  `PrimKey` int(11) NOT NULL AUTO_INCREMENT,
   `SocietyName` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`PrimKey`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `logintable`
 --
 
-INSERT INTO `logintable` (`ID`, `Password`, `UserType`, `PrimKey`, `SocietyName`) VALUES
-(201709001, 'James', 'Student', 1, NULL),
-(111111111, 'Staff', 'Staff', 2, NULL),
-(222222222, 'Admin', 'Admin', 3, NULL),
-(333333333, 'Society', 'Society', 4, 'Airsoft'),
-(555555555, 'Lecturer', 'Lecturer', 5, NULL),
-(201707408, 'Antony', 'Admin', 6, NULL);
+INSERT INTO `logintable` (`ID`, `Password`, `UserType`, `SocietyName`) VALUES
+(201709001, 'James', 'Student', NULL),
+(111111111, 'Staff', 'Staff', NULL),
+(222222222, 'Admin', 'Admin', NULL),
+(333333333, 'Society', 'Society', 'Airsoft'),
+(555555555, 'Lecturer', 'Lecturer', NULL),
+(201707408, 'Antony', 'Admin', NULL);
 
 -- --------------------------------------------------------
 
