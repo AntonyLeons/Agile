@@ -106,9 +106,9 @@ function test_input($data)
                 $SelectionErr = "Invalid Selection";
                }
              }
-             $sql="DROP TABLE IF EXISTS `TEMP`;";
+             $sql="DROP TABLE IF EXISTS `temp`;";
              $result = mysqli_query($conn, $sql);
-             $sql="CREATE TABLE IF NOT EXISTS `TEMP` (
+             $sql="CREATE TABLE IF NOT EXISTS `temp` (
                `entryID` varchar(20),
                `ts` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
                `StudentID` varchar(20) DEFAULT NULL,
@@ -171,7 +171,7 @@ if(isset($icalobj->tree->child))
             $k11=rtrim($k11,"*");
         }
 			}
-              $sql = "INSERT INTO TEMP (entryID, ts, StudentID, Society, Room, booking_for, booking_end, Activity, UserType) VALUES ('', CURRENT_TIMESTAMP, '$StudentID', '', '$k11', '$k1', '$k2', '$k9','Timetabling')";
+              $sql = "INSERT INTO temp (entryID, ts, StudentID, Society, Room, booking_for, booking_end, Activity, UserType) VALUES ('', CURRENT_TIMESTAMP, '$StudentID', '', '$k11', '$k1', '$k2', '$k9','Timetabling')";
           if  (mysqli_query($conn, $sql)){
             }
             else {
@@ -182,23 +182,23 @@ if(isset($icalobj->tree->child))
 }
 }
 
-$sql="INSERT TEMP SELECT * FROM rooms WHERE (StudentID='$StudentID' OR '$StudentID'='') AND (Society='$Society' OR '$Society'='');";
+$sql="INSERT temp SELECT * FROM rooms WHERE (StudentID='$StudentID' OR '$StudentID'='') AND (Society='$Society' OR '$Society'='');";
 $result = mysqli_query($conn, $sql);
 
 
 if($Selection=='Now')
 {
-$Fetch="SELECT * FROM TEMP WHERE booking_for > CURRENT_TIMESTAMP  ORDER BY `temp`.`booking_for` ASC";
+$Fetch="SELECT * FROM temp WHERE booking_for > CURRENT_TIMESTAMP  ORDER BY `temp`.`booking_for` ASC";
 $result = mysqli_query($conn, $Fetch);
 }
 else if($Selection=='All')
 {
-  $Fetch="SELECT * FROM TEMP ORDER BY `temp`.`booking_for` ASC";
+  $Fetch="SELECT * FROM temp ORDER BY `temp`.`booking_for` ASC";
   $result = mysqli_query($conn, $Fetch);
 }
 else if($Selection=='Week')
 {
-$Fetch="SELECT * FROM TEMP WHERE booking_for > (SELECT DATE_ADD(CURDATE(), INTERVAL - WEEKDAY(CURDATE()) DAY))  ORDER BY `temp`.`booking_for` ASC";
+$Fetch="SELECT * FROM temp WHERE booking_for > (SELECT DATE_ADD(CURDATE(), INTERVAL - WEEKDAY(CURDATE()) DAY))  ORDER BY `temp`.`booking_for` ASC";
 $result = mysqli_query($conn, $Fetch);
 }
 while ($row = mysqli_fetch_array($result)) {
