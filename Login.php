@@ -18,9 +18,9 @@ $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
 $GetID =   $_POST["IDform"];
 $GetPass =   $_POST["Passwordform"];
 
-$validateID ="SELECT ID FROM bookings.logintable WHERE `ID` LIKE $GetID";
-$ValidatePass = "SELECT Password FROM bookings.logintable WHERE `ID` LIKE $GetID";
-$usertype = "SELECT UserType FROM bookings.logintable WHERE `ID` LIKE $GetID";
+$validateID ="SELECT ID FROM logintable WHERE `ID` LIKE $GetID";
+$ValidatePass = "SELECT Password FROM logintable WHERE `ID` LIKE $GetID";
+$usertype = "SELECT UserType FROM logintable WHERE `ID` LIKE $GetID";
 
 $result = mysqli_query($conn,$validateID);
 

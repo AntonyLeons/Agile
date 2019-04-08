@@ -12,13 +12,15 @@
 </head>
 <body>
 
+
+
   <div class="container" >
     <h1>Room Booking</h1>
     <h2>With Hull University</h2>
-    <form class="form" action= "Book.php" method="post" name="InsertData">
+    <form class="form" id = "Studentport" name = "Studentport" action= "Book.php" method="post" name="InsertData">
 
       <fieldset class="form-fieldset ui-input __first">
-        <input type="Number" min="0" max="999999999" placeholder="Student ID" name="StudentID" id =  "username" required/>
+        <input type="Number" min="0" max="999999999" placeholder="Student ID" name="StudentID" id =  "username" readonly ="readonly" required/>
         <label for="repeat-new-password">
           <span data-text="Repeat New Password">Student ID</span>
         </label>
@@ -65,10 +67,32 @@
 
 
       <div class="form-footer">
-        <button class="btn">Book Room</button>
+        <button  class="btn" onclick="fetchcook()">Book Room</button>
       </div>
     </form>
+
+    <script>
+    var local = localStorage.getItem("LoginID");
+   document.getElementById("Studentport").elements.namedItem("StudentID").value = local;
+    </script>
+
+<script>
+var logoutclear = function()
+{
+  localStorage.clear();
+}
+
+</script>
+
   </div>
+
+  <div>
+    <button class ="button2" >Manage Bookings</button>
+  </div>
+  <br>
+  <br>
+  <br>
+
   </body>
       <div class="mainmessage">
 
@@ -76,7 +100,7 @@
             <li><a class="active" href="StudentPortal.html">Home</a></li>
             <li><a href="Avalible.html">Find Avalible Rooms</a></li>
             <li><a href="Search.html">My Timetable</a></li>
-            <li><a href="../index.html">Logout</a></li>
+            <li><a href="../index.html" onclick="logoutclear()">Logout</a></li>
           </ul>
 
 </div>

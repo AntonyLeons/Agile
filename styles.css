@@ -420,3 +420,32 @@ h2 {
     transform: translate3d(0, 0, 0);
   }
 }
+.button2
+{
+  float: left;
+  width:100%;
+
+  border: 0;
+  background-color: #50617A;
+  padding: 18px 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: .0875em;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: $base-font-family;
+  border-radius: 100px;
+  outline: 0;
+  transition: background-color $time $bezier,
+              color $time $bezier;
+
+
+}
+
+
+.button2:focus,.button2:active,
+.button2:hover {
+  background-color: #6EB1FF;
+  color: white;
+}

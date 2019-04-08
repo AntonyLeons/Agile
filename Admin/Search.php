@@ -18,8 +18,14 @@
             <li><a href="AdminPortal.html">Home</a></li>
             <li><a href="Avalible.html">Find Avalible Rooms</a></li>
             <li><a class="active" href="Search.html">My Timetable</a></li>
-            <li><a href="../index.html">Logout</a></li>
+            <li><a href="../index.html" onclick="logoutclear()">Logout</a></li>
           </ul>
+          <script>
+          var logoutclear = function()
+          {
+            localStorage.clear();
+          }
+          </script>
 
 </div>
 </body>
@@ -114,16 +120,15 @@ function test_input($data)
                `Activity` varchar(100) DEFAULT NULL,
                `Room` varchar(255) DEFAULT NULL,
                `UserType` varchar(11) NOT NULL
-             ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
+             )  AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
              $result = mysqli_query($conn, $sql);
              if($StudentID != '')
              {
-file_put_contents("import.ics", fopen("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}", 'r'));
 // create the ical object
 require_once("../zapcallib.php");
 
 //$icalfile = count($argv) > 1 ? $argv[1] : "abrahamlincoln.ics";
-$icalfeed = file_get_contents("import.ics");
+$icalfeed = file_get_contents("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}");
 
 $icalobj = new ZCiCal($icalfeed);
 
