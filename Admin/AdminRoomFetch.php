@@ -37,7 +37,7 @@ function test_input($data)
     return $data;
   }
   $servername = null;
-  $username = 'appengine'
+  $username = 'appengine';
   $password = 'Test';
   $dbname = Bookings;
   $dbport = null;
