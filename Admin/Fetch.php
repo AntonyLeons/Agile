@@ -30,8 +30,8 @@
 
 
 <?php
-require __DIR__ . '../vendor/autoload.php';
-require __DIR__ . '../env.php';
+require("../vendor/autoload.php");
+require("../env.php");
   $servername = null;
   $username = 'appengine';
   $password = 'Test';

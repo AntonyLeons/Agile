@@ -27,8 +27,8 @@
 
 
 <?php
-require __DIR__ . '../vendor/autoload.php';
-require __DIR__ . '../env.php';
+require("../vendor/autoload.php");
+require("../env.php");
 function test_input($data)
  {
     $data = trim($data);
