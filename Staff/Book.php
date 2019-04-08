@@ -4,7 +4,7 @@ require_once("../zapcallib.php");
 require __DIR__ . '/vendor/autoload.php';
 require __DIR__ . '/env.php';
   $servername = null;
-  $username = 'appengine'
+  $username = 'appengine';
   $password = 'Test';
   $dbname = Bookings;
   $dbport = null;
