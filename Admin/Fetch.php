@@ -30,16 +30,11 @@
 
 
 <?php
-require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/env.php';
-  $servername = null;
-  $username = 'appengine'
-  $password = 'Test';
-  $dbname = Bookings;
-  $dbport = null;
-  // Create connection
-  $conn = new mysqli($servername, $username, $password, $dbname,
-  	$dbport, "/cloudsql/agile-235110:europe-west2:agile-4");
+$dbhost = "35.246.48.149";
+$dbuser = "appengine";
+$dbpass = "Test";
+$db = "Bookings";
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
             $Fetch="SELECT * FROM rooms";
             $result = mysqli_query($conn, $Fetch);
             echo "
