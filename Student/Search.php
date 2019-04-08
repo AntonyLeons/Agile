@@ -27,6 +27,7 @@
           {
             localStorage.clear();
           }
+          </script>
 
 </div>
 </body>
@@ -121,15 +122,16 @@ function test_input($data)
                `Activity` varchar(100) DEFAULT NULL,
                `Room` varchar(255) DEFAULT NULL,
                `UserType` varchar(11) NOT NULL
-             )  AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
+             ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
              $result = mysqli_query($conn, $sql);
              if($StudentID != '')
              {
+file_put_contents("import.ics", fopen("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}", 'r'));
 // create the ical object
 require_once("../zapcallib.php");
 
 //$icalfile = count($argv) > 1 ? $argv[1] : "abrahamlincoln.ics";
-$icalfeed = file_get_contents("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}");
+$icalfeed = file_get_contents("import.ics");
 
 $icalobj = new ZCiCal($icalfeed);
 
