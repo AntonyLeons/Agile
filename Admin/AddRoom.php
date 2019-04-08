@@ -56,24 +56,32 @@ $Chemicallab = test_input($_POST["Chemicallab"]);
 $ComputerLab = test_input($_POST["ComputerLab"]);
 $Timeopen = test_input($_POST["Timeopen"]);
 
+$OpeningTime = test_input($_POST["OpeningTime"]);
+$timestamp =  strtotime($OpeningTime);
+$timestamp_one_hour_earlier = $timestamp - 3600;
+$shiftedtime = strftime('%H:%M', $timestamp_one_hour_earlier);
+$timestamp = strtotime($shiftedtime);
 
             //  if(($UserIDErr =="") && ($PasswordErr =="") && ($UserIDErr ==""))
             //  {
-              $sql = "INSERT INTO `roomcontent`(`Room`, `Society`, `IsBooked`, `IsDisabledAccess`, `RoomID`, `IsProjector`, `LatestBooking`, `BookedDuration`, `Time`, `RoomCapacity`, `RoomBuilding`, `IsComputerLab`, `IsChemicalLab`, `Activity`) VALUES
-('$RoomName',NULL,'No','$Disabled','#this is where autoID should be ','$Projector', NULL,NULL,'#GeneratedTime','$RoomCapacity','$RoomBuilding','$ComputerLab','$Chemicallab',NULL)";
-               if (mysqli_query($conn, $sql))
-              {
-                alert("Submitted");
+
+            //for (int i =0; i< $Timeopen; i++)
+          //  {
+              for ($i=0; $i < $Timeopen ; $i++) {
+
+                $timestamp_one_hour_later = $timestamp + 3600;
+                $shiftedtime = strftime('%H:%M', $timestamp_one_hour_later);
+                $timestamp = strtotime($shiftedtime);
+
+
+                $sql = "INSERT INTO `roomcontent`(`Room`, `Society`, `IsBooked`, `IsDisabledAccess`, `RoomID`, `IsProjector`, `LatestBooking`, `BookedDuration`, `Time`, `RoomCapacity`, `RoomBuilding`, `IsComputerLab`, `IsChemicalLab`, `Activity`) VALUES
+              ('$RoomName',NULL,'No','$Disabled',NULL,'$Projector', NULL,NULL,'$shiftedtime','$RoomCapacity','$RoomBuilding','$ComputerLab','$Chemicallab',NULL)";
+
+                mysqli_query($conn, $sql);
 
               }
-          //  }
-              else
-              {
-              //  $message="$UserIDErr $PasswordErr $UserIDErr";
-                alert("error");
+              alert("Room Added");
 
-              }
-              mysqli_close($conn);
         }
         catch(Exception $e)
         {
