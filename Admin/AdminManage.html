@@ -40,6 +40,13 @@
         </label>
       </fieldset>
 
+      <fieldset class="form-fieldset ui-input __first">
+        <input type="time" min="0" max="999999999" placeholder="Opening Time" name="OpeningTime" id =  "OpeningTime" required/>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Opening Time</span>
+        </label>
+      </fieldset>
+
 
 
       <fieldset class="form-fieldset ui-input __third">
@@ -75,6 +82,8 @@
       </fieldset>
 
 
+
+
       <fieldset class="form-fieldset ui-input __third">
       <input type="text" name = "Chemicallab" id = "Chemicallab" placeholder="Chemical Lab?" list="Chemlab">
       <label for="repeat-new-password" >
@@ -95,6 +104,18 @@
       <option value="Yes"></option>
       <option value="No"></option>
       </datalist>
+
+
+      <fieldset class="form-fieldset ui-input __third">
+      <input type="text" name = "Timeopen" id = "Timeopen" placeholder="Time Open (Hours)" list="Timeopenlist">
+      <label for="repeat-new-password" >
+        <span data-text="Repeat New Password">How long is the room open for?</span>
+      </label>
+      <datalist id ="Timeopenlist">
+      <option value="24"></option>
+      <option value="8"></option>
+      </datalist>
+
 
 
 
