@@ -48,8 +48,6 @@ function test_input($data)
   }
 
 
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
-
 $TimeSearch = $_GET["Timesearch"];
             $Fetch="SELECT * FROM roomcontent WHERE `Time` LIKE '%$TimeSearch%'";
             $result = mysqli_query($conn, $Fetch);
