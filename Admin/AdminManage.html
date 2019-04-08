@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Room Booking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../styles.css" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+<link rel="shortcut icon" type="image/png" href="https://www.hull.ac.uk/site-elements/img/favicon/favicon-57.png"/>
+  <script src="main.js"></script>
+</head>
+<body>
+  <div class="container" >
+    <h1>Room Booking</h1>
+    <h2>With Hull University</h2>
+    <form class="form" action= "AddRoom.php" method="post" name="AdminPort" id ="AdminPort">
+
+      <fieldset class="form-fieldset ui-input __first">
+        <input type="Number" min="0" max="999999999" placeholder="Admin ID" name="AdminID" id =  "AdminID" readonly = "readonly" required/>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Admin ID</span>
+        </label>
+      </fieldset>
+
+
+      <fieldset class="form-fieldset ui-input __fourth">
+        <input list="Room" input type="text" name="Room"maxlength="40" placeholder="Room Name" id = "RoomName" required>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Room Name</span>
+
+        </label>
+      </fieldset>
+
+      <fieldset class="form-fieldset ui-input __fourth">
+        <input list="Room" input type="text" name="RoomBuilding"maxlength="40" placeholder="Room Building" id = "RoomBuilding" required>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Room Building</span>
+
+        </label>
+      </fieldset>
+
+      <fieldset class="form-fieldset ui-input __first">
+        <input type="time" min="0" max="999999999" placeholder="Opening Time" name="OpeningTime" id =  "OpeningTime" required/>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Opening Time</span>
+        </label>
+      </fieldset>
+
+
+
+      <fieldset class="form-fieldset ui-input __third">
+      <input type="text" name = "Disabled" id = "Disabled" placeholder="Disabled Access?" list="Disabledlist">
+      <label for="repeat-new-password" >
+        <span data-text="Repeat New Password">Projector?</span>
+      </label>
+<datalist id ="Disabledlist">
+  <option value="Yes"></option>
+  <option value="No"></option>
+</datalist>
+
+<fieldset class="form-fieldset ui-input __third">
+<input type="text" name = "Projector" id = "Projector" placeholder="Projector ?" list="Projectorlist">
+<label for="repeat-new-password" >
+  <span data-text="Repeat New Password">Disabled Access?</span>
+</label>
+<datalist id ="Projectorlist">
+<option value="Yes"></option>
+<option value="No"></option>
+</datalist>
+
+
+      </fieldset>
+
+
+
+      <fieldset class="form-fieldset ui-input __first">
+        <input type="Number" min="0" max="999999999" placeholder="Room Capacity" name="RoomCapacity" id =  "RoomCapacity" required/>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Room Capacity</span>
+        </label>
+      </fieldset>
+
+
+
+
+      <fieldset class="form-fieldset ui-input __third">
+      <input type="text" name = "Chemicallab" id = "Chemicallab" placeholder="Chemical Lab?" list="Chemlab">
+      <label for="repeat-new-password" >
+        <span data-text="Repeat New Password">Chemical Lab?</span>
+      </label>
+      <datalist id ="Chemlab">
+      <option value="Yes"></option>
+      <option value="No"></option>
+      </datalist>
+
+
+      <fieldset class="form-fieldset ui-input __third">
+      <input type="text" name = "ComputerLab" id = "ComputerLab" placeholder="Computer Lab?" list="CompLab">
+      <label for="repeat-new-password" >
+        <span data-text="Repeat New Password">Computer Lab?</span>
+      </label>
+      <datalist id ="CompLab">
+      <option value="Yes"></option>
+      <option value="No"></option>
+      </datalist>
+
+
+      <fieldset class="form-fieldset ui-input __third">
+      <input type="text" name = "Timeopen" id = "Timeopen" placeholder="Time Open (Hours)" list="Timeopenlist">
+      <label for="repeat-new-password" >
+        <span data-text="Repeat New Password">How long is the room open for?</span>
+      </label>
+      <datalist id ="Timeopenlist">
+      <option value="24"></option>
+      <option value="8"></option>
+      </datalist>
+
+
+
+
+
+      <div class="form-footer">
+        <button class="btn">Add Room</button>
+        <br>
+        <br>
+         <button  formaction="Deleteroom.php" class="btn">Delete Room</button>
+      </div>
+    </form>
+
+<br>
+
+
+    <script>
+    var local = localStorage.getItem("LoginID");
+   document.getElementById("AdminPort").elements.namedItem("AdminID").value = local;
+    </script>
+
+<script>
+var logoutclear = function()
+{
+  localStorage.clear();
+}
+</script>
+
+
+  </div>
+
+<div>
+
+
+
+<ul>
+
+  <li><a class ="btn" >Manage Rooms</a></li>
+  <li><a href="adduser.html" class ="btn">Add User</a></li>
+  <li><a class ="btn">Change Booking</a></li>
+  <li><a class ="btn">Booking Requests</a></li>
+</ul>
+</div>
+
+  <br>
+    <br>
+  </body>
+      <div class="mainmessage">
+
+        <ul>
+            <li><a class="active" href="AdminPortal.html">Home</a></li>
+            <li><a href="Avalible.html">Find Avalible Rooms</a></li>
+            <li><a href="Search.html">My Timetable</a></li>
+            <li><a href="../index.html" onclick="logoutclear()">Logout</a></li>
+          </ul>
+
+</div>
+</html>
