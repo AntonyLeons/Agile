@@ -56,8 +56,10 @@ function test_input($data)
   }
 
 
+$maxcapacity =20;
+
 $TimeSearch = $_GET["Timesearch"];
-            $Fetch="SELECT * FROM roomcontent WHERE `Time` LIKE '%$TimeSearch%'";
+            $Fetch="SELECT * FROM roomcontent WHERE `Time` LIKE '%$TimeSearch%' AND `IsBooked` LIKE 'No' AND `IsComputerLab`LIKE 'No' AND `RoomCapacity` <=  '$maxcapacity' AND `IsChemicalLab` LIKE 'No'";
             $result = mysqli_query($conn, $Fetch);
 
 
@@ -89,12 +91,8 @@ $TimeSearch = $_GET["Timesearch"];
             <table>
         <tr>
         <th>Room</th>
-        <th>IsBooked</th>
         <th>Disabled Access?</th>
 
-
-        <th>Latest Booking</th>
-        <th>Duration Of Booking</th>
         <th>Time</th>
         <th>Capacity</th>
         <th>Building</th>
@@ -106,12 +104,7 @@ $TimeSearch = $_GET["Timesearch"];
             {
                 echo "<tr>";
                 echo "<td>".$row['Room']."</td>";
-                echo "<td>" . $row['IsBooked']. "</td>";
                 echo "<td>" . $row['IsDisabledAccess'] . "</td>";
-
-
-                echo "<td>" . $row['LatestBooking'] . "</td>";
-                echo "<td>" . $row['BookedDuration'] . "</td>";
                 echo "<td>" . $row['Time'] . "</td>";
                 echo "<td>" . $row['RoomCapacity'] . "</td>";
                 echo "<td>" . $row['RoomBuilding'] . "</td>";
