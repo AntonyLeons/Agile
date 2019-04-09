@@ -64,7 +64,7 @@ try
               else
               {
               //  $message="$UserIDErr $PasswordErr $UserIDErr";
-                //alert("error");
+                alert("error");
 
               }
               mysqli_close($conn);
