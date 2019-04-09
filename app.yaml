@@ -1,4 +1,4 @@
-runtime: php
+runtime: php72
 env_variables:
     MYSQL_USER: "appengine"
     MYSQL_PASSWORD: "Test"
