@@ -74,8 +74,8 @@ $timestamp = strtotime($shiftedtime);
                 $timestamp = strtotime($shiftedtime);
 
 
-                $sql = "INSERT INTO `roomcontent`(`Room`, `Society`, `IsBooked`, `IsDisabledAccess`, `RoomID`, `IsProjector`, `LatestBooking`, `BookedDuration`, `Time`, `RoomCapacity`, `RoomBuilding`, `IsComputerLab`, `IsChemicalLab`, `Activity`) VALUES
-              ('$RoomName',NULL,'No','$Disabled',NULL,'$Projector', NULL,NULL,'$shiftedtime','$RoomCapacity','$RoomBuilding','$ComputerLab','$Chemicallab',NULL)";
+                $sql = "INSERT INTO `roomcontent`(`Room`, `IsBooked`, `IsDisabledAccess`, `RoomID`, `IsProjector`, `LatestBooking`, `BookedDuration`, `Time`, `RoomCapacity`, `RoomBuilding`, `IsComputerLab`, `IsChemicalLab`) VALUES
+              ('$RoomName','No','$Disabled',NULL,'$Projector', NULL,NULL,'$shiftedtime','$RoomCapacity','$RoomBuilding','$ComputerLab','$Chemicallab')";
 
                 mysqli_query($conn, $sql);
 
