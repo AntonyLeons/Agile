@@ -1,4 +1,6 @@
 <?php
+require("../vendor/autoload.php");
+require("../env.php");
  function test_input($data)
  {
     $data = trim($data);
@@ -18,11 +20,15 @@ try
          $UserIDErr = $PasswordErr = $UserTypeErr = "";
          $UserID = $Password = $UserType =  "";
 
-         $dbhost = "localhost";
-         $dbuser = "appengine";
-         $dbpass = "Test";
-         $db = "bookings";
-         $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
+
+        $servername = null;
+        $username = 'appengine';
+        $password = 'Test';
+        $dbname = Bookings;
+        $dbport = null;
+                     // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname,
+        $dbport, "/cloudsql/agile-235110:europe-west2:agile-4");
 
 
                 $UserID = test_input($_POST["UserID"]);
