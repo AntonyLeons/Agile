@@ -22,12 +22,12 @@ try
          $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
 
 
-                $RoomName = test_input($_POST["RoomName"]);
-                $sql = "DELETE FROM `roomcontent` WHERE `Room` LIKE '$RoomName'";
+                $UserID = test_input($_POST["UserID"]);
+                $sql = "DELETE FROM `logintable` WHERE `logintable`.`ID` = '$UserID';";
 
                 if (mysqli_query($conn, $sql))
                {
-                 alert("Room Deleted");
+                 alert("User Deleted");
 
                }
                else
