@@ -15,40 +15,16 @@
   }
 try
         {
-        // $UserIDErr = $PasswordErr = $UserTypeErr = "";
-         //$RoomName = $RoomBuilding = $OpeningTime = $Disabled = $Projector = $RoomCapacity = $Chemicallab = $ComputerLab = $Timeopen =   "";
-
          $dbhost = "localhost";
          $dbuser = "appengine";
          $dbpass = "Test";
          $db = "bookings";
          $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
 
-
-          //  if (empty($_POST["UserID"])) {
-              //  $UserIDErr = "User ID is required";
-              //} else {
                 $RoomName = test_input($_POST["RoomName"]);
-                // check if name only contains letters and whitespace
-                //if (!preg_match("/^[0-9][0-9]{2,10}$/",$UserID)) {
-                //  $UserIDErr = "Only Numbers allowed in User ID";
-                //}
-              //}
-              //if (empty($_POST["Password"])) {
-              //  $PasswordErr = "Password is required";
-            //  } else {
                $RoomBuilding = test_input($_POST["RoomBuilding"]);
-
-
-            //  }
-              //if (empty($_POST["UserType"])) {
-            //    $UserTypeErr = "User Type is required";
-            //  } else {
                 $OpeningTime = test_input($_POST["OpeningTime"]);
-              //  if (!preg_match("/^[a-zA-Z ]{2,20}$/",$UserType)) {
-                //  $UserTypeErr = "Only letters and white space allowed in First Name";
-              //  }
-            //  }
+
 $Disabled = test_input($_POST["Disabled"]);
 $Projector = test_input($_POST["Projector"]);
 $RoomCapacity = test_input($_POST["RoomCapacity"]);
@@ -62,11 +38,6 @@ $timestamp_one_hour_earlier = $timestamp - 3600;
 $shiftedtime = strftime('%H:%M', $timestamp_one_hour_earlier);
 $timestamp = strtotime($shiftedtime);
 
-            //  if(($UserIDErr =="") && ($PasswordErr =="") && ($UserIDErr ==""))
-            //  {
-
-            //for (int i =0; i< $Timeopen; i++)
-          //  {
               for ($i=0; $i < $Timeopen ; $i++) {
 
                 $timestamp_one_hour_later = $timestamp + 3600;
