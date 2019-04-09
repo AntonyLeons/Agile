@@ -47,6 +47,7 @@ INSERT INTO `logintable` (`ID`, `Password`, `UserType`, `SocietyName`) VALUES
 (222222222, 'Admin', 'Admin', NULL),
 (333333333, 'Society', 'Society', 'Airsoft'),
 (555555555, 'Lecturer', 'Lecturer', NULL),
+(201707038, 'Will','Admin',NULL),
 (201707408, 'Antony', 'Admin', NULL);
 
 -- --------------------------------------------------------
@@ -200,6 +201,31 @@ CREATE TABLE IF NOT EXISTS `temp` (
 
 INSERT INTO `temp` (`entryID`, `ts`, `StudentID`, `Society`, `booking_for`, `booking_end`, `Activity`, `Room`, `UserType`) VALUES
 ('20', '2019-04-03 01:29:53', '201707408', 'Monzo', '2019-04-03 14:00:00', '2019-04-03 20:00:00', 'Movie night', 'ESK ALLAM', 'Student');
+COMMIT;
+
+--
+-- Table structure for table `speakers`
+--
+
+DROP TABLE IF EXISTS `speakers`;
+CREATE TABLE IF NOT EXISTS `speakers` (
+  `SpeakerID` int(11) NOT NULL,
+  `SocietyID` int(11) NOT NULL,
+  `RoomID` int(11) NOT NULL,
+  `SpeakerName` varchar(50) NOT NULL,
+  `Affiliation` varchar(50) NOT NULL,
+  `SpeechTopic` varchar(50) NOT NULL,
+  `SpeechDescription` text NOT NULL,
+  `PrimKey` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`PrimKey`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `speakers`
+--
+
+INSERT INTO `speakers` (`SpeakerID`, `SocietyID`, `RoomID`, `SpeakerName`, `Affiliation`, `SpeechTopic`, `SpeechDescription`, `PrimKey`) VALUES
+(1, 333333333, 1, 'John Smith', 'Digital Delivery Academy', 'Travis CI', 'Continuous Integration and delivery', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

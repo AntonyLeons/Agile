@@ -24,31 +24,9 @@ try
          $db = "bookings";
          $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
 
-
-          //  if (empty($_POST["UserID"])) {
-              //  $UserIDErr = "User ID is required";
-              //} else {
                 $SocietyID = test_input($_POST["SocietyID"]);
-                // check if name only contains letters and whitespace
-                //if (!preg_match("/^[0-9][0-9]{2,10}$/",$UserID)) {
-                //  $UserIDErr = "Only Numbers allowed in User ID";
-                //}
-              //}
-              //if (empty($_POST["Password"])) {
-              //  $PasswordErr = "Password is required";
-            //  } else {
                $BookedRoomID = test_input($_POST["BookedRoomID"]);
-
-
-            //  }
-              //if (empty($_POST["UserType"])) {
-            //    $UserTypeErr = "User Type is required";
-            //  } else {
                 $SpeakerID = test_input($_POST["SpeakerID"]);
-              //  if (!preg_match("/^[a-zA-Z ]{2,20}$/",$UserType)) {
-                //  $UserTypeErr = "Only letters and white space allowed in First Name";
-              //  }
-            //  }
 
             $SpeakerName = test_input($_POST["SpeakerName"]);
             $Affiliation = test_input($_POST["Affiliation"]);
