@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Room Booking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="../styles.css" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+<link rel="shortcut icon" type="image/png" href="https://www.hull.ac.uk/site-elements/img/favicon/favicon-57.png"/>
+  <script src="main.js"></script>
+</head>
+<body>
+
+  <div class="container" >
+    <h1>Room Booking</h1>
+    <h2>With Hull University</h2>
+    <h2>Lecturer Portal</h2>
+    <form class="form" action= "ExternalSpeaker.php" method="post" name="InsertData" id ="Societyport" name ="Societyport">
+      <fieldset class="form-fieldset ui-input __first">
+        <input type="Number" min="0" max="999999999" placeholder="Society ID" name="SocietyID" id =  "SocietyID" readonly = "readonly" required/>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Society ID</span>
+        </label>
+      </fieldset>
+
+      <fieldset class="form-fieldset ui-input __third">
+      <input type="number" name="BookedRoomID" placeholder="Booked Room ID" id =  "BookedRoomID" required>
+      <label for="repeat-new-password">
+        <span data-text="Repeat New Password">Booked Room ID</span>
+      </label>
+      </fieldset>
+
+      <fieldset class="form-fieldset ui-input __third">
+      <input type="number" name="SpeakerID" placeholder="Speaker ID" id =  "SpeakerID" required>
+      <label for="repeat-new-password">
+        <span data-text="Repeat New Password">Speaker ID</span>
+      </label>
+      </fieldset>
+
+
+
+      <fieldset class="form-fieldset ui-input __first">
+        <input type="text"  placeholder="Speaker Name" name="SpeakerName" id =  "SpeakerName" required/>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Speaker Name</span>
+        </label>
+      </fieldset>
+
+      <fieldset class="form-fieldset ui-input __first">
+        <input type="text"  placeholder="Affiliation Of Speaker" name="Affiliation" id =  "Affiliation" required/>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Affiliation Of Speaker</span>
+        </label>
+      </fieldset>
+
+      <fieldset class="form-fieldset ui-input __fourth">
+        <input list="Room" input type="text" name="SpeechTopic"maxlength="40" placeholder="Speech Topic" id = "SpeechTopic" required>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Speech Topic</span>
+
+        </label>
+      </fieldset>
+
+
+      <fieldset class="form-fieldset ui-input __fourth">
+        <input list="Room" input type="text" name="SpeechDescription" placeholder="Speech Description" id = "SpeechDescription" required>
+        <label for="repeat-new-password">
+          <span data-text="Repeat New Password">Speech Description</span>
+
+        </label>
+      </fieldset>
+
+      <div class="form-footer">
+        <button class="btn">Book Speaker</button>
+      </div>
+    </form>
+
+
+    <script>
+    var local = localStorage.getItem("LoginID");
+   document.getElementById("Societyport").elements.namedItem("SocietyID").value = local;
+    </script>
+
+<script>
+var logoutclear = function()
+{
+  localStorage.clear();
+}
+
+</script>
+
+  </div>
+
+  <div>
+
+
+
+  <ul>
+
+    <li><a class ="btn" >External Speaker</a></li>
+    <li><a class ="btn">Book Large Facilities</a></li>
+    <li><a class ="btn">Contact Union</a></li>
+    <li><a href="Members.html" class ="btn">View Members</a></li>
+  </ul>
+  </div>
+  <br>
+
+
+
+
+  </body>
+      <div class="mainmessage">
+
+        <ul>
+            <li><a class="active" href="SocietyPortal.html">Home</a></li>
+            <li><a href="Avalible.html">Find Avalible Rooms</a></li>
+            <li><a href="Search.html">My Timetable</a></li>
+            <li><a href="../index.html" onclick="logoutclear()">Logout</a></li>
+          </ul>
+
+</div>
+</html>
