@@ -10,7 +10,7 @@
   {
     echo "<script type='text/javascript'>
     alert('$msg');
-    location='AdminPortal.html';
+    location='SocietyPortal.html';
     </script>";
   }
 try
