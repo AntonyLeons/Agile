@@ -48,7 +48,9 @@ INSERT INTO `logintable` (`ID`, `Password`, `UserType`, `SocietyName`) VALUES
 (333333333, 'Society', 'Society', 'Airsoft'),
 (555555555, 'Lecturer', 'Lecturer', NULL),
 (201707038, 'Will','Admin',NULL),
-(201707408, 'Antony', 'Admin', NULL);
+(201707408, 'Antony', 'Admin', NULL),
+(123456789, 'Speaker', 'Speaker', NULL),
+(777777777, 'ExternalUser', 'ExternalUser', NULL);
 
 -- --------------------------------------------------------
 

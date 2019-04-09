@@ -45,7 +45,7 @@ CREATE TABLE `logintable` (
 
 LOCK TABLES `logintable` WRITE;
 /*!40000 ALTER TABLE `logintable` DISABLE KEYS */;
-INSERT INTO `logintable` VALUES (111111111,'Staff','Staff',NULL),(201707408,'Antony','Admin',NULL),(201709001,'James','Student',NULL),(222222222,'Admin','Admin',NULL),(333333333,'Society','Society','Airsoft'),(555555555,'Lecturer','Lecturer',NULL);
+INSERT INTO `logintable` VALUES (111111111,'Staff','Staff',NULL),(123456789,'Speaker','Speaker',NULL),(201707038,'Will','Admin',NULL),(201707408,'Antony','Admin',NULL),(201709001,'James','Student',NULL),(222222222,'Admin','Admin',NULL),(333333333,'Society','Society','Airsoft'),(555555555,'Lecturer','Lecturer',NULL),(777777777,'ExternalUser','ExternalUser',NULL);
 /*!40000 ALTER TABLE `logintable` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,6 +145,36 @@ INSERT INTO `rooms` VALUES (15,'2019-04-03 01:32:59','201707038','compsci','2019
 UNLOCK TABLES;
 
 --
+-- Table structure for table `speakers`
+--
+
+DROP TABLE IF EXISTS `speakers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `speakers` (
+  `SpeakerID` int(11) NOT NULL,
+  `SocietyID` int(11) NOT NULL,
+  `RoomID` int(11) NOT NULL,
+  `SpeakerName` varchar(50) NOT NULL,
+  `Affiliation` varchar(50) NOT NULL,
+  `SpeechTopic` varchar(50) NOT NULL,
+  `SpeechDescription` text NOT NULL,
+  `PrimKey` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`PrimKey`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `speakers`
+--
+
+LOCK TABLES `speakers` WRITE;
+/*!40000 ALTER TABLE `speakers` DISABLE KEYS */;
+INSERT INTO `speakers` VALUES (1,333333333,1,'John Smith','Digital Delivery Academy','Travis CI','Continuous Integration and delivery',1);
+/*!40000 ALTER TABLE `speakers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `temp`
 --
 
@@ -183,4 +213,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-09 12:21:30
+-- Dump completed on 2019-04-09 14:49:05
