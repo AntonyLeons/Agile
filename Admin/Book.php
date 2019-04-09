@@ -76,7 +76,7 @@ catch (\Exception $e) {
 else {
   if($Past==1)
   {
-    //alert("Time has passed");
+    alert("Time has passed");
   }
 }
 mysqli_close($conn);
