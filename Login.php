@@ -65,6 +65,14 @@ $dataID = mysqli_fetch_array($result);
                 location='Society/SocietyPortal.html';
                 </script>";
               }
+
+              if ($dataUser['UserType'] =="ExternalUser")
+              {
+                echo "<script type='text/javascript'>
+                location='ExternalUser/ExternalUserPortal.html';
+                </script>";
+              }
+
           }
           else
           {
