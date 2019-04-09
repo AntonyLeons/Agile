@@ -1,18 +1,5 @@
 runtime: php
-env: flex
-runtime_config:
-    document_root: .
 env_variables:
-    APP_LOG: errorlog
-    GOOGLE_STORAGE_BUCKET: "agile-235110.appspot.com"
     MYSQL_USER: "appengine"
     MYSQL_PASSWORD: "Test"
     MYSQL_DSN: "mysql:dbname=bookings;unix_socket=/cloudsql/agile-235110:europe-west2:agile-4"
-beta_settings:
-    cloud_sql_instances: "agile-235110:europe-west2:agile-4"
-manual_scaling:
-  instances: 1
-resources:
-  cpu: 1
-  memory_gb: 0.5
-  disk_size_gb: 10
