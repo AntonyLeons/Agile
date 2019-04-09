@@ -57,6 +57,12 @@ $InputtedRoomErr ="";
        $fetchedComputerLab = mysqli_query($conn, $GetComputerLab);
        $row3 = mysqli_fetch_array($fetchedComputerLab);
 
+       $GetBooked = "SELECT `IsBooked` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
+       $fetchedBook = mysqli_query($conn, $GetBooked);
+       $row4 = mysqli_fetch_array($fetchedBook);
+
+       if ($row4['IsBooked'] != "Yes")
+       {
 
 if ($row3['IsComputerLab'] != "Yes")
 {
@@ -104,16 +110,20 @@ if ($row3['IsComputerLab'] != "Yes")
                 }
                 else
                 {
-                  //  alert("You cannot book this room");
+                    alert("You cannot book this room");
                 }
             }
             else
             {
-              //alert("You cannot book this room");
+              alert("You cannot book this room");
             }
 }
 else {
-  //alert("You cannot book this room");
+  alert("You cannot book this room");
+}
+}
+else {
+  alert("You cannot book this room");
 }
 
 
