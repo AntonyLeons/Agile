@@ -54,12 +54,11 @@ $roomssql="INSERT INTO rooms (entryID, ts, StudentID, Room, booking_for, booking
 
 if (mysqli_query($conn, $sql) && mysqli_query($conn, $roomssql))
 {
-  //alert("Booked");
-  echo "$Stamp";
+  alert("Booked");
 }
 else
 {
-//  alert("Error");
+  alert("Error");
 }
 
 try {
