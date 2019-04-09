@@ -41,7 +41,7 @@
 
 
       <fieldset class="form-fieldset ui-input __first">
-        <input type="Number" min="0" max="999999999" placeholder="Duration(mins)" name="FormDuration" id =  "username" required/>
+        <input type="Number" min="0" max="999999999" placeholder="Duration(mins)" name="FormDuration" id =  "username" step="60" required/>
         <label for="repeat-new-password">
           <span data-text="Repeat New Password">Duration</span>
         </label>
@@ -51,9 +51,16 @@
         <input list="Room" input type="text" name="Room"maxlength="40" placeholder="Room" id = "username" required>
         <label for="repeat-new-password">
           <span data-text="Repeat New Password">Room</span>
-
-          <fieldset class="form-fieldset ui-input __fourth">
-            <input list="Room" input type="text" name="Activity"maxlength="40" placeholder="Activity" id = "username" required>
+        </label>
+          <datalist id="Room">
+                    <option value="ESK-ALLAM-LT">
+                    <option value="COHEN-LT3">
+                    <option value="FENNER-052B">
+                    <option value="RBB-USFR">
+                  </datalist>
+      </fieldset>
+          <fieldset class="form-fieldset ui-input __first">
+            <input input type="text" name="Activity"maxlength="40" placeholder="Activity" id = "username" required>
             <label for="repeat-new-password">
               <span data-text="Repeat New Password">Activity</span>
 

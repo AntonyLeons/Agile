@@ -1,6 +1,4 @@
 <?php
-require("../vendor/autoload.php");
-require("../env.php");
  function test_input($data)
  {
     $data = trim($data);
@@ -17,23 +15,19 @@ require("../env.php");
   }
 try
         {
-          $servername = null;
-          $username = 'appengine';
-          $password = 'Test';
-          $dbname = Bookings;
-          $dbport = null;
-          // Create connection
-          $conn = new mysqli($servername, $username, $password, $dbname,
-          	$dbport, "/cloudsql/agile-235110:europe-west2:agile-4");
+         $dbhost = "localhost";
+         $dbuser = "appengine";
+         $dbpass = "Test";
+         $db = "bookings";
+         $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
 
 
-
-                $RoomName = test_input($_POST["RoomName"]);
-                $sql = "DELETE FROM `roomcontent` WHERE `Room` LIKE '$RoomName'";
+                $UserID = test_input($_POST["UserID"]);
+                $sql = "DELETE FROM `logintable` WHERE `logintable`.`ID` = '$UserID';";
 
                 if (mysqli_query($conn, $sql))
                {
-                 alert("Room Deleted");
+                 alert("User Deleted");
 
                }
                else
