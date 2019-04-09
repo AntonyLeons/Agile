@@ -41,6 +41,12 @@ $InputtedRoomErr ="";
        {
          $Past="1";
        }
+       $GetBooked = "SELECT `IsBooked` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
+       $fetchedBook = mysqli_query($conn, $GetBooked);
+       $row4 = mysqli_fetch_array($fetchedBook);
+
+       if ($row4['IsBooked'] != "Yes")
+       {
 
 
 
@@ -80,6 +86,10 @@ else {
     alert("Time has passed");
 
   }
+}
+}
+else {
+  alert("You cannot book this room");
 }
 mysqli_close($conn);
 

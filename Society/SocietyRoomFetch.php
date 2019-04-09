@@ -51,7 +51,8 @@ $dbpass = "Test";
 $db = "Bookings";
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
 $TimeSearch = $_GET["Timesearch"];
-            $Fetch="SELECT * FROM roomcontent WHERE `Time` LIKE '%$TimeSearch%'";
+            $Fetch="SELECT * FROM roomcontent WHERE `Time` LIKE '%$TimeSearch%' AND `IsBooked` LIKE 'No' AND `IsComputerLab`LIKE 'No' AND `IsChemicalLab` LIKE 'No'";
+
             $result = mysqli_query($conn, $Fetch);
 
 

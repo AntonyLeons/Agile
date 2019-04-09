@@ -47,6 +47,32 @@ $InputtedRoomErr ="";
        }
 
 
+
+       $GetChemLab  = "SELECT `IsChemicalLab` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
+       $fetchedchemlab = mysqli_query($conn, $GetChemLab);
+       $row2 = mysqli_fetch_array($fetchedchemlab);
+
+       $GetComputerLab = "SELECT `IsComputerLab` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
+       $fetchedComputerLab = mysqli_query($conn, $GetComputerLab);
+       $row3 = mysqli_fetch_array($fetchedComputerLab);
+
+       $GetBooked = "SELECT `IsBooked` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
+       $fetchedBook = mysqli_query($conn, $GetBooked);
+       $row4 = mysqli_fetch_array($fetchedBook);
+
+
+
+       if ($row4['IsBooked'] != "Yes")
+       {
+
+if ($row3['IsComputerLab'] != "Yes")
+{
+
+    if ($row2['IsChemicalLab'] != "Yes")
+    {
+
+
+
 if($Past =='')
 {
 $sql = "UPDATE `roomcontent` SET `IsBooked` = 'Yes', `LatestBooking` = '$Stamp', `BookedDuration` = '$InputtedDuration'  WHERE `roomcontent`.`Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
@@ -82,6 +108,17 @@ else {
   {
     alert("Time has passed");
   }
+}
+}
+else {
+  alert("You cannot book this room");
+}
+}
+else {
+  alert("You cannot book this room");
+}
+}else {
+  alert("You cannot book this room");
 }
 mysqli_close($conn);
 
