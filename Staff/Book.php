@@ -51,6 +51,12 @@ $InputtedRoomErr ="";
          $Past="1";
        }
 
+       $GetBooked = "SELECT `IsBooked` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
+       $fetchedBook = mysqli_query($conn, $GetBooked);
+       $row4 = mysqli_fetch_array($fetchedBook);
+       if ($row4['IsBooked'] != "Yes")
+       {
+
 if($Past =='')
 {
 $sql = "UPDATE `roomcontent` SET `IsBooked` = 'Yes', `LatestBooking` = '$Stamp', `BookedDuration` = '$InputtedDuration'  WHERE `roomcontent`.`Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
@@ -85,6 +91,10 @@ else {
   {
     alert("Time has passed");
   }
+}
+}
+else {
+  alert("This Room Is Booked");
 }
 mysqli_close($conn);
 ?>

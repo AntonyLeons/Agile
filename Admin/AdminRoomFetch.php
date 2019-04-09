@@ -52,7 +52,7 @@ function test_input($data)
   	$dbport, "/cloudsql/agile-235110:europe-west2:agile-4");
 
 $TimeSearch = $_GET["Timesearch"];
-            $Fetch="SELECT * FROM roomcontent WHERE `Time` LIKE '%$TimeSearch%'";
+            $Fetch="SELECT * FROM roomcontent WHERE `Time` LIKE '%$TimeSearch%' AND `IsBooked` LIKE 'No'";
             $result = mysqli_query($conn, $Fetch);
 
 
