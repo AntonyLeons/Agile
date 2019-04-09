@@ -1,5 +1,6 @@
 
 <?php
+date_default_timezone_set('Europe/London');
 require_once("../zapcallib.php");
 require("../vendor/autoload.php");
 require("../env.php");
@@ -35,18 +36,22 @@ $InputtedRoomErr ="";
        $InputtedRoom = test_input($_POST["Room"]);
        $InputtedDate = test_input($_POST["BookingFor"]);
        $InputtedDuration = test_input($_POST["FormDuration"]);
-
-
-
+       $Activity= test_input($_POST["Activity"]);
        $InputtedTime = test_input($_POST["Timebook"]);
 
        $Stamp = $InputtedDate  . ' ' . $InputtedTime .":00";
        $Time1 = $InputtedTime .":00";
+       $Past='';
+       if($Stamp < date("Y-m-d H:i:s"))
+       {
+         $Past="1";
+       }
 
 
 
 
-
+if($Past =='')
+{
 $sql = "UPDATE `roomcontent` SET `IsBooked` = 'Yes', `LatestBooking` = '$Stamp', `BookedDuration` = '$InputtedDuration'  WHERE `roomcontent`.`Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
 $InputtedTime=$Stamp;
 $inputtedminutes=$InputtedDuration % 60;
@@ -73,9 +78,15 @@ try {
 catch (\Exception $e) {
 
 }
+}
+else {
+  if($Past==1)
+  {
+    alert("Time has passed");
+
+  }
+}
 mysqli_close($conn);
-
-
 
 
 ?>

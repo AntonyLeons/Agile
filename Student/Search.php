@@ -18,8 +18,16 @@
             <li><a href="StudentPortal.html">Home</a></li>
             <li><a href="Avalible.html">Find Avalible Rooms</a></li>
             <li><a class="active" href="Search.html">My Timetable</a></li>
-            <li><a href="../index.html">Logout</a></li>
+            <li><a href="../index.html" onclick="logoutclear()">Logout</a></li>
           </ul>
+
+
+          <script>
+          var logoutclear = function()
+          {
+            localStorage.clear();
+          }
+          </script>
 
 </div>
 </body>
@@ -80,15 +88,11 @@ function test_input($data)
   </style>
   <table>
 <tr>
-<th>ID</th>
-       <th>TimeStamp</th>
-       <th>StudentID</th>
        <th>Society</th>
        <th>Room</th>
        <th>Start</th>
        <th>End</th>
        <th>Activity</th>
-       <th>User Type</th>
 </tr>";
 							 $StudentID = test_input($_GET["StudentID"]);
 							 // check if name only contains letters and whitespace
@@ -119,15 +123,16 @@ function test_input($data)
                `Activity` varchar(100) DEFAULT NULL,
                `Room` varchar(255) DEFAULT NULL,
                `UserType` varchar(11) NOT NULL
-             )  AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
+             ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
              $result = mysqli_query($conn, $sql);
              if($StudentID != '')
              {
+file_put_contents("import.ics", fopen("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}", 'r'));
 // create the ical object
 require_once("../zapcallib.php");
 
 //$icalfile = count($argv) > 1 ? $argv[1] : "abrahamlincoln.ics";
-$icalfeed = file_get_contents("http://calendars.hull.ac.uk/tcs/Stucal.asp?p1={$StudentID}");
+$icalfeed = file_get_contents("import.ics");
 
 $icalobj = new ZCiCal($icalfeed);
 
@@ -204,15 +209,12 @@ $result = mysqli_query($conn, $Fetch);
 while ($row = mysqli_fetch_array($result)) {
     {
         echo "<tr>";
-        echo "<td>" . $row['entryID'] . "</td>";
-        echo "<td>" . $row['ts']. "</td>";
-        echo "<td>" . $row['StudentID'] . "</td>";
+
         echo "<td>" . $row['Society'] . "</td>";
         echo "<td>" . $row['Room'] . "</td>";
         echo "<td>" . $row['booking_for'] . "</td>";
         echo "<td>" . $row['booking_end'] . "</td>";
         echo "<td>" . $row['Activity'] . "</td>";
-        echo "<td>" . $row['UserType'] . "</td>";
         echo "</tr>" ;
     }
 }

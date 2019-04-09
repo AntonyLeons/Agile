@@ -18,8 +18,14 @@
             <li><a href="LecturerPortal.html">Home</a></li>
             <li><a href="Avalible.html">Find Avalible Rooms</a></li>
             <li><a class="active" href="Search.html">My Timetable</a></li>
-            <li><a href="../index.html">Logout</a></li>
+            <li><a href="../index.html" onclick="logoutclear()">Logout</a></li>
           </ul>
+          <script>
+          var logoutclear = function()
+          {
+            localStorage.clear();
+          }
+          </script>
 
 </div>
 </body>
@@ -80,15 +86,12 @@ function test_input($data)
   </style>
   <table>
 <tr>
-<th>ID</th>
-       <th>TimeStamp</th>
-       <th>StudentID</th>
-       <th>Society</th>
+        <th>Student ID</th>
        <th>Room</th>
        <th>Start</th>
        <th>End</th>
        <th>Activity</th>
-       <th>User Type</th>
+
 </tr>";
 							 $StudentID = test_input($_GET["StudentID"]);
 							 // check if name only contains letters and whitespace
@@ -204,15 +207,11 @@ $result = mysqli_query($conn, $Fetch);
 while ($row = mysqli_fetch_array($result)) {
     {
         echo "<tr>";
-        echo "<td>" . $row['entryID'] . "</td>";
-        echo "<td>" . $row['ts']. "</td>";
         echo "<td>" . $row['StudentID'] . "</td>";
-        echo "<td>" . $row['Society'] . "</td>";
         echo "<td>" . $row['Room'] . "</td>";
         echo "<td>" . $row['booking_for'] . "</td>";
         echo "<td>" . $row['booking_end'] . "</td>";
         echo "<td>" . $row['Activity'] . "</td>";
-        echo "<td>" . $row['UserType'] . "</td>";
         echo "</tr>" ;
     }
 }

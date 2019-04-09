@@ -14,59 +14,37 @@
   <div class="container" >
     <h1>Room Booking</h1>
     <h2>With Hull University</h2>
-    <form class="form" action= "book.php" method="post" name="AdminPort" id ="AdminPort">
-
+    <form class="form" action= "Adduser.php" method="post" name="AdminPort" id ="AdminPort">
       <fieldset class="form-fieldset ui-input __first">
-        <input type="Number" min="0" max="999999999" placeholder="Admin ID" name="AdminID" id =  "AdminID" readonly = "readonly" required/>
+        <input type="Number" min="0" max="999999999" placeholder="Admin ID (Verification)" name="AdminID" id =  "AdminID" readonly = "readonly" required/>
         <label for="repeat-new-password">
           <span data-text="Repeat New Password">Admin ID</span>
         </label>
       </fieldset>
 
-      <fieldset class="form-fieldset ui-input __third">
-      <input type="date" name="BookingFor" placeholder="Booking start" id =  "username" required>
-      <label for="repeat-new-password">
-        <span data-text="Repeat New Password">Booking Date</span>
-      </label>
-      </fieldset>
-
-      <fieldset class="form-fieldset ui-input __third">
-      <input type="time" name="Timebook" placeholder="Booking start" id =  "username" required>
-      <label for="repeat-new-password">
-        <span data-text="Repeat New Password">Booking Time</span>
-      </label>
-      </fieldset>
-
-
-
       <fieldset class="form-fieldset ui-input __first">
-        <input type="Number" min="0" max="999999999" placeholder="Duration(mins)" name="FormDuration" id =  "username" required/>
+        <input type="ni,number" min="0" max="999999999" placeholder="User ID" name="UserID" id =  "UserID"  required/>
         <label for="repeat-new-password">
-          <span data-text="Repeat New Password">Admin ID</span>
+          <span data-text="Repeat New Password">User ID</span>
         </label>
       </fieldset>
 
-
-
-      <fieldset class="form-fieldset ui-input __fourth">
-        <input list="Room" input type="text" name="Room"maxlength="40" placeholder="Room" id = "username" required>
-        <label for="repeat-new-password">
-          <span data-text="Repeat New Password">Room</span>
-
-        </label>
+      <fieldset class="form-fieldset ui-input __third">
+      <input type="text" name="Password" placeholder="Password" id =  "Password" required>
+      <label for="repeat-new-password">
+        <span data-text="Repeat New Password">Password</span>
+      </label>
       </fieldset>
 
-      <fieldset class="form-fieldset ui-input __fourth">
-        <input list="Room" input type="text" name="Activity"maxlength="40" placeholder="Activity" id = "username" required>
-        <label for="repeat-new-password">
-          <span data-text="Repeat New Password">Activity</span>
-
-        </label>
+      <fieldset class="form-fieldset ui-input __third">
+      <input type="text" name="UserType" placeholder="User Type" id =  "UserType" required>
+      <label for="repeat-new-password">
+        <span data-text="Repeat New Password">User Type</span>
+      </label>
       </fieldset>
-
 
       <div class="form-footer">
-        <button class="btn">Book Room</button>
+        <button class="btn">Add User</button>
       </div>
     </form>
 
@@ -94,8 +72,8 @@ var logoutclear = function()
 
 <ul>
 
-  <li><a href="AdminManage.html" class ="btn" >Manage Rooms</a></li>
-  <li><a href="adduser.html" class ="btn">Add User</a></li>
+  <li><a class ="btn" >Manage Rooms</a></li>
+  <li><a class ="btn">Add User</a></li>
   <li><a class ="btn">Change Booking</a></li>
   <li><a class ="btn">Booking Requests</a></li>
 </ul>

@@ -16,13 +16,20 @@
   <h1>Room Booking</h1>
   <h2>With Hull University</h2>
     <div class="form">
-      <form action= "Search.php" method="GET" name="Search";>
+      <form action= "Search.php" method="GET" id="Search" name="Search";>
         <fieldset class="form-fieldset ui-input __first">
-          <input type="Number" min="0" max="999999999" placeholder="Student ID" name="StudentID" id =  "StudentID"/>
+          <input type="Number" min="0" max="999999999" placeholder="Student ID" readonly = "readonly" name="StudentID" id =  "StudentID"/>
         </fieldset>
         <fieldset class="form-fieldset ui-input __second">
           <input type="text" placeholder="Society" name="Society" maxlength="20"  id =  "Society" />
         </fieldset>
+
+
+        <script>
+        var local = localStorage.getItem("LoginID");
+       document.getElementById("Search").elements.namedItem("StudentID").value = local;
+        </script>
+
         <div class="switch-field">
                         <input type="radio" id="switch_3_left" name="Selection" value="Week" checked/>
                         <label for="switch_3_left">Week</label>
@@ -45,8 +52,14 @@
             <li><a href="SocietyPortal.html">Home</a></li>
             <li><a href="Avalible.html">Find Avalible Rooms</a></li>
             <li><a class="active" href="Search.html">My Timetable</a></li>
-            <li><a href="../index.html">Logout</a></li>
+            <li><a href="../index.html" onclick="logoutclear()">Logout</a></li>
           </ul>
+          <script>
+          var logoutclear = function()
+          {
+            localStorage.clear();
+          }
+          </script>
 
 </div>
 </html>
