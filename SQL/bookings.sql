@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 08, 2019 at 10:06 PM
+-- Generation Time: Apr 09, 2019 at 12:14 PM
 -- Server version: 5.7.24
 -- PHP Version: 7.2.14
 
@@ -48,6 +48,31 @@ INSERT INTO `logintable` (`ID`, `Password`, `UserType`, `SocietyName`) VALUES
 (333333333, 'Society', 'Society', 'Airsoft'),
 (555555555, 'Lecturer', 'Lecturer', NULL),
 (201707408, 'Antony', 'Admin', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `members`
+--
+
+DROP TABLE IF EXISTS `members`;
+CREATE TABLE IF NOT EXISTS `members` (
+  `MemberID` int(11) NOT NULL,
+  `MemberName` text NOT NULL,
+  `Phone` text NOT NULL,
+  `UserType` text NOT NULL,
+  `Email` text NOT NULL,
+  `SocietyID` int(11) NOT NULL,
+  `PrimKey` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`PrimKey`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `members`
+--
+
+INSERT INTO `members` (`MemberID`, `MemberName`, `Phone`, `UserType`, `Email`, `SocietyID`, `PrimKey`) VALUES
+(201709001, 'James Duncan', '01632 960858', 'Student', 'jamesjduncan99@gmail.com', 333333333, 1);
 
 -- --------------------------------------------------------
 
