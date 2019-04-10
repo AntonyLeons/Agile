@@ -182,7 +182,7 @@ if(isset($icalobj->tree->child))
 }
 }
 
-$sql="INSERT TEMP SELECT * FROM rooms WHERE (StudentID='$StudentID' OR '$StudentID'='') AND (Society='$Society' OR '$Society'='');";
+$sql="INSERT TEMP SELECT * FROM rooms WHERE (StudentID='$StudentID' OR '$StudentID'='') OR (Society='$Society' OR '$Society'='');";
 $result = mysqli_query($conn, $sql);
 
 
@@ -211,7 +211,7 @@ while ($row = mysqli_fetch_array($result)) {
         echo "<td>" . $row['booking_for'] . "</td>";
         echo "<td>" . $row['booking_end'] . "</td>";
         echo "<td>" . $row['Activity'] . "</td>";
-    
+
         echo "</tr>" ;
     }
 }

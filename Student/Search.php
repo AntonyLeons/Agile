@@ -181,7 +181,7 @@ if(isset($icalobj->tree->child))
 }
 }
 
-$sql="INSERT TEMP SELECT * FROM rooms WHERE (StudentID='$StudentID' OR '$StudentID'='') AND (Society='$Society' OR '$Society'='');";
+$sql="INSERT TEMP SELECT * FROM rooms WHERE (StudentID='$StudentID' OR '$StudentID'='') OR (Society='$Society' OR '$Society'='');";
 $result = mysqli_query($conn, $sql);
 
 
