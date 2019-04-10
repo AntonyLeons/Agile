@@ -1,0 +1,234 @@
+aff9428,Antony Leons,7 minutes ago,favicons added
+7e9be92,Antony Leons,40 minutes ago,removed unnecceary queries
+b16eb00,JamesDun2866,89 minutes ago,Merge pull request #38 from Openanttony/BugFixing
+c5821ca,JamesDun2866,2 hours ago,Added Validation
+65cca5d,JamesDun2866,2 hours ago,Even more bug fixes v2
+f9b14ea,JamesDun2866,2 hours ago,Even More Bug Fixes
+1c6a9ce,JamesDun2866,2 hours ago,More Bug Fixes
+c4000d3,JamesDun2866,3 hours ago,Merge branch 'master' into BugFixing
+dae9a4d,JamesDun2866,3 hours ago,Update StaffRoomFetch.php
+490e2b6,JamesDun2866,3 hours ago,available change
+4b1cc12,Antony Leons,3 hours ago,Searches
+68b42e8,Antony Leons,5 hours ago,fix search
+1b0a7c2,Antony Leons,5 hours ago,Revert "fix search"
+3d99046,Antony Leons,5 hours ago,fix search
+efbbf9c,Antony Leons,16 hours ago,contact timetabling
+ac3a921,Antony Leons,16 hours ago,delete user added
+0a4c4c5,Antony Leons,16 hours ago,Update AdminPortal.html
+d6ba81b,Antony Leons,17 hours ago,drop downs added
+32070d9,Antony Leons,17 hours ago,steps added
+289fad9,Antony Leons,21 hours ago,fixed search
+57fb155,JamesDun2866,21 hours ago,Merge pull request #37 from Openanttony/Validation
+215769e,JamesDun2866,21 hours ago,Merge branch 'master' into Validation
+b6e336a,JamesDun2866,21 hours ago,Limitations for every user
+716e88b,Antony Leons,21 hours ago,fixed buttons
+5882b6a,Antony Leons,21 hours ago,Update AdminManage.html
+d1171eb,Antony Leons,22 hours ago,Merge branch 'master' of https://github.com/Openanttony/Agile
+6d7c7cf,Antony Leons,22 hours ago,Update loop.php
+bd920d7,JamesDun2866,22 hours ago,Merge pull request #36 from Openanttony/Validation
+916dbeb,JamesDun2866,22 hours ago,Merge branch 'master' into Validation
+47d1425,JamesDun2866,22 hours ago,Student Restrictions
+7a1d91f,Antony Leons,22 hours ago,sql queries
+2554cc7,Antony Leons,23 hours ago,Create add new dates
+f4b3bde,Antony Leons,24 hours ago,Sql updated
+0e175f4,JamesDun2866,24 hours ago,Merge pull request #35 from Openanttony/LargeRoom
+7e07cfc,JamesDun2866,24 hours ago,Merge branch 'master' into LargeRoom
+e7615cc,JamesDun2866,24 hours ago,Added User ExternalUser
+3f6e70a,Antony Leons,24 hours ago,removed unnecessary comments
+24532ee,Antony Leons,24 hours ago,Update bookings.sql
+a5feda2,JamesDun2866,25 hours ago,Merge pull request #34 from Openanttony/ExternalSpeaker
+0666c2e,JamesDun2866,25 hours ago,Fixed Redirect
+1d4c4f9,JamesDun2866,25 hours ago,Added Speaker Table
+923d8a0,JamesDun2866,25 hours ago,Linked External Speaker
+0d9bf22,JamesDun2866,25 hours ago,Merge branch 'master' into ExternalSpeaker
+2e02a57,JamesDun2866,25 hours ago,External Speaker Added
+13c517f,Antony Leons,26 hours ago,fix add user
+d3dc969,Antony Leons,26 hours ago,Merge branch 'master' of https://github.com/Openanttony/Agile
+7a441d4,Antony Leons,26 hours ago,added union button and sql
+a293144,JamesDun2866,26 hours ago,Merge branch 'master' of https://github.com/Openanttony/Agile
+472739c,JamesDun2866,26 hours ago,Update AdminManage.html
+5fc2ef4,Antony Leons,26 hours ago,password masking
+bdd3d32,JamesDun2866,26 hours ago,Merge branch 'master' of https://github.com/Openanttony/Agile
+85a5696,JamesDun2866,26 hours ago,Added Member to society
+4cb5f00,Antony Leons,27 hours ago,added headers
+24ee6a4,Antony Leons,28 hours ago,Update AdminPortal.html
+e565fd7,JamesDun2866,28 hours ago,Update AddRoom.php
+5978f58,Antony Leons,28 hours ago,css fixes
+f1c88de,Antony Leons,28 hours ago,Update Book.php
+4f0e322,Antony Leons,28 hours ago,Update Book.php
+8aa175c,Antony Leons,28 hours ago,Update Avalible.html
+b3ac355,Antony Leons,28 hours ago,Update Avalible.html
+3c3dd58,Antony Leons,28 hours ago,Update AdminPortal.html
+7fe48ff,JamesDun2866,2 days ago,Merge pull request #33 from Openanttony/AdminPortalExpansion
+2274c03,JamesDun2866,2 days ago,Linked Manage Page
+1fc567d,JamesDun2866,2 days ago,Merge branch 'master' into AdminPortalExpansion
+ebe1842,JamesDun2866,2 days ago,Added Delete Room Function
+c319997,JamesDun2866,2 days ago,Merge pull request #32 from Openanttony/AdminPortalExpansion
+1629463,JamesDun2866,2 days ago,Auto Generating Primary Key
+d4276d3,JamesDun2866,2 days ago,Admins Can Add Rooms
+318d49b,JamesDun2866,2 days ago,Merge branch 'master' into AdminPortalExpansion
+94c35b4,JamesDun2866,2 days ago,AddRoom Added
+65e88f3,Antony Leons,2 days ago,Merge pull request #31 from Openanttony/past-validation
+0486687,Antony Leons,2 days ago,cleaned book
+97815d1,Antony Leons,2 days ago,added activity to 2 missing ones
+96ac4b4,Antony Leons,2 days ago,Merge branch 'master' into past-validation
+87ec731,Antony Leons,2 days ago,Update bookings.sql
+9ae9448,Antony Leons,2 days ago,added is past
+fd448e3,JamesDun2866,2 days ago,Merge pull request #30 from Openanttony/AdminPortalExpansion
+cc18a2b,JamesDun2866,2 days ago,Added Times of rooms to form
+3bea67a,JamesDun2866,2 days ago,Added Admin Manage Room Page
+4a0e62b,JamesDun2866,2 days ago,Merge branch 'master' into AdminPortalExpansion
+0914643,JamesDun2866,2 days ago,User Styled Timetables
+712248e,Antony Leons,2 days ago,Merge branch 'master' into past-validation
+7064ed2,Antony Leons,2 days ago,SQL MERGE
+fad6d01,JamesDun2866,2 days ago,Merge pull request #29 from Openanttony/AdminPortalExpansion
+963c4d7,JamesDun2866,2 days ago,Merge branch 'master' into AdminPortalExpansion
+b924fac,JamesDun2866,2 days ago,Added Add User function
+8fbd7c8,Antony Leons,2 days ago,update tables
+ea45bab,Antony Leons,2 days ago,Merge branch 'master' into past-validation
+f2e824e,JamesDun2866,2 days ago,Merge pull request #28 from Openanttony/Misc
+ee82618,JamesDun2866,2 days ago,Added Defaults to Society and Student
+a1715df,JamesDun2866,2 days ago,Merge pull request #27 from Openanttony/ExpandingPortals
+23f19a2,JamesDun2866,2 days ago,Merge branch 'master' into ExpandingPortals
+e42d78d,JamesDun2866,2 days ago,Added to Portals
+2c67c3e,Antony Leons,2 days ago,Merge pull request #26 from Openanttony/deployment-fixes
+30cbcfd,Antony Leons,2 days ago,fixes for deployment
+8928166,JamesDun2866,2 days ago,Removed Useless character
+202e920,JamesDun2866,2 days ago,Fixed Logout Buttons
+e32abf7,JamesDun2866,2 days ago,Merge branch 'master' of https://github.com/Openanttony/Agile
+5b2f9a8,JamesDun2866,2 days ago,Update Login.php
+f267ef4,JamesDun2866,2 days ago,Merge pull request #25 from Openanttony/PersistantID
+ae23a99,JamesDun2866,2 days ago,Merge branch 'master' into PersistantID
+b2686f5,JamesDun2866,2 days ago,Added Functionality to all users
+ca8db86,JamesDun2866,2 days ago,Login StudentID Globalised
+42d2463,Antony Leons,2 days ago,Deployment
+761d9fb,Antony Leons,2 days ago,works but not really
+54bab6f,Antony Leons,3 days ago,merged sql and modifed table
+4579b41,Antony Leons,3 days ago,fixed entrys
+9397cb1,Antony Leons,3 days ago,fixed search
+0767253,Antony Leons,3 days ago,activity added
+80afd7c,Antony Leons,3 days ago,fixed
+48cf25f,JamesDun2866,3 days ago,Merge pull request #24 from Openanttony/Fixing-Links
+40e07a4,JamesDun2866,3 days ago,Added Society And activity
+32bb056,JamesDun2866,3 days ago,Merge pull request #23 from Openanttony/Fixing-Links
+8d43b82,JamesDun2866,3 days ago,Merge branch 'master' into Fixing-Links
+0705cb3,JamesDun2866,3 days ago,Links All Work and Booking only affects one entry now
+547d1ca,Antony Leons,3 days ago,Merge pull request #22 from Openanttony/link-fixing-and-table-merge
+597de69,Antony Leons,3 days ago,fixed duration maker
+25c7739,Antony Leons,3 days ago,Merge branch 'master' into link-fixing-and-table-merge
+419cc1b,Antony Leons,3 days ago,Update Book.php
+7f3629b,JamesDun2866,3 days ago,Merge pull request #21 from Openanttony/FixingGeneralLinksAndAddingbooking
+6dba313,JamesDun2866,3 days ago,Merge branch 'master' into FixingGeneralLinksAndAddingbooking
+7b074e3,JamesDun2866,3 days ago,Added Per hour search
+8e95404,Antony Leons,3 days ago,Merge branch 'master' of https://github.com/Openanttony/Agile
+7a7c0f6,Antony Leons,3 days ago,unified sql
+974a42a,Antony Leons,3 days ago,Merge pull request #20 from Openanttony/link-fixing-and-table-merge
+68abef0,Antony Leons,3 days ago,added to all types
+f227efb,Antony Leons,3 days ago,merged fuctions
+5594c34,Antony Leons,3 days ago,Merge branch 'master' into link-fixing-and-table-merge
+5509fc0,JamesDun2866,3 days ago,Merge pull request #19 from Openanttony/FixingGeneralLinksAndAddingbooking
+6120cb1,JamesDun2866,3 days ago,Changed IsBooked to No
+d83ced9,JamesDun2866,3 days ago,Added Times
+0179f94,JamesDun2866,3 days ago,Merge pull request #18 from Openanttony/FixingGeneralLinksAndAddingbooking
+14ca316,JamesDun2866,3 days ago,Added more entries
+65ef7f5,Antony Leons,3 days ago,links fixed
+ba9ef37,Antony Leons,4 days ago,Merge pull request #17 from Openanttony/Multi-Society
+9da95ee,Antony Leons,4 days ago,Update styles.css
+c62c3a3,Antony Leons,4 days ago,added log out and fixed styles
+29da1fc,Antony Leons,4 days ago,updated links and search
+2689009,Antony Leons,5 days ago,Merge pull request #16 from Openanttony/Multi-Society
+eadf897,Antony Leons,5 days ago,fixed
+9e523dc,JamesDun2866,5 days ago,Merge pull request #15 from Openanttony/email
+4af72fa,JamesDun2866,5 days ago,Merge branch 'master' into email
+4b081fa,JamesDun2866,5 days ago,Email
+c3a81ec,Antony Leons,5 days ago,combined sql
+ac90eb5,Antony Leons,5 days ago,Merge branch 'master' of https://github.com/Openanttony/Agile
+17a75cd,Antony Leons,5 days ago,housekeeping
+4c48841,Antony Leons,5 days ago,Merge pull request #14 from Openanttony/search-field
+3d401ca,Antony Leons,5 days ago,finiahed combined search
+d6bc8e0,Antony Leons,5 days ago,Merge branch 'master' into search-field
+ed8ab52,Antony Leons,5 days ago,adding field validation
+1b03924,JamesDun2866,5 days ago,Merge pull request #13 from Openanttony/Login
+0b43352,JamesDun2866,5 days ago,Login Working
+3c819b8,JamesDun2866,5 days ago,Added a fetch for testing
+fb28540,JamesDun2866,5 days ago,Login Database added
+32a788d,JamesDun2866,5 days ago,Login Form Added to index and Login.php added
+e2a3e1b,Antony Leons,6 days ago,fixed html
+68151f8,Antony Leons,7 days ago,Merge pull request #11 from Openanttony/fix-css-Antony
+31802ed,Antony Leons,7 days ago,fix table styling
+03ea0fe,Antony Leons,7 days ago,removed commented lines
+bd9f4c7,Antony Leons,7 days ago,edited nav bar names
+49956ab,Antony Leons,7 days ago,fixed header
+2a88896,JamesDun2866,7 days ago,Merge pull request #10 from Openanttony/Restyling
+df41740,JamesDun2866,7 days ago,Re-Styled all search htmls
+005d4f5,JamesDun2866,7 days ago,Society & Staff Restyled
+e9452a9,JamesDun2866,7 days ago,Merge branch 'master' into Restyling
+00d9a35,JamesDun2866,7 days ago,LecturerPortal And Admin Portal Restyled
+149a75e,JamesDun2866,7 days ago,Restyle Front Page
+7b68f1a,Antony Leons,7 days ago,search added to folders
+b75af10,Antony Leons,7 days ago,delete update
+e50bea4,Antony Leons,7 days ago,fix book.php
+44c115d,Antony Leons,7 days ago,favicons added
+bb4ed0d,Antony Leons,8 days ago,removed clutter
+4b73eef,Antony Leons,8 days ago,Update .travis.yml
+90bf5f1,Antony Leons,8 days ago,travis Strict
+e2d393a,Antony Leons,8 days ago,Merge pull request #9 from Openanttony/SQL-housekeeping-Antony
+8a315aa,Antony Leons,8 days ago,revert verification
+fb4715d,Antony Leons,8 days ago,Merge pull request #8 from Openanttony/search-options-antony
+af950e9,Antony Leons,8 days ago,Merge branch 'master' into search-options-antony
+1babf85,Antony Leons,8 days ago,fix Month
+97a331a,Antony Leons,8 days ago,finished optional features
+df730e6,JamesDun2866,8 days ago,Merge pull request #7 from Openanttony/CreatingPortals
+49568d4,JamesDun2866,8 days ago,Added Portals Of Other Users
+2267609,JamesDun2866,8 days ago,Merge pull request #6 from Openanttony/Agile--James
+5801b35,JamesDun2866,8 days ago,Changed SQL Query
+0f96e4f,JamesDun2866,8 days ago,Added Duration and Timestamp
+3861d01,Antony Leons,8 days ago,travis added to readme
+ea42ea7,Antony Leons,8 days ago,moved script
+fc2cde7,Antony Leons,8 days ago,replaced travis
+a496c6c,Antony Leons,8 days ago,lint test
+8d68799,Antony Leons,8 days ago,html fix
+70afb7e,Antony Leons,8 days ago,Merge pull request #5 from Openanttony/search-time-filtering-Antony
+1019a71,Antony Leons,8 days ago,added search filtering, working state
+04164f7,JamesDun2866,8 days ago,Added Fetch for Rooms
+46ca2d1,Antony Leons,8 days ago,added ordering
+b85f6a9,Antony Leons,8 days ago,Merge pull request #4 from Openanttony/insert-data-filtering
+5285ba3,Antony Leons,8 days ago,added date validation to instert data
+e1acda4,JamesDun2866,8 days ago,Merge pull request #3 from Openanttony/format-and-filtering-antony
+fd79a72,Antony Leons,8 days ago,more detailed instructions
+4779f1f,Antony Leons,8 days ago,Update README.md
+d5b92c9,Antony Leons,8 days ago,search filters
+f53c4bf,JamesDun2866,8 days ago,Merge branch 'master' into Agile--James
+65fc7fa,Antony Leons,8 days ago,new travis
+8c5f02e,Antony Leons,8 days ago,Update .travis.yml
+f3aeb7b,Antony Leons,8 days ago,Create composer.json
+5af4d2e,Antony Leons,8 days ago,Update .travis.yml
+71f1e3b,Antony Leons,9 days ago,travis name fix
+406a29e,Antony Leons,9 days ago,delete clutter from merge
+3c02d0c,Antony Leons,9 days ago,Merge pull request #1 from Openanttony/SQL-ICAL-Antony
+1a61a3b,Antony Leons,9 days ago,update search
+76e3b93,Antony Leons,9 days ago,remove composer
+cddc5f6,Antony Leons,9 days ago,created composer.json
+5e38af4,Antony Leons,9 days ago,add travis and ID
+29b96bb,Antony Leons,9 days ago,inserts to sql
+9504b7c,Antony Leons,9 days ago,added ID
+9066178,JamesDun2866,9 days ago,Story 1 - Lecturer booking
+e9134a8,Antony Leons,9 days ago,time format fixed
+0174026,Antony Leons,9 days ago,rename and changed to get
+e544d74,Antony Leons,9 days ago,Merge branch 'master' into SQL-ICAL-Antony
+731a845,Antony Leons,9 days ago,remove ID column and reshuffle
+fb9538f,Antony Leons,9 days ago,Printing to table
+43dbe3a,Antony Leons,10 days ago,bullet points
+350ea97,Antony Leons,11 days ago,prints ical
+ead5722,Antony Leons,13 days ago,can download file
+15c089d,Antony Leons,13 days ago,Work in progress
+a7770d4,Antony Leons,2 weeks ago,table and instructions
+eda568a,Antony Leons,2 weeks ago,fetch
+305aba9,Antony Leons,2 weeks ago,competed search and started fetch
+313767b,Antony Leons,2 weeks ago,woks bois
+3d16e45,Antony Leons,2 weeks ago,work in progress
+7d25322,Antony Leons,2 weeks ago,error message
+b0066bb,Antony Leons,2 weeks ago,working
+f3c474b,Antony Leons,3 weeks ago,Delete CNAME
+f4a0094,Antony Leons,3 weeks ago,Create CNAME
+5962fae,Antony Leons,3 weeks ago,import web tech for testing
