@@ -123,7 +123,7 @@ function test_input($data)
                `Activity` varchar(100) DEFAULT NULL,
                `Room` varchar(255) DEFAULT NULL,
                `UserType` varchar(11) NOT NULL
-             ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
+             )  AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;";
              $result = mysqli_query($conn, $sql);
              if($StudentID != '')
              {
