@@ -54,18 +54,18 @@ $InputtedRoomErr ="";
 
 
 
-if ($row['Room'] == $InputtedRoom)
+if ($row2['Room'] == $InputtedRoom)
 {
 
 
 
-       if ($row['IsBooked'] != "Yes")
+       if ($row2['IsBooked'] != "Yes")
        {
 
-if ($row['IsComputerLab'] != "Yes")
+if ($row2['IsComputerLab'] != "Yes")
 {
 
-    if ($row['IsChemicalLab'] != "Yes")
+    if ($row2['IsChemicalLab'] != "Yes")
     {
 
 
@@ -119,7 +119,8 @@ else {
 }
 }
 else {
-  alert("This room does not exist")
+
+  alert("This room does not exist");
 }
 mysqli_close($conn);
 
