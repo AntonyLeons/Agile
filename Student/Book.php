@@ -50,38 +50,22 @@ $InputtedRoomErr ="";
        }
        $maxcapacity = 20;
 
-       $GetCapacity = "SELECT `RoomCapacity` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
+       $GetCapacity = "SELECT * FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
        $fetchedcapacity = mysqli_query($conn, $GetCapacity);
        $row = mysqli_fetch_array($fetchedcapacity);
 
-       $GetChemLab  = "SELECT `IsChemicalLab` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
-       $fetchedchemlab = mysqli_query($conn, $GetChemLab);
-       $row2 = mysqli_fetch_array($fetchedchemlab);
-
-       $GetComputerLab = "SELECT `IsComputerLab` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
-       $fetchedComputerLab = mysqli_query($conn, $GetComputerLab);
-       $row3 = mysqli_fetch_array($fetchedComputerLab);
-
-       $GetBooked = "SELECT `IsBooked` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
-       $fetchedBook = mysqli_query($conn, $GetBooked);
-       $row4 = mysqli_fetch_array($fetchedBook);
-
-       $GetRoom = "SELECT `Room` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1''";
-       $FetchedRoom = mysqli_query($conn, $GetRoom);
-       $row5 = mysqli_fetch_array($FetchedRoom);
 
 
-
-if ($row5['Room'] == $InputtedRoom)
+if ($row['Room'] == $InputtedRoom)
 {
 
-       if ($row4['IsBooked'] != "Yes")
+       if ($row['IsBooked'] != "Yes")
        {
 
-if ($row3['IsComputerLab'] != "Yes")
+if ($row['IsComputerLab'] != "Yes")
 {
 
-    if ($row2['IsChemicalLab'] != "Yes")
+    if ($row['IsChemicalLab'] != "Yes")
     {
 
         if ($row['RoomCapacity'] <= $maxcapacity)
@@ -143,10 +127,6 @@ else {
 else {
   alert("This room does not exist");
 }
-
-
-
-
 
 
 mysqli_close($conn);
