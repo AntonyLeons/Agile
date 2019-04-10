@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="message">
-        <h1>Location Reporting</h1>
+        <h1>Room Booking</h1>
         <h2>With Hull University</h2>
         <ul>
             <li><a href="StudentPortal.html">Home</a></li>
