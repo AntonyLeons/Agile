@@ -50,6 +50,15 @@ $InputtedRoomErr ="";
        $fetchedBook = mysqli_query($conn, $GetBooked);
        $row4 = mysqli_fetch_array($fetchedBook);
 
+       $GetRoom = "SELECT `Room` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1''";
+       $FetchedRoom = mysqli_query($conn, $GetRoom);
+       $row5 = mysqli_fetch_array($FetchedRoom);
+
+
+
+if ($row5['Room'] == $InputtedRoom)
+{
+
        if ($row4['IsBooked'] != "Yes")
        {
 
@@ -95,6 +104,10 @@ else {
 }
 else {
   alert("You cannot book this room");
+}
+}
+else {
+  alert("This Room does not exist");
 }
 mysqli_close($conn);
 

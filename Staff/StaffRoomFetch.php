@@ -10,11 +10,11 @@
 </head>
 <body>
 <div class="message">
-        <h1>Location Reporting</h1>
+        <h1>Room Booking</h1>
         <h2>With Hull University</h2>
         <ul>
             <li><a href="StaffPortal.html">Home</a></li>
-            <li><a class="active" href="Avalible.html">Find Avalible Rooms</a></li>
+            <li><a class="active" href="Avalible.html">Find Available Rooms</a></li>
             <li><a href="Search.html">My Timetable</a></li>
             <li><a href="../index.html" onclick="logoutclear">Logout</a></li>
           </ul>

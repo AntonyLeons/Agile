@@ -12,11 +12,11 @@
 </head>
 <body>
 <div class="message">
-        <h1>Location Reporting</h1>
+        <h1>Room Bookings</h1>
         <h2>With Hull University</h2>
         <ul>
             <li><a href="StudentPortal.html">Home</a></li>
-            <li><a href="Avalible.html">Find Avalible Rooms</a></li>
+            <li><a href="Avalible.html">Find Available Rooms</a></li>
             <li><a class="active" href="Search.html">My Timetable</a></li>
             <li><a href="../index.html" onclick="logoutclear()">Logout</a></li>
           </ul>
@@ -186,7 +186,7 @@ if(isset($icalobj->tree->child))
 }
 }
 
-$sql="INSERT temp SELECT * FROM rooms WHERE (StudentID='$StudentID' OR '$StudentID'='') AND (Society='$Society' OR '$Society'='');";
+$sql="INSERT TEMP SELECT * FROM rooms WHERE (StudentID='$StudentID' OR '$StudentID'='') OR (Society='$Society' OR '$Society'='');";
 $result = mysqli_query($conn, $sql);
 
 
