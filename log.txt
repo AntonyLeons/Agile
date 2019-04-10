@@ -1,0 +1,1560 @@
+commit aff942835e1b370e4155563148e431aabdbf8fb7
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 10 15:28:04 2019 +0100
+
+    favicons added
+
+commit 7e9be92a00efc69cbe3ddfde668f096926fa79f3
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 10 14:55:48 2019 +0100
+
+    removed unnecceary queries
+
+commit b16eb00b888bca7d10d8a6d262aa9217706a7c08
+Merge: 4b1cc12 c5821ca
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 10 14:06:29 2019 +0100
+
+    Merge pull request #38 from Openanttony/BugFixing
+    
+    Bug fixing
+
+commit c5821ca4d4899c7caf3b6947a5f43dc8a35c1297
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 10 14:05:27 2019 +0100
+
+    Added Validation
+
+commit 65cca5dd2e3b9969b25a434b2c5cdb51409083b4
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 10 13:47:55 2019 +0100
+
+    Even more bug fixes v2
+
+commit f9b14ea3da8d7e3ed3de2aed20309a517942a294
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 10 13:30:42 2019 +0100
+
+    Even More Bug Fixes
+
+commit 1c6a9ceb938a51ca50e6ebc6cb21fd8c94251dd0
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 10 13:30:22 2019 +0100
+
+    More Bug Fixes
+
+commit c4000d3ebcafa4d37dd8c29a90d743c3fc3f40f9
+Merge: dae9a4d 4b1cc12
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 10 13:05:34 2019 +0100
+
+    Merge branch 'master' into BugFixing
+
+commit dae9a4d8a6d57acc9e492e1947b06babee3361e5
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 10 13:01:58 2019 +0100
+
+    Update StaffRoomFetch.php
+
+commit 490e2b66528622f129b1dba27cf5b82f5f9b2584
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 10 13:01:35 2019 +0100
+
+    available change
+
+commit 4b1cc12f20d1f06a9721d4ffc11a5196b37f9075
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 10 13:01:29 2019 +0100
+
+    Searches
+
+commit 68b42e8f249d1ee692c546ae5b666dd80e7a16f3
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 10 10:08:48 2019 +0100
+
+    fix search
+
+commit 1b0a7c28d75aa8a424006e8e4906bd6c5a6444c8
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 10 10:07:48 2019 +0100
+
+    Revert "fix search"
+    
+    This reverts commit 3d990462459a8c6212bb997e25647bfde81744ce.
+
+commit 3d990462459a8c6212bb997e25647bfde81744ce
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 10 10:07:29 2019 +0100
+
+    fix search
+
+commit efbbf9cc87d74ecc7943f9734c71fe84be0135ec
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 10 00:02:26 2019 +0100
+
+    contact timetabling
+
+commit ac3a921736d5110aee4110683ca6f9e7b0ce37f0
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 23:39:34 2019 +0100
+
+    delete user added
+
+commit 0a4c4c5b2e5db7198e48c35362b2f4941068b9a0
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 23:11:28 2019 +0100
+
+    Update AdminPortal.html
+
+commit d6ba81b76fc6f41d286173abed11c2cdebfcb961
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 22:49:54 2019 +0100
+
+    drop downs added
+
+commit 32070d90fc6209769e0a2e4a243b1b0773dcb816
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 22:27:26 2019 +0100
+
+    steps added
+
+commit 289fad915aabb4215d466a211360cb30906dccfe
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 18:35:56 2019 +0100
+
+    fixed search
+
+commit 57fb15591f94bb2eee98d8a8e4a48eb9219cf094
+Merge: 716e88b 215769e
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 18:35:18 2019 +0100
+
+    Merge pull request #37 from Openanttony/Validation
+    
+    Limitations with different users
+
+commit 215769ef098d41f598425f0acf886dbdef6b962d
+Merge: b6e336a 716e88b
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 18:34:21 2019 +0100
+
+    Merge branch 'master' into Validation
+
+commit b6e336a4f7ae48b74c10f3b49c1e06dfa8763a89
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 18:34:09 2019 +0100
+
+    Limitations for every user
+
+commit 716e88b80f00d8ceb755f5220147f7fdfdd4e607
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 18:11:57 2019 +0100
+
+    fixed buttons
+
+commit 5882b6a3580a858e83e9c0e86829c52e302689b1
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 18:09:07 2019 +0100
+
+    Update AdminManage.html
+
+commit d1171eb56d81820ec0959245b74284999578c41d
+Merge: 6d7c7cf bd920d7
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 17:57:17 2019 +0100
+
+    Merge branch 'master' of https://github.com/Openanttony/Agile
+
+commit 6d7c7cf088e0d7ede6e68e503ccc542ecefcd78c
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 17:57:06 2019 +0100
+
+    Update loop.php
+
+commit bd920d7c9c1326e8c0df7f23c3e566e1f41edfe8
+Merge: 7a1d91f 916dbeb
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 17:56:53 2019 +0100
+
+    Merge pull request #36 from Openanttony/Validation
+    
+    Validation (limitations- Student)
+
+commit 916dbeb1c94167717f3d9c3d643a41a4585ad4ee
+Merge: 47d1425 7a1d91f
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 17:55:36 2019 +0100
+
+    Merge branch 'master' into Validation
+
+commit 47d1425c8c7ebf4b43cf1950e3bfec00a5acab56
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 17:55:21 2019 +0100
+
+    Student Restrictions
+
+commit 7a1d91f9de11419cb592f13ee147126a76250af2
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 17:26:54 2019 +0100
+
+    sql queries
+
+commit 2554cc746a3166aad2fd35cfb094b6bcbd50c671
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 16:32:48 2019 +0100
+
+    Create add new dates
+
+commit f4b3bde206d779dd2a9a05d0659813b29dbd1fcd
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 15:50:03 2019 +0100
+
+    Sql updated
+
+commit 0e175f43c99518f6b942813fbaac59619bb88f21
+Merge: 3f6e70a 7e07cfc
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 15:42:24 2019 +0100
+
+    Merge pull request #35 from Openanttony/LargeRoom
+    
+    Added External User
+
+commit 7e07cfca372227298eefb2e63f25d5cc791d1765
+Merge: e7615cc 3f6e70a
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 15:41:29 2019 +0100
+
+    Merge branch 'master' into LargeRoom
+
+commit e7615cc930a373e28bdfc11e9fb7d9a342f839e9
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 15:41:11 2019 +0100
+
+    Added User ExternalUser
+
+commit 3f6e70adf2f665a4728083c0b14e965da6e3a846
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 15:24:02 2019 +0100
+
+    removed unnecessary comments
+
+commit 24532eea094c0df8b7d1f677d027e86924449ee0
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 15:15:02 2019 +0100
+
+    Update bookings.sql
+
+commit a5feda2a3677e84939270229ff6a04dba44b2480
+Merge: 13c517f 0666c2e
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 14:59:04 2019 +0100
+
+    Merge pull request #34 from Openanttony/ExternalSpeaker
+    
+    External speaker
+
+commit 0666c2e0fadf9ef75277ed45a60b1d4c601b934a
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 14:58:15 2019 +0100
+
+    Fixed Redirect
+
+commit 1d4c4f90a302e14758a1524b8366ae699dab8d94
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 14:56:18 2019 +0100
+
+    Added Speaker Table
+
+commit 923d8a02139390a09e4216e9dbe5e79bc20aea53
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 14:50:31 2019 +0100
+
+    Linked External Speaker
+
+commit 0d9bf22c85052cfe398a506a3e7c7b9f9f49f2b8
+Merge: 2e02a57 13c517f
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 14:43:17 2019 +0100
+
+    Merge branch 'master' into ExternalSpeaker
+
+commit 2e02a571347c09a5bdf0289c9e92c7609e606814
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 14:43:00 2019 +0100
+
+    External Speaker Added
+
+commit 13c517f7aea4729c8dba32f2e020541502b56ab6
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 13:43:01 2019 +0100
+
+    fix add user
+
+commit d3dc969dbcbdd031665ff7b7a3fbbafb6b44dd58
+Merge: 7a441d4 a293144
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 13:27:42 2019 +0100
+
+    Merge branch 'master' of https://github.com/Openanttony/Agile
+
+commit 7a441d4d906970b435a54eff47e156d74628cb08
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 13:27:23 2019 +0100
+
+    added union button and sql
+
+commit a29314407039832b6b9078a6dba8ea51f71a31e5
+Merge: 472739c 5fc2ef4
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 13:16:56 2019 +0100
+
+    Merge branch 'master' of https://github.com/Openanttony/Agile
+
+commit 472739c6996e871ca2800f757680a687de632b37
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 13:16:41 2019 +0100
+
+    Update AdminManage.html
+
+commit 5fc2ef4a4631c48cc2e4f2769204cc638061b219
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 13:07:54 2019 +0100
+
+    password masking
+
+commit bdd3d32df8496f78f0c3b364106733bd79fbc133
+Merge: 85a5696 4cb5f00
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 13:06:35 2019 +0100
+
+    Merge branch 'master' of https://github.com/Openanttony/Agile
+
+commit 85a569627494b174047ccaa27f3ab8f4aefabdbe
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 13:06:18 2019 +0100
+
+    Added Member to society
+
+commit 4cb5f002945ac3ee2265ce4de26b5ef037613df6
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 12:44:08 2019 +0100
+
+    added headers
+
+commit 24ee6a4998ff315fb070061df0a7ef4960df4814
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 11:48:13 2019 +0100
+
+    Update AdminPortal.html
+
+commit e565fd72bffd3b6fa5c6ac34c830bb4990a2d1e1
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 11:29:18 2019 +0100
+
+    Update AddRoom.php
+
+commit 5978f581294e50abc2c46578f605bbd7d2e89233
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 11:26:08 2019 +0100
+
+    css fixes
+
+commit f1c88dea1ce71577bed23925d638d5f2698ca22d
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 11:14:29 2019 +0100
+
+    Update Book.php
+
+commit 4f0e322553a0a4f115ac364bb09f4efa0cb09f22
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 11:13:36 2019 +0100
+
+    Update Book.php
+
+commit 8aa175c77f0e3200bc34b106d448b816c3718974
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 11:10:38 2019 +0100
+
+    Update Avalible.html
+
+commit b3ac35556690b9c6482ebe858ef0494ce61f3f74
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 11:09:56 2019 +0100
+
+    Update Avalible.html
+
+commit 3c3dd58b0af4f7fdf6a20599da2ebf099bd5bb2d
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 9 11:06:40 2019 +0100
+
+    Update AdminPortal.html
+
+commit 7fe48ffb3e847c3d1f04db362c14df30262068e8
+Merge: c319997 2274c03
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 00:43:30 2019 +0100
+
+    Merge pull request #33 from Openanttony/AdminPortalExpansion
+    
+    Added Delete Room
+
+commit 2274c037dc4b4e1eac124fee4395cbe836d9aa2c
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 00:42:59 2019 +0100
+
+    Linked Manage Page
+
+commit 1fc567d8b0f419b322de03d6963593e6392a70e0
+Merge: ebe1842 c319997
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 00:40:18 2019 +0100
+
+    Merge branch 'master' into AdminPortalExpansion
+
+commit ebe184213309e310789b91e79ab23999f08d71ec
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 00:40:07 2019 +0100
+
+    Added Delete Room Function
+
+commit c319997a0a9f7e793ede6451399f79ee625141ab
+Merge: 65e88f3 1629463
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 00:30:43 2019 +0100
+
+    Merge pull request #32 from Openanttony/AdminPortalExpansion
+    
+    Added Add room function to Admin and auto generations of Primary key
+
+commit 16294632dfea150574e28a211d34131fc61717e9
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 00:29:34 2019 +0100
+
+    Auto Generating Primary Key
+
+commit d4276d3c93ce9cac83292f7b6ab29186d790da7f
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 9 00:28:41 2019 +0100
+
+    Admins Can Add Rooms
+
+commit 318d49b139ec8f0c889d9d9289d22bc9e26aca61
+Merge: 94c35b4 65e88f3
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 23:25:56 2019 +0100
+
+    Merge branch 'master' into AdminPortalExpansion
+
+commit 94c35b438ceee6fb1e1ca03573b7f6c627fa14e7
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 23:25:45 2019 +0100
+
+    AddRoom Added
+    
+    Need to add autogenning IDs and Increment the time
+
+commit 65e88f37c90e306ee937e753853d53328ffacdbe
+Merge: 87ec731 0486687
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 23:14:23 2019 +0100
+
+    Merge pull request #31 from Openanttony/past-validation
+    
+    Past validation
+
+commit 04866874677215db68ba07ddae8734ffbdfd2e41
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 23:13:40 2019 +0100
+
+    cleaned book
+
+commit 97815d14e826e24e42f765e69cabd3987f92e0b8
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 23:12:34 2019 +0100
+
+    added activity to 2 missing ones
+
+commit 96ac4b41e271e41c46f29b68107bcb5529e9ab42
+Merge: 9ae9448 87ec731
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 23:10:18 2019 +0100
+
+    Merge branch 'master' into past-validation
+
+commit 87ec7316f2d2e41dd0e834eaf17950426795cf4a
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 23:07:19 2019 +0100
+
+    Update bookings.sql
+
+commit 9ae944809edbc9c08afd144ec0b5d261d2a3d78f
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 23:04:59 2019 +0100
+
+    added is past
+
+commit fd448e3151d12bbefd97a6385b4ed98ac80ecf22
+Merge: 7064ed2 cc18a2b
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 22:53:05 2019 +0100
+
+    Merge pull request #30 from Openanttony/AdminPortalExpansion
+    
+    Edited Searches and Added Managment Portal for admins
+
+commit cc18a2b42e378f10a0b029172299fd61dc1eb6a0
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 22:52:04 2019 +0100
+
+    Added Times of rooms to form
+
+commit 3bea67abf923e6d6988af7dbcacfb7bd07e6883f
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 22:33:08 2019 +0100
+
+    Added Admin Manage Room Page
+
+commit 4a0e62ba60963757e6c2cf8870085d2b77d975b6
+Merge: 0914643 7064ed2
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 21:56:28 2019 +0100
+
+    Merge branch 'master' into AdminPortalExpansion
+
+commit 09146436c9ecbfcfc3577eacc1372995668782fc
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 21:46:22 2019 +0100
+
+    User Styled Timetables
+
+commit 712248eeb708d5e5e165cfd3d89f75d68a95080a
+Merge: ea45bab 7064ed2
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 21:38:47 2019 +0100
+
+    Merge branch 'master' into past-validation
+
+commit 7064ed224a9664faac9fd8ac8a67f03d8dc90bfd
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 21:28:35 2019 +0100
+
+    SQL MERGE
+
+commit fad6d011ac1d7019d01ddb6560e5b3c4a77ad72a
+Merge: 8fbd7c8 963c4d7
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 21:25:52 2019 +0100
+
+    Merge pull request #29 from Openanttony/AdminPortalExpansion
+    
+    Admin portal expansion
+
+commit 963c4d7906c7abf6cb0631545213e769fc887991
+Merge: b924fac 8fbd7c8
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 21:24:30 2019 +0100
+
+    Merge branch 'master' into AdminPortalExpansion
+
+commit b924fac18a7f0ccf579d40c98bae0850cc591ea4
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 21:23:32 2019 +0100
+
+    Added Add User function
+
+commit 8fbd7c8ad7ce5b01402d0fcbe73496a946692f2a
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 21:05:18 2019 +0100
+
+    update tables
+
+commit ea45babe0747449dc5b7ef3b5ea2c4a2770ad1ba
+Merge: 761d9fb a1715df
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 20:25:22 2019 +0100
+
+    Merge branch 'master' into past-validation
+
+commit f2e824ec32cfa255d1e0158590a0ecb2d74fc6f4
+Merge: a1715df ee82618
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 20:24:24 2019 +0100
+
+    Merge pull request #28 from Openanttony/Misc
+    
+    Added Defaults to Society and Student
+
+commit ee8261850af8eeab9e81912c5d81c97d225f2ecd
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 20:22:06 2019 +0100
+
+    Added Defaults to Society and Student
+
+commit a1715df6d8cc11fd7df6ad21d5cde1877a839f37
+Merge: 2c67c3e 23f19a2
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 20:05:45 2019 +0100
+
+    Merge pull request #27 from Openanttony/ExpandingPortals
+    
+    Expanding portals
+
+commit 23f19a27fecc39511346ce39296b237e4c5927ed
+Merge: e42d78d 2c67c3e
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 20:05:12 2019 +0100
+
+    Merge branch 'master' into ExpandingPortals
+
+commit e42d78d7f8eb7f47631c53e8a128ec0a7c105879
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 20:05:03 2019 +0100
+
+    Added to Portals
+
+commit 2c67c3e1caa51f700123e7da861511ca0a6c8605
+Merge: e32abf7 30cbcfd
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 19:52:17 2019 +0100
+
+    Merge pull request #26 from Openanttony/deployment-fixes
+    
+    fixes for deployment
+
+commit 30cbcfdae4086f62eb0c4c3b21e6b2f200fe846e
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 19:47:11 2019 +0100
+
+    fixes for deployment
+
+commit 89281665b09db872dbd072dc1976c20138943d73
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 19:27:50 2019 +0100
+
+    Removed Useless character
+
+commit 202e920e6f1df34f69544eeddf6f285eda7f52f7
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 19:26:35 2019 +0100
+
+    Fixed Logout Buttons
+
+commit e32abf77212ed1a88d1ad4fbd17b20a4eb2582d0
+Merge: 5b2f9a8 f267ef4
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 15:45:14 2019 +0100
+
+    Merge branch 'master' of https://github.com/Openanttony/Agile
+
+commit 5b2f9a8a6ed5d0e0770a0fd6feaf9275e6b6d9d5
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 15:44:50 2019 +0100
+
+    Update Login.php
+
+commit f267ef48e0fd1316f4f486473275b4a485fccb0e
+Merge: 42d2463 ae23a99
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 15:38:41 2019 +0100
+
+    Merge pull request #25 from Openanttony/PersistantID
+    
+    Persistant ID
+
+commit ae23a9920286104a16fbfbfbd8bae292bf04defd
+Merge: b2686f5 42d2463
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 15:37:44 2019 +0100
+
+    Merge branch 'master' into PersistantID
+
+commit b2686f59424d8cbfd29d1d8bb09e0858d9aa1a9e
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 15:37:27 2019 +0100
+
+    Added Functionality to all users
+
+commit ca8db86e8d98c9414384dd7da4b0f68f0815a24a
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 8 15:08:46 2019 +0100
+
+    Login StudentID Globalised
+
+commit 42d2463911ee17137b2c3af59fef5f569d9c6cd9
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 11:55:42 2019 +0100
+
+    Deployment
+
+commit 761d9fb27a3b4da5b1f34b61bc401e9e21e94a68
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 8 11:54:07 2019 +0100
+
+    works but not really
+
+commit 54bab6f20c2eed8587f713f44cef2d5f778d21bd
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 18:52:13 2019 +0100
+
+    merged sql and modifed table
+
+commit 4579b4196898dd66cede683d436d927fdba4e8a6
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 18:45:57 2019 +0100
+
+    fixed entrys
+
+commit 9397cb1421c142fa086d09fa15906dbdebf9eff8
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 18:41:04 2019 +0100
+
+    fixed search
+
+commit 0767253386ba09bd6dd9615ec8a3c91f149a5ba1
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 18:32:40 2019 +0100
+
+    activity added
+
+commit 80afd7cd2e6c64e2f3aa9bebcf548834726e840f
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 18:22:46 2019 +0100
+
+    fixed
+
+commit 48cf25ff9a9f47abc99bfeec0d599672fc516c2d
+Merge: 32bb056 40e07a4
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Sun Apr 7 17:42:25 2019 +0100
+
+    Merge pull request #24 from Openanttony/Fixing-Links
+    
+    Added Society And activity
+
+commit 40e07a442b65549fcd1721caa721681d5ce47c6f
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Sun Apr 7 17:41:52 2019 +0100
+
+    Added Society And activity
+
+commit 32bb0564e06f01fc6d8145b7c3eb464ed3546fd6
+Merge: 547d1ca 8d43b82
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Sun Apr 7 17:31:27 2019 +0100
+
+    Merge pull request #23 from Openanttony/Fixing-Links
+    
+    Fixing links And booking working for one entry
+
+commit 8d43b82e173ee1bdfdca82a33dadfd98bfa7dff7
+Merge: 0705cb3 547d1ca
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Sun Apr 7 17:30:37 2019 +0100
+
+    Merge branch 'master' into Fixing-Links
+
+commit 0705cb38efe11a19bcd8b8373ef3d1ff2b86b715
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Sun Apr 7 17:30:24 2019 +0100
+
+    Links All Work and Booking only affects one entry now
+
+commit 547d1ca6daad1f692e2907306ef3da1e45fcac09
+Merge: 7f3629b 597de69
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 17:07:32 2019 +0100
+
+    Merge pull request #22 from Openanttony/link-fixing-and-table-merge
+    
+    Link fixing and table merge
+
+commit 597de695706a4c3339d3e810473bfa2c1d90f9bd
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 17:06:51 2019 +0100
+
+    fixed duration maker
+
+commit 25c773997a793e96f5a5af021d6895ffb315843d
+Merge: 419cc1b 7f3629b
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 16:00:11 2019 +0100
+
+    Merge branch 'master' into link-fixing-and-table-merge
+
+commit 419cc1bd45fd321a051ee49b5198652313132c0a
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 15:59:51 2019 +0100
+
+    Update Book.php
+
+commit 7f3629bb678085ca0a2b7a11efd6440f20c32e76
+Merge: 8e95404 6dba313
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Sun Apr 7 14:02:03 2019 +0100
+
+    Merge pull request #21 from Openanttony/FixingGeneralLinksAndAddingbooking
+    
+    Fixing general links and adding booking
+
+commit 6dba31327289825cb3fab3762548cac46c860101
+Merge: 7b074e3 8e95404
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Sun Apr 7 14:01:30 2019 +0100
+
+    Merge branch 'master' into FixingGeneralLinksAndAddingbooking
+
+commit 7b074e3e20aaaf682e1ae47e29eda00053e8f8fc
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Sun Apr 7 14:01:19 2019 +0100
+
+    Added Per hour search
+
+commit 8e95404fb1414df78a300c8d86586655b8ffa29f
+Merge: 7a7c0f6 974a42a
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 13:52:37 2019 +0100
+
+    Merge branch 'master' of https://github.com/Openanttony/Agile
+
+commit 7a7c0f673d5b141c2cceeb1127f5a7da9ca16b96
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 13:52:14 2019 +0100
+
+    unified sql
+
+commit 974a42aae42771734ba3914a5e81bb2e1ac02385
+Merge: 5509fc0 68abef0
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 13:43:55 2019 +0100
+
+    Merge pull request #20 from Openanttony/link-fixing-and-table-merge
+    
+    Link fixing and table merge
+
+commit 68abef00ba2317197fdb88d47707d3795c6b22ad
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 13:38:15 2019 +0100
+
+    added to all types
+
+commit f227efb9da01eb05a6939befe5794759899789e6
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 13:29:41 2019 +0100
+
+    merged fuctions
+    
+    not finished
+
+commit 5594c346861b669207d8c7ad8292b07e2bf1e34c
+Merge: 65ef7f5 5509fc0
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 13:18:20 2019 +0100
+
+    Merge branch 'master' into link-fixing-and-table-merge
+
+commit 5509fc00bf151a1e71df55594a4fffb968a5b5de
+Merge: 0179f94 6120cb1
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Sun Apr 7 12:50:59 2019 +0100
+
+    Merge pull request #19 from Openanttony/FixingGeneralLinksAndAddingbooking
+    
+    Fixing general links and addingbooking
+
+commit 6120cb1f1463760bd8e2fd8708723c481b5b27e9
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Sun Apr 7 12:50:13 2019 +0100
+
+    Changed IsBooked to No
+
+commit d83ced9ea0502b860f4e70709a07b60a23c225d3
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Sun Apr 7 12:49:06 2019 +0100
+
+    Added Times
+
+commit 0179f9450ac572baec8abca220ac3ce2bafa6adc
+Merge: ba9ef37 14ca316
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Sun Apr 7 12:36:19 2019 +0100
+
+    Merge pull request #18 from Openanttony/FixingGeneralLinksAndAddingbooking
+    
+    Added more entries
+
+commit 14ca316a016593f8dd466607cdfadbb8da74b6c3
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Sun Apr 7 12:35:36 2019 +0100
+
+    Added more entries
+
+commit 65ef7f51581a587617a196f655806df04ae3c0b8
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Apr 7 11:59:50 2019 +0100
+
+    links fixed
+
+commit ba9ef37107f6f04a7f85debcee96e9584659cc2a
+Merge: 2689009 9da95ee
+Author: Antony Leons <antony@leons.dev>
+Date:   Sat Apr 6 17:19:08 2019 +0100
+
+    Merge pull request #17 from Openanttony/Multi-Society
+    
+    added logout, fixed links and fixed styles
+
+commit 9da95ee7288b08551e26e95861f53cc08fdb3968
+Author: Antony Leons <antony@leons.dev>
+Date:   Sat Apr 6 17:14:53 2019 +0100
+
+    Update styles.css
+
+commit c62c3a32ba28d1c76d0250c0803952c9a8c092d7
+Author: Antony Leons <antony@leons.dev>
+Date:   Sat Apr 6 17:13:41 2019 +0100
+
+    added log out and fixed styles
+
+commit 29da1fccfc32dbcfdd60ef0b1c05d59dc7a18ae6
+Author: Antony Leons <antony@leons.dev>
+Date:   Sat Apr 6 17:02:57 2019 +0100
+
+    updated links and search
+
+commit 26890090da859a9f4cefa3f32c0aeadd2d5cda40
+Merge: 9e523dc eadf897
+Author: Antony Leons <antony@leons.dev>
+Date:   Fri Apr 5 16:14:25 2019 +0100
+
+    Merge pull request #16 from Openanttony/Multi-Society
+    
+    fixed
+
+commit eadf897e533a20bb874a51f0a233bcc14077034e
+Author: Antony Leons <antony@leons.dev>
+Date:   Fri Apr 5 16:14:04 2019 +0100
+
+    fixed
+
+commit 9e523dc4d43335abe261f9f5055205751e5cbafd
+Merge: c3a81ec 4af72fa
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Fri Apr 5 15:57:41 2019 +0100
+
+    Merge pull request #15 from Openanttony/email
+    
+    Email
+
+commit 4af72fa3afbc9d5c05b2f54c30ce006e18d93f60
+Merge: 4b081fa c3a81ec
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Fri Apr 5 15:56:58 2019 +0100
+
+    Merge branch 'master' into email
+
+commit 4b081fa62b1f3791bc0784d0dc4296d7d19876f2
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Fri Apr 5 15:56:43 2019 +0100
+
+    Email
+
+commit c3a81ec7caca9340b85c7dea7cf5d3c29e4735b1
+Author: Antony Leons <antony@leons.dev>
+Date:   Fri Apr 5 15:40:01 2019 +0100
+
+    combined sql
+
+commit ac90eb50e8255bb6978b0d20069621e7ccdae5a6
+Merge: 17a75cd 4c48841
+Author: Antony Leons <antony@leons.dev>
+Date:   Fri Apr 5 15:32:44 2019 +0100
+
+    Merge branch 'master' of https://github.com/Openanttony/Agile
+
+commit 17a75cdb8ec03bc53082bf933cce41a7c6bce241
+Author: Antony Leons <antony@leons.dev>
+Date:   Fri Apr 5 15:32:22 2019 +0100
+
+    housekeeping
+
+commit 4c4884153c70da939b1418a9e2e2bc7bb71f71b1
+Merge: 1b03924 3d401ca
+Author: Antony Leons <antony@leons.dev>
+Date:   Fri Apr 5 15:20:06 2019 +0100
+
+    Merge pull request #14 from Openanttony/search-field
+    
+    Search field
+
+commit 3d401ca0d949b53eba21be0c2e9be679f9599e12
+Author: Antony Leons <antony@leons.dev>
+Date:   Fri Apr 5 15:13:29 2019 +0100
+
+    finiahed combined search
+
+commit d6bc8e02f75200b2619de3988722856e762707b8
+Merge: ed8ab52 1b03924
+Author: Antony Leons <antony@leons.dev>
+Date:   Fri Apr 5 14:51:23 2019 +0100
+
+    Merge branch 'master' into search-field
+
+commit ed8ab527015f74afdcd86291354c459ed592b3d2
+Author: Antony Leons <antony@leons.dev>
+Date:   Fri Apr 5 14:50:20 2019 +0100
+
+    adding field validation
+
+commit 1b039240ee3e8eec0435dfa67d4a885f09e4ab2b
+Merge: e2a3e1b 0b43352
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Fri Apr 5 14:42:43 2019 +0100
+
+    Merge pull request #13 from Openanttony/Login
+    
+    Login
+
+commit 0b43352c837c1cf30ea31d625d5489ba2647badf
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Fri Apr 5 14:41:25 2019 +0100
+
+    Login Working
+
+commit 3c819b88fca7d994c5b409c613223dc0509d2a96
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Fri Apr 5 10:48:21 2019 +0100
+
+    Added a fetch for testing
+
+commit fb2854072b93764adec2444bd1e2ab4424278e63
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Fri Apr 5 10:28:17 2019 +0100
+
+    Login Database added
+
+commit 32a788da04685761193955bbdf72c6678464393b
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Fri Apr 5 10:12:33 2019 +0100
+
+    Login Form Added to index and Login.php added
+
+commit e2a3e1bd1d3e1cb856c4d0679fdf23093b3fb102
+Author: Antony Leons <antony@leons.dev>
+Date:   Thu Apr 4 16:20:29 2019 +0100
+
+    fixed html
+
+commit 68151f82630b8afd1359e7fa365e7fe750dc1511
+Merge: 2a88896 31802ed
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 17:36:18 2019 +0100
+
+    Merge pull request #11 from Openanttony/fix-css-Antony
+    
+    Fix css antony
+
+commit 31802edd861896f162c7cde75d3957ba3db56775
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 17:35:09 2019 +0100
+
+    fix table styling
+
+commit 03ea0fe089837515ecd055c0fdbb81534af336d5
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 17:28:12 2019 +0100
+
+    removed commented lines
+
+commit bd9f4c773efa9c1c5cba446af6f82599b5c4112f
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 17:25:46 2019 +0100
+
+    edited nav bar names
+
+commit 49956ab893cebc5d579ab6a630e04b6dfd382dfd
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 17:01:45 2019 +0100
+
+    fixed header
+
+commit 2a88896be1fad71f1fca3242aca11ae606a3c3f9
+Merge: 7b68f1a df41740
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 3 16:36:26 2019 +0100
+
+    Merge pull request #10 from Openanttony/Restyling
+    
+    Restyling
+
+commit df417405cf0d6e889eb2c77db4b9d94c72287e9d
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 3 16:34:43 2019 +0100
+
+    Re-Styled all search htmls
+
+commit 005d4f571ced71bb031c8d27a36ea9ffa0ce81d5
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 3 16:23:43 2019 +0100
+
+    Society & Staff Restyled
+
+commit e9452a9fb31a3351f7f3c91da5ba7080ae327a05
+Merge: 00d9a35 7b68f1a
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 3 16:12:59 2019 +0100
+
+    Merge branch 'master' into Restyling
+
+commit 00d9a351423d36e43da315770434296d067e64fd
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 3 16:12:26 2019 +0100
+
+    LecturerPortal And Admin Portal Restyled
+
+commit 149a75e22254041884afc5099d4990654a01076e
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Wed Apr 3 15:48:13 2019 +0100
+
+    Restyle Front Page
+
+commit 7b68f1a156978085123610677a0ef70febee9aad
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 10:57:27 2019 +0100
+
+    search added to folders
+
+commit b75af10a1fa518e33e5d30b8d0426bed2a318316
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 10:47:02 2019 +0100
+
+    delete update
+
+commit e50bea409fd81c0ab62ba9a0eefbe696cfef243f
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 10:36:50 2019 +0100
+
+    fix book.php
+
+commit 44c115d4c1eb8bc99813253eabe38c3935d57301
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 10:15:42 2019 +0100
+
+    favicons added
+
+commit bb4ed0de99f444a368775d4115745c56ea97b1c3
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 03:11:18 2019 +0100
+
+    removed clutter
+
+commit 4b73eef30471fb756931a6d7d144e077f20c6aaa
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 03:04:55 2019 +0100
+
+    Update .travis.yml
+
+commit 90bf5f12148593158f1e05c144177cdf68d57e18
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 03:02:11 2019 +0100
+
+    travis Strict
+
+commit e2d393acbb630408a332a477f47a64cd289dc0e4
+Merge: fb4715d 8a315aa
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 02:48:46 2019 +0100
+
+    Merge pull request #9 from Openanttony/SQL-housekeeping-Antony
+    
+    Clean up
+
+commit 8a315aa10e7f210e2eb5118fe3bd8101d460a70a
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Apr 3 02:44:15 2019 +0100
+
+    revert verification
+    
+    cleaning up files and added fav icons
+
+commit fb4715d45e839dd8fdeb287b370ee6ec35082f79
+Merge: df730e6 af950e9
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 21:23:41 2019 +0100
+
+    Merge pull request #8 from Openanttony/search-options-antony
+    
+    Search options antony
+
+commit af950e9338be2f40787c0a32607dacdc18cc0ed5
+Merge: 1babf85 df730e6
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 21:19:40 2019 +0100
+
+    Merge branch 'master' into search-options-antony
+
+commit 1babf85689a36f2f00c8f21d62eb4c85f3149b10
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 21:17:57 2019 +0100
+
+    fix Month
+
+commit 97a331a122634ef7175a1ac9f7472ee053612496
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 21:07:21 2019 +0100
+
+    finished optional features
+
+commit df730e6cb846ad2c8c87f9284c61a31ea7119ce1
+Merge: 2267609 49568d4
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 2 19:39:01 2019 +0100
+
+    Merge pull request #7 from Openanttony/CreatingPortals
+    
+    Added Portals Of Other Users
+
+commit 49568d483f562ca430b4b4835fdbcdcc3b069672
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 2 19:35:58 2019 +0100
+
+    Added Portals Of Other Users
+
+commit 2267609d3a467d28c513ba70a6a65366a02cb6ea
+Merge: 3861d01 5801b35
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 2 18:43:03 2019 +0100
+
+    Merge pull request #6 from Openanttony/Agile--James
+    
+    Agile  james
+
+commit 5801b35380b6a50f43535ddcfe4a810d80a1c8e2
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 2 18:40:15 2019 +0100
+
+    Changed SQL Query
+
+commit 0f96e4fe48cca2b4ddb84fa56a4bcb1aa18341ce
+Merge: 04164f7 3861d01
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 2 18:26:32 2019 +0100
+
+    Added Duration and Timestamp
+
+commit 3861d014a11b053e509f6089ce39fca8282ba056
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 17:02:19 2019 +0100
+
+    travis added to readme
+
+commit ea42ea73dcd227ce187aab62a1937e63cf845461
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 16:54:53 2019 +0100
+
+    moved script
+
+commit fc2cde76f5381973b28911b3ad361caeb9a8e7f1
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 16:42:18 2019 +0100
+
+    replaced travis
+
+commit a496c6c56c1708fdd39c64ed669cb00982d3845b
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 16:35:06 2019 +0100
+
+    lint test
+
+commit 8d6879985512e71ca6b1ff12c4cc9b626b309479
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 16:19:27 2019 +0100
+
+    html fix
+
+commit 70afb7e63e5a2607fea370d1be035b1318e7d91d
+Merge: b85f6a9 1019a71
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 15:40:54 2019 +0100
+
+    Merge pull request #5 from Openanttony/search-time-filtering-Antony
+    
+    Search time filtering antony
+
+commit 1019a71a2aff68c69bb9f298223511ce4a19dd54
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 15:38:19 2019 +0100
+
+    added search filtering, working state
+
+commit 04164f7ded09433f550fa4afbf8dac26c0d9c041
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 2 15:33:32 2019 +0100
+
+    Added Fetch for Rooms
+
+commit 46ca2d16769f2129eb94e781360108bf7991fef5
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 15:29:22 2019 +0100
+
+    added ordering
+
+commit b85f6a973621b8a8b182c256bda52cfc30568329
+Merge: e1acda4 5285ba3
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 15:13:40 2019 +0100
+
+    Merge pull request #4 from Openanttony/insert-data-filtering
+    
+    added date validation to instert data
+
+commit 5285ba3748c475656aa36c53d8f1a34cfc6f6037
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 15:12:48 2019 +0100
+
+    added date validation to instert data
+
+commit e1acda4bfdf3188bf11cdfa0a57c92bd04dbfbac
+Merge: 65fc7fa fd79a72
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 2 14:16:43 2019 +0100
+
+    Merge pull request #3 from Openanttony/format-and-filtering-antony
+    
+    Format and filtering antony
+
+commit fd79a721da661c2d877e0390a5e9225be6d1739e
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 14:11:52 2019 +0100
+
+    more detailed instructions
+
+commit 4779f1fd75fbf8c5407ca44c0067220b176fc182
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 14:07:38 2019 +0100
+
+    Update README.md
+
+commit d5b92c98059198517cbefa8eeb138e3874df2388
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 14:02:29 2019 +0100
+
+    search filters
+
+commit f53c4bfcd52a1745fec1e7715fe6fbea62277eb4
+Merge: 9066178 65fc7fa
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Tue Apr 2 13:37:01 2019 +0100
+
+    Merge branch 'master' into Agile--James
+
+commit 65fc7fa7eec1dc5642182ffee033bc247750e21c
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 11:53:17 2019 +0100
+
+    new travis
+
+commit 8c5f02efb0a6b0d6151cfb8a263ae3cb60093026
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 11:40:49 2019 +0100
+
+    Update .travis.yml
+
+commit f3aeb7b704b2f31cd23ce895542cda6bf1219105
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 11:32:00 2019 +0100
+
+    Create composer.json
+
+commit 5af4d2e592e4ddfea5b8d4e00175600fa9249036
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 11:28:16 2019 +0100
+
+    Update .travis.yml
+
+commit 71f1e3b196ce8b2adb348a39d8c019b8340f7b19
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Apr 2 00:01:19 2019 +0100
+
+    travis name fix
+
+commit 406a29eb73bf3e04e0a44e951f403e4286bdff55
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 1 23:48:52 2019 +0100
+
+    delete clutter from merge
+
+commit 3c02d0c068fcfa07ad6aeb9eddeff4fa8596a110
+Merge: 731a845 1a61a3b
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 1 23:45:30 2019 +0100
+
+    Merge pull request #1 from Openanttony/SQL-ICAL-Antony
+    
+    Sql ical antony
+
+commit 1a61a3bde48c4b3e966e1a1b07e087afb890a121
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 1 23:41:32 2019 +0100
+
+    update search
+
+commit 76e3b9396b00e14df9a32cf0d405d79310a30639
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 1 23:11:38 2019 +0100
+
+    remove composer
+
+commit cddc5f615abe195dab73cd35addcce9a1a8fa611
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 1 22:08:18 2019 +0100
+
+    created composer.json
+
+commit 5e38af4b4890e0f8dd6fe27225dbbda48b336902
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 1 21:53:53 2019 +0100
+
+    add travis and ID
+
+commit 29b96bb501e5c85cf75618197f833ed47fd054b7
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 1 21:37:41 2019 +0100
+
+    inserts to sql
+
+commit 9504b7c6e8b8e76e77718ef126fdc4e00baaddc3
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 1 20:31:03 2019 +0100
+
+    added ID
+
+commit 90661789f3982c5559791c54f3042c54fa599fda
+Author: JamesDun2866 <44902009+JamesDun2866@users.noreply.github.com>
+Date:   Mon Apr 1 20:18:02 2019 +0100
+
+    Story 1 - Lecturer booking
+    
+    Added RoomContent SQL file
+    added a portal for Lecturers
+
+commit e9134a85bef807c3e0d51757cfc9268ba1d02ad3
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 1 19:03:29 2019 +0100
+
+    time format fixed
+
+commit 01740269bbed72c840a01d5ee5e4b513d5952516
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 1 13:59:17 2019 +0100
+
+    rename and changed to get
+
+commit e544d74621aa5dc376e34b0ff45ba69d9b73d28f
+Merge: fb9538f 731a845
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 1 13:48:58 2019 +0100
+
+    Merge branch 'master' into SQL-ICAL-Antony
+
+commit 731a84501bc2b6e7a4fc2ead13f6e27c48cc6da1
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 1 13:45:50 2019 +0100
+
+    remove ID column and reshuffle
+
+commit fb9538f5dc3b5089de19d93be3e82cd49edad1f0
+Author: Antony Leons <antony@leons.dev>
+Date:   Mon Apr 1 13:40:47 2019 +0100
+
+    Printing to table
+
+commit 43dbe3aa5aaf67b2d919a4404e120af508600fc3
+Author: Antony Leons <antony@leons.dev>
+Date:   Sun Mar 31 14:17:26 2019 +0100
+
+    bullet points
+
+commit 350ea97ce1489bda9b6bda73924afad1be5b7c59
+Author: Antony Leons <antony@leons.dev>
+Date:   Sat Mar 30 20:19:45 2019 +0000
+
+    prints ical
+
+commit ead57223f04136f592050381a3806b57957142ac
+Author: Antony Leons <antony@leons.dev>
+Date:   Thu Mar 28 20:33:05 2019 +0000
+
+    can download file
+
+commit 15c089d83ccaa0c1d5bfeeebd7bb2ac3c0364416
+Author: Antony Leons <antony@leons.dev>
+Date:   Thu Mar 28 17:01:44 2019 +0000
+
+    Work in progress
+
+commit a7770d4a34312cf3436a7785d0756d2256a0b94b
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Mar 27 11:25:31 2019 +0000
+
+    table and instructions
+
+commit eda568a6253cda1ea617bd6b23a12c9e4f31b4be
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Mar 27 10:53:26 2019 +0000
+
+    fetch
+
+commit 305aba976ea9d4cf6553c2fd0f30d7c4a16e6908
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Mar 27 09:46:27 2019 +0000
+
+    competed search and started fetch
+
+commit 313767ba8cb45badf94b80b5c8b6c06bb3612699
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Mar 27 08:45:02 2019 +0000
+
+    woks bois
+
+commit 3d16e45ac8221010b1b5ebcd95baa040ba750237
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Mar 26 18:50:44 2019 +0000
+
+    work in progress
+
+commit 7d253221343247b8381b2001b27e77bf581a68da
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Mar 26 17:28:07 2019 +0000
+
+    error message
+
+commit b0066bbf73faba33f1282c77e2099a9b866732b3
+Author: Antony Leons <antony@leons.dev>
+Date:   Tue Mar 26 17:24:48 2019 +0000
+
+    working
+
+commit f3c474bbe07c039cccdc89da02c4dd7bf95003b1
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Mar 20 21:21:55 2019 +0000
+
+    Delete CNAME
+
+commit f4a0094640343ce94d7cb3f183ba1bcee7086bd6
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Mar 20 19:47:04 2019 +0000
+
+    Create CNAME
+
+commit 5962fae60b5dfb22348f730a03a23062f3e5efc0
+Author: Antony Leons <antony@leons.dev>
+Date:   Wed Mar 20 19:45:13 2019 +0000
+
+    import web tech for testing
+
+commit ca2b222a623e00c1c5dde80949ff25ed0c9c15af
+Author: Antony Leons <littleantony.leons@gmail.com>
+Date:   Wed Feb 20 11:09:23 2019 +0000
+
+    Initial commit
