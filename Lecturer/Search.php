@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="message">
-        <h1>Location Reporting</h1>
+        <h1>Room Bookings</h1>
         <h2>With Hull University</h2>
         <ul>
             <li><a href="LecturerPortal.html">Home</a></li>
