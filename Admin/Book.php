@@ -44,22 +44,18 @@ function test_input($data)
        }
 
 
-       $GetBooked = "SELECT `IsBooked` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
+       $GetBooked = "SELECT * FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1'";
        $fetchedBook = mysqli_query($conn, $GetBooked);
-       $row4 = mysqli_fetch_array($fetchedBook);
-
-       $GetRoom = "SELECT `Room` FROM `roomcontent` WHERE `Room` LIKE '$InputtedRoom' AND `Time` LIKE '$Time1''";
-       $FetchedRoom = mysqli_query($conn, $GetRoom);
-       $row5 = mysqli_fetch_array($FetchedRoom);
+       $row = mysqli_fetch_array($fetchedBook);
 
 
 
-if ($row5['Room'] == $InputtedRoom)
+if ($row['Room'] == $InputtedRoom)
 {
 
 
 
-       if ($row4['IsBooked'] != "Yes")
+       if ($row['IsBooked'] != "Yes")
        {
 
 
