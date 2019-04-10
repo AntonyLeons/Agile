@@ -14,7 +14,7 @@
         <h2>With Hull University</h2>
         <ul>
             <li><a href="StudentPortal.html">Home</a></li>
-            <li><a class="active" href="Avalible.html">Find Avalible Rooms</a></li>
+            <li><a class="active" href="Avalible.html">Find Available Rooms</a></li>
             <li><a href="Search.html">My Timetable</a></li>
             <li><a href="../index.html" onclick="logoutclear()">Logout</a></li>
           </ul>

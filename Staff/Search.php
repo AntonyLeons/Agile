@@ -16,7 +16,7 @@
         <h2>With Hull University</h2>
         <ul>
             <li><a href="StaffPortal.html">Home</a></li>
-            <li><a href="Avalible.html">Find Avalible Rooms</a></li>
+            <li><a href="Avalible.html">Find Available Rooms</a></li>
             <li><a class="active" href="Search.html">My Timetable</a></li>
             <li><a href="../index.html" onclick="logoutclear()">Logout</a></li>
           </ul>
@@ -211,7 +211,7 @@ while ($row = mysqli_fetch_array($result)) {
         echo "<td>" . $row['booking_for'] . "</td>";
         echo "<td>" . $row['booking_end'] . "</td>";
         echo "<td>" . $row['Activity'] . "</td>";
-    
+
         echo "</tr>" ;
     }
 }
