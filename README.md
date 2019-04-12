@@ -3,6 +3,7 @@
 * Install WAMP for PHP
 * Create a virtualhost pointing to agile Github folder
 * Fetch latest copy
+* Go to localhost on a browser and click on myphpadminer
 * Create a database called bookings and import the bookings.sql file
 * Create a user called appengine with the password Test with all privileges
 * Create your own branch
