@@ -1,4 +1,4 @@
-# Agile [![Build Status](https://travis-ci.com/Openanttony/Agile.svg?token=iEHPmhnrfp4VatGpB9LT&branch=master)](https://travis-ci.com/Openanttony/Agile)
+# Agile [![Build Status](https://travis-ci.com/AntonyLeons/Agile.svg?token=iEHPmhnrfp4VatGpB9LT&branch=master)](https://travis-ci.com/AntonyLeons/Agile)
 * Agile Project
 * Install WAMP for PHP
 * Create a virtualhost pointing to agile Github folder
