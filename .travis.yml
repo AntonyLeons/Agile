@@ -1,4 +1,4 @@
-dist: xenial
+dist: bionic
 # Required to run your project under the correct environment.
 language: php
 
